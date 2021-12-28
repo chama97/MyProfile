@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case_4</title>
+    <style>
+        main{
+            width: 800px;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            overflow: hidden;       
+    
+        }
+
+        main > section {
+            width: 400%;
+            height: 100%;
+            display: flex;
+            border: solid red 3px;
+            animation-name: slider;
+            animation-duration: 8s;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            
+        }
+
+        main > section > div {
+            width: 100%;
+        }
+
+        section > div:nth-child(1){
+            background-image: url(assets/image/img1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        section > div:nth-child(2){
+            background-image: url(assets/image/img2.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        section > div:nth-child(3){
+            background-image: url(assets/image/img3.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        @keyframes slider {
+            0%,30%{
+                transform: translateX(0);
+            }
+
+            33%,60%{
+                transform: translateX(-33%);
+            }
+
+            100%{
+                transform: translateX(-66%);
+            }
+
+        
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </main>
+</body>
+</html>

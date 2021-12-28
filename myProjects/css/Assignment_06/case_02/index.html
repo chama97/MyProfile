@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case_02(circle)</title>
+    <style>
+
+        
+
+        main > section {
+            width: 200px;
+            height: 200px;
+            border: 20px solid blue;
+            border-radius: 100%;
+            border-top: 20px solid red;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+            background-color: rgb(121, 121, 121);
+        }
+
+        section > h2{
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+
+        }
+
+        section:hover{
+            transform: rotate(360deg);
+            transition: all 2s;
+        }
+
+        section:hover h2{
+            transform: rotate(-360deg);
+            transition: all 2s;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+
+            <h2>RWAD</h2>
+
+        </section>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link href="assets/css/fonts/css/all.css" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+
+        main > section {
+            width: 220px;
+            height: 500px;
+            position: relative;
+            top: 50px;
+            justify-content: space-around;
+            display: flex;
+            flex-direction: column;
+            right: 170px;
+        }
+
+        
+        main > section > div {
+            height: 40px;
+            background-color: blue;
+            left: 0;
+            position: relative;
+            color: white;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            transition: all 1s;
+            cursor: pointer;
+            
+        }
+
+        main > section > div > h2 {
+           
+            margin: 0;
+            display: inline-block;
+            padding: 10px;
+
+        }
+
+        section > div > i {
+            position: absolute;
+            right: 10px;
+            top: 7px;
+            font-size: 28px;
+        }
+
+
+        section > div:hover {
+            background-color: chartreuse;
+            width: 90px;
+            transition: all 2s;
+            left: 170px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <main>
+        <section>
+            <div id="d1"><h2>menu_1</h2><i class="fas fa-address-book"></i></div>
+            <div id="d2"><h2>menu_2</h2><i class="fas fa-ambulance"></i></div>
+            <div id="d3"> <h2>menu_3</h2><i class="fas fa-book-medical"></i></div>
+            <div id="d4"><h2>menu_4</h2><i class="fas fa-layer-group"></i></div>
+
+        </section>
+    </main>
+    
+</body>
+</html>

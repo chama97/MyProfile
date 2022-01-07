@@ -56,6 +56,7 @@
             border: 1px solid transparent;
             color: rgb(245, 245, 245);
             transition: 0.6s ease;
+            border-radius: 5px;
 
         }
 
@@ -153,11 +154,22 @@
             color: rgb(255, 242, 221);
         }
 
+        /* about...///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
         main > #about {
             display: flex;
             position: relative;
-            background-color: rgb(26, 26, 26);
+            background-color: rgb(12, 12, 12);
             height: 700px;
+            
+        }
+
+        #about > div {
+            position: absolute;
+            background-color: rgb(39, 39, 39);
+            height: 95%;
+            width: 98%;
+            border-radius: 20px;
             top: 0;
             bottom: 0;
             left: 0;
@@ -169,19 +181,706 @@
             font-size: 3rem;
             color: white;
             top: 0;
-            
-
+            position: absolute;
+            margin-left: 42%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;     
         }
+
         #about > div > h1 > span {
             font-size: 3rem;
-            color:  rgb(238, 202, 0);
-            
+            color:  rgb(238, 202, 0);   
         }
+
          #about > div > p {
             font-size: 1rem;
             color: white;
+            position: absolute;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+            margin-top: 11%;
+            margin-left: 40%;
+            letter-spacing: 1px;
+           
+        }
+
+        #about > div > img {
+            width: 290px;
+            height: 350px;
+            background-size: cover;
+            box-shadow: 10px -10px 1px 1px rgb(179, 170, 134);  
+            position: absolute;
+            margin-top: 12%;
+            margin-left: 10%;
+            border: solid rgb(173, 137, 19) 5px;     
+        }
+
+        #about > div > :nth-child(4){
+            background-color: rgb(78, 78, 78);
+            position: absolute;
+            width: 800px;
+            height: 40px;
+            margin-left: 40%;
+            margin-top: 16%;
+        }
+
+        #about > div > :nth-child(4) > p{   
+            color: white;
+            font-size: 18px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 10px;
+            margin-left: 12px;
+            
+        }
+
+        #about > div > :nth-child(5){
+            background-color: rgb(78, 78, 78);
+            position: absolute;
+            width: 800px;
+            height: 300px;
+            margin-left: 40%;
+            margin-top: 21%;           
+            color: white;
+            font-size: 18px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+        }
+
+        #about > div > :nth-child(5) > pre{
+            padding-left: 60px;
+            padding-top: 22px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
         }
+
+
+        #about > div > :nth-child(6) > p{
+            padding-left: 1x;
+            padding-top: 22px;
+        }
+
+        #about > div > .cv{
+            color: white;
+            text-decoration: none;
+            border: 3px solid rgb(219, 184, 26);
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: absolute;
+            margin-top: 38%;
+            margin-left: 14.5%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+
+        }
+
+        #about > div > .cv:hover{
+            background-color: rgb(218, 0, 0);
+            border: solid white;
+            font-size: 18px;
+        }
+
+        /* skill //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+        main > #skill {
+            display: flex;
+            position: relative;
+            background-color: rgb(12, 12, 12);
+            height: 1100px;
+            
+        }
+
+        #skill > div {
+            position: absolute;
+            background-color: rgb(39, 39, 39);
+            height: 100%;
+            width: 98%;
+            border-radius: 20px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #skill > div > h1 {
+            font-size: 3rem;
+            color: white;
+            top: 0;
+            position: absolute;
+            margin-left: 42%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;     
+        }
+
+        #skill > div > h1 > span {
+            font-size: 3rem;
+            color:  rgb(238, 202, 0);   
+        }
+
+        #skill > div > p{
+            text-align: center;
+            font-size: 18px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+            margin-top: 10%;
+            letter-spacing: 0.95px;          
+        }
+
+        #skill > div > p > span{
+            color: rgb(255, 215, 104);
+        }
+
+        #skill > div > #program {
+            position: relative;
+            background-color: rgb(88, 87, 87);
+            height: 35%;
+            width: 87%;
+            border-radius: 15px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        #skill > div > #network {
+            position: relative;
+            background-color: rgb(88, 87, 87);
+            height: 35%;
+            width: 87%;
+            border-radius: 15px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        #skill > div > #network > h1{
+            padding: 20px;
+            font-size: 27px;
+            color: #fff;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #skill > div > #program > h1{
+            padding: 20px;
+            font-size: 27px;
+            color: #fff;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #skill > div > #program > div{
+            position: absolute;
+            border: solid rgb(214, 0, 0) 5px;
+            background-color: #fff;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin-left: 12%; 
+            margin-top: 30px;                     
+        }
+
+        #skill > div > #program > div:nth-child(2){
+            background-image: url(assets/image/p1.jpg);  
+            background-size: cover;
+            background-position-x: center;
+        }
+
+        #skill > div > #program > div:nth-child(3){
+            left: calc(100%/5);
+            background-image: url(assets/image/p2.png);
+            background-size: cover;           
+        }
+        #skill > div > #program > div:nth-child(4){
+            left: calc((100%/5)*2); 
+            background-image: url(assets/image/p3.png); 
+            background-size: cover;            
+        }
+        #skill > div > #program > div:nth-child(5){
+            left: calc((100%/5)*3); 
+            background-image: url(assets/image/p4.jpg);
+            background-size: cover;            
+        }
+
+        #skill > div > #network > div{
+            position: absolute;
+            border: solid rgb(214, 0, 0) 5px;
+            background-color: #fff;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin-left: 12%; 
+            margin-top: 30px;                     
+        }
+
+        #skill > div > #network > div:nth-child(2){
+            background-image: url(assets/image/n1.jpg);  
+            background-size: cover;                   
+        }
+
+        #skill > div > #network > div:nth-child(3){
+            left: calc(100%/5);
+            background-image: url(assets/image/n2.jpg);  
+            background-size: cover;                       
+        }
+
+        #skill > div > #network > div:nth-child(4){
+            left: calc((100%/5)*2); 
+            background-image: url(assets/image/n3.jpg);
+            background-size: cover;             
+        }
+        
+        #skill > div > #network > div:nth-child(5){
+            left: calc((100%/5)*3);  
+            background-image: url(assets/image/n4.png); 
+            background-size: cover; 
+            background-position-x: center;         
+        }
+
+        /* projects ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+        main > #project {
+            display: flex;
+            position: relative;
+            background-color: rgb(12, 12, 12);
+            height: 1000px;
+        }
+
+        #project > div {
+            position: absolute;
+            background-color: rgb(39, 39, 39);
+            height: 96%;
+            width: 98%;
+            border-radius: 20px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #project > div > h1 {
+            font-size: 3rem;
+            color: white;
+            top: 0;
+            position: absolute;
+            text-align: center;
+            margin-left: 42%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;     
+        }
+
+        #project > div > h1 > span {
+            font-size: 3rem;
+            color:  rgb(238, 202, 0);   
+        }
+
+        #project > div > p{
+            text-align: center;
+            font-size: 18px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+            margin-top: 10%;
+            letter-spacing: 0.95px;          
+        }
+
+        #project > div > p > span{
+            color: rgb(255, 215, 104);
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        #project > div > section{
+            position: relative;
+            background-color: rgb(88, 87, 87);
+            height: 70%;
+            width: 90%;
+            border-radius: 15px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        #project > div > section > div{
+            position: absolute;
+            display: inline-block;         
+            border: solid rgb(0, 120, 233) 5px;
+            background-color: #fff;
+            width: 380px;
+            height: 240px;
+            border-radius: 10px;
+            margin-left: 2%; 
+            margin-top: 60px;   
+            z-index: 1;                       
+        }
+
+        #project > div > section > div:nth-child(1){
+            background-image: url(assets/image/p1.jpg);  
+            background-size: cover;
+            background-position-x: center;
+        }
+
+        #project > div > section > div:nth-child(2){
+            left: calc(100%/3);
+            background-image: url(assets/image/p1.jpg);  
+            background-size: cover;
+            background-position-x: center;
+        }
+
+        #project > div > section > div:nth-child(3){
+            left: calc((100%/3)*2); 
+            background-image: url(assets/image/p1.jpg);  
+            background-size: cover;
+            background-position-x: center;
+        }
+
+        #project > div > section > div:nth-child(4){
+            top: calc(100%/2); 
+            background-image: url(assets/image/p1.jpg);  
+            background-size: cover;
+            background-position-x: center;
+        }
+
+        #project > div > section > div:nth-child(5){
+            top: calc(100%/2); 
+            left: calc(100%/3); 
+            background-image: url(assets/image/p1.jpg);  
+            background-size: cover;
+            background-position-x: center;
+        }
+
+        #project > div > section > div:nth-child(6){
+            top: calc(100%/2); 
+            left: calc((100%/3)*2);
+            background-color: transparent;
+            border-color: transparent;                         
+        }
+
+        #project > div > section > div:nth-child(6) > a{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            text-align: center;
+            color: rgb(111, 202, 255);
+            position: absolute;
+            margin-top: 35%;
+            margin-left: 30%;
+            text-decoration-line: underline;
+        }
+
+        #project > div > section > div:nth-child(6) > a:hover{
+            color: rgb(162, 244, 247);
+            font-size: 23px;
+        }
+
+       .detail{
+            width: 100%;
+            height: 20%;
+            position: absolute;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgb(29, 58, 121);
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+
+        .detail > span{
+            position: absolute;
+            left: 20px;
+            top: 8px;
+            
+        }
+
+
+    /* education /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    main > #education {
+            display: flex;
+            position: relative;
+            background-color: rgb(12, 12, 12);
+            height: 1000px;
+        }
+
+        #education > div {
+            position: absolute;
+            background-color: rgb(39, 39, 39);
+            height: 100%;
+            width: 98%;
+            border-radius: 20px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #education > div > h1 {
+            font-size: 3rem;
+            color: white;
+            top: 0;
+            position: absolute;
+            text-align: center;
+            margin-left: 40%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;     
+        }
+
+        #education > div > h1 > span {
+            font-size: 3rem;
+            color:  rgb(238, 202, 0);   
+        }
+
+        #education > div > p{
+            text-align: center;
+            font-size: 18px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+            margin-top: 10%;
+            letter-spacing: 0.95px;          
+        }
+
+        #education > div > p > span{
+            color: rgb(255, 215, 104);
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        #education > div > .edu{
+            position: relative;
+            background-color: rgb(88, 87, 87);
+            height: 70%;
+            width: 90%;
+            border-radius: 15px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .edu >section{
+            position: absolute;
+            width: 8px;
+            height: 600px;
+            left: 49%;
+            top: 8%;
+            background-color: rgb(96, 191, 255);
+            border-radius: 100%;
+        }
+
+        .edu > div{
+            color: white;
+            left: 10%;
+            width: 350px;
+            height: 200px;
+            position: absolute;           
+        }
+
+        .edu > div > div{
+            width: 100%;
+            height: 30%;
+            background-color: rgb(131, 131, 131);
+        }
+
+        .edu > div:nth-child(2){        
+            border-left: solid rgb(0, 160, 144) 8px;
+            left: 240px;
+            top: 100px;         
+        }
+
+        .edu > div:nth-child(3){
+            border-right: solid rgb(0, 160, 144) 8px;
+            left: 710px;
+            top: 250px;
+        }
+
+        .edu > div:nth-child(4){
+            border-left: solid rgb(0, 160, 144) 8px;
+            left: 240px;
+            top: 400px;
+        }
+
+        .edu > div > h1{
+            font-size: 20px;
+            text-align: center;
+
+        }
+
+        .edu > div > div > span{
+            position: absolute;
+            margin-left: 10px;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 19px;
+            font-weight: 500;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .edu > div > span{
+            margin-left: 10px;
+            position: absolute;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .edu > div:nth-child(3) > span{
+            margin-left: 70px;
+        }
+
+
+        /* services ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+        main > #service {
+            display: flex;
+            position: relative;
+            background-color: rgb(12, 12, 12);
+            height: 900px;
+        }
+
+        #service > div {
+            position: relative;
+            background-color: rgb(39, 39, 39);
+            height: 96%;
+            width: 98%;
+            border-radius: 20px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #service > div > h1 {
+            font-size: 3rem;
+            color: white;
+            top: 0;
+            position: absolute;
+            text-align: center;
+            margin-left: 40%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;     
+        }
+
+        #service > div > h1 > span {
+            font-size: 3rem;
+            color:  rgb(238, 202, 0);   
+        }
+
+        #service > div > .services{
+            position: relative;
+            background-color: rgb(99, 99, 99);
+            height: 75%;
+            width: 90%;
+            border-radius: 15px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: 10%;
+        }
+
+        .services > div{
+            width: 380px;
+            height: 300px;
+            background-color: thistle;
+            position: absolute;
+            border: solid rgb(190, 167, 31) 3px;
+            z-index: 1;
+        }
+
+
+        .services > div:nth-child(1){
+            margin-top: 12%;
+            margin-left: 5%;
+            background-image: url(assets/image/desktop.png);  
+            background-size: cover;
+            background-position-x: center;        
+            perspective: 3000px;
+            position: absolute;
+        }
+
+        /* .services > div:nth-child(1):hover{
+            transform: translate(-50%, -50%);
+            transform-style: preserve-3d;
+        } */
+
+        .services > div:nth-child(2){
+            margin-top: 12%;
+            margin-left: 36%;
+            background-image: url(assets/image/mobile.jpg);  
+            background-size: cover;
+            background-position-y: center;
+        }
+
+        .services > div:nth-child(3){
+            margin-top: 12%;
+            margin-left: 67%;
+            background-image: url(assets/image/network.jpg);  
+            background-size: cover;
+            background-position-y: center;
+       
+        }
+
+        .services > div::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: .7; 
+            z-index: -1; 
+        }
+
+        .services > div > div{
+            position: relative;
+            width: 100%;
+            height: 15%;
+            background-color: rgb(90, 90, 90);
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+            color: rgb(185, 255, 176);
+        }
+
+        .services > div > div > span{
+            position: absolute;
+            top: 13px;
+            left: 15px;
+            justify-content: center;
+        }
+
+        .services > a > span{
+            position: absolute;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            top: 550px;
+            left: 48%;
+            font-weight: 500;   
+        } 
+
+        .services > a > span:hover{
+            color: rgb(131, 185, 255);
+            font-weight: 550;
+        }
+
+    
+
+
+
 
     </style>
 </head>
@@ -190,12 +889,12 @@
         <img alt="" src="assets/image/img0.png">
         <ul>
             <li class="active"><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SKILLS</a></li>
-            <li><a href="#">PROJECTS</a></li>
-            <li><a href="#">EDUCATION</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skill">SKILLS</a></li>
+            <li><a href="#project">PROJECTS</a></li>
+            <li><a href="#education">EDUCATION</a></li>
+            <li><a href="#service">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
          </ul>
          <h1>CTech.com</h1>
     </header>
@@ -226,10 +925,133 @@
         <section id="about">
             <div>
                 <h1> About<span> ME</span></h1>
-                <p> -  I’m Chamath Manchanayake. I’m software developer & computer  network technician and now Following GDSE Cource at
-                   <br> Institute of Software Engineering (IJSE).</p>
+             
+                <img src="assets/image/img4.jpg" alt="">
+                        
+                <p> I’m Chamath Manchanayake. I’m software developer & computer  network technician and now <br> Following GDSE Cource at
+                    Institute of Software Engineering (IJSE).</p>
+
+                <section>
+                    <p>Personal Details</p>
+                </section>
+                <section>
+                    <pre>Age         :         24</pre>                   
+                    <pre>Address   :         309, Handapangoda road Poruwadanda, Horana</pre>                    
+                    <pre>E-mail      :         chamamanchanayake5@gmail.com</pre>                   
+                    <pre>Contact    :         076-2988833</pre>          
+                </section>
+
+                <a href="#" class="cv">Download CV</a>
             </div>
         </section>
+
+        <section id="skill">
+            <div>
+                <h1> My<span> Skills</span></h1>
+                <p>  I have skills & knowledge about <span> computer networking </span> and <span> programming.</span>  The fundamentals of computer
+                     Hardware and Software; <br> Advanced concepts such as <span> software developing, security, networking programming languages,
+                     problem solving, OOP concepts, website optimization</span> and theResponsibilities of an IT Professional.
+                     And also I have <span> Java, JavaScript, HTML, Cascade Style Sheet (CSS),JavaFX, Mysql, Hibernate etc.</span>
+                </p>
+
+                <section id="program">
+                    <h1>- Programming -</h1>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    
+                </section>
+
+                <section id="network">
+                    <h1>- Networking -</h1>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+
+            </div>
+        </section>
+
+        <section id="project">
+            <div>
+                <h1> My<span> projects</span></h1>
+                <p> I have done some projects using <span> Java(MySQL)</span> as (Student Management System, Hotel Management System, Wholesale Management System, etc) . <br> And 
+                    I have Used  <span> Hibernate </span>  framework to some projects.
+                </p>
+                <section>
+                    <div>
+                        <a href="#">
+                            <div class="detail"><span>Hotel Management System</span></div>
+                        </a>
+                    </div>
+                    <div><a href="#">
+                        <div class="detail"><span>Wholesale Management System</span></div>
+                    </a></div>
+                    <div><a href="#">
+                        <div class="detail"><span>Vehicle Parking System</span></div>
+                    </a></div>
+                    <div><a href="#">
+                        <div class="detail"><span>Supermarket Management System</span></div>
+                    </a></div>
+                    <div><a href="#">
+                        <div class="detail"><span>Institute Management System</span></div></a></div>
+                    <div>
+                        <a href="#">Sea more..</a>>
+                    </div>
+                    <aside></aside>
+
+                </section>
+            </div>
+        </section>
+
+
+        <section id="education">
+            <div>
+                <h1> My<span> Education</span></h1>
+                <p>
+                    I first learned in <span> Royal College, Horana.</span> It was my primary & higher school(2002-2016). In 2018,  I studied
+                    <span> National certificate in Network Administration </span> at NYSC(LAVTC) Ratmalana.
+               
+                    Now I am following <span> Graduate Diploma in Sowtware Engineering </span> at Institute of Java & Software Engineering
+                    (IJSE), Panadura.
+                </p>
+                <section class="edu">
+                    <section></section>
+                    <div> <h1>( 2020 - 2023 )</h1> <div> 
+                        <span> Diploma in Software Engineering</span></div><span>Institute of Software Engineering</span>
+                    </div>
+                    <div><h1>( 2018 - 2019 )</h1>  <div> 
+                        <span> Certificate in Network Administration</span></div><span>LAVTC(NYSC), Ratmalana.</span>
+                    </div>
+                    <div><h1>( 2002 - 2016 )</h1> <div>
+                     <span> Primary and higher School</span></div><span>Royal College, Horana.</span>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+
+        <section id="service">
+            <div>
+                <h1> My<span> Services</span></h1>
+                <section class="services">
+                    <div><div><span>Desktop Applicaton</span></div> <p></p></div>
+                    <div><div><span>Mobile Applicaton</span></div><p></p></div>
+                    <div><div><span>Computer Networking</span></div><p></p></div>
+                    <a href="#"> <span> < Sea more > </span></a> 
+                </section>
+            </div>
+        </section>
+
+
+        <section id="contact">
+            <div>
+                <h1>My <span> Contact</span></h1>
+            </div>
+        </section>
+        
 
     </main>
 

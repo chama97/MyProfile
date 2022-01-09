@@ -1,0 +1,1413 @@
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffd04f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #daa700;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 75px;
+    box-shadow: -2px 6px 9px -4px #fffefe;
+    background-color: #363636;
+    border-bottom: 3px solid rgb(226, 226, 226);
+}
+
+header > img {
+    position: absolute;
+    width: 40px;
+    margin: 15px;
+    margin-left: 3%;
+}
+
+header > ul {
+    position: absolute;
+    right: 30px;
+    bottom: 6px;
+    font-size: 18px;
+    font-family: 'Righteous', cursive;
+    list-style: none;
+    color: #4a3a3a;
+}
+
+header >  h1  {
+    position: absolute;
+    font-size: 28px;
+    font-family: 'Syncopate', sans-serif;
+    letter-spacing: 3px;
+    color: #fff;
+    margin-left: 6%;
+    margin-top: 23px;
+}
+
+
+header >  ul > li {
+    display: inline-block;
+}
+
+header >  ul > li > a {
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    color: rgb(245, 245, 245);
+    transition: 0.6s ease;
+    border-radius: 5px;
+
+}
+
+header > ul > li > a:hover{
+    cursor: pointer;
+    background-color: rgb(190, 190, 190);
+    color: #000;
+}
+
+header > ul > li.active > a {
+    background-color: rgb(190, 190, 190);;
+    color: #000;
+}
+
+body > main  {
+    position: relative;
+}
+
+main > #home {
+    background-image: url("../image/img1.jpg");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    height: 700px;
+    z-index: 1;
+}
+
+main > #home::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+.icon {
+    position: absolute;
+    margin-left: 71%;
+    margin-top: 37%;
+}
+
+
+main > #home > .icon a img {
+    width: 40px;
+    margin: 15px;
+
+}
+
+.icon a img:hover {
+    width: 45px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: tomato;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.container > div > h1{
+    animation-delay: 1s;
+    color: transparent;
+}
+
+.container > div > h1:nth-child(1) {
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1s;
+    display: block;
+    font-family: Arial;
+    width: fit-content;
+    font-size: 3rem;
+    padding-left: 15%;
+    margin-top: 15%;
+    position: relative;
+}
+
+.container > div > h1:nth-child(2) {
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 2s;
+    display: block;
+    font-family: Arial;
+    width: fit-content;
+    font-size: 3rem;
+    padding-left: 15%;
+    margin-top: 7%;
+    position: relative;
+}
+
+.container > div > h1:nth-child(3) {
+    animation: text_reveal_name 1.5s ease forwards;
+    animation-delay: 3s;
+    display: block;
+    font-family: serif;
+    width: fit-content;
+    font-size: 5rem;
+    padding-left: 15%;
+    margin-top: 15%;
+    position: relative;
+}
+
+.container > div > h1:nth-child(4) {
+    animation: text_reveal 1s ease forwards;
+    animation-delay: 4s;
+    display: block;
+    font-family: Arial;
+    width: fit-content;
+    padding-left: 15%;
+    margin-top: 15%;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.container > div > h1 > span{
+    top: 0;
+    width: 0;
+    left: 0;
+    position: absolute;
+
+    animation-delay: 0.5s;
+    background-color: tomato;
+}
+
+.container > div > h1:nth-child(1) span{
+    animation: text_box 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.container > div > h1:nth-child(2) span{
+    animation: text_box 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.container > div > h1:nth-child(3) span{
+    animation: text_box 1s ease forwards;
+    animation-delay: 2.5s;
+}
+
+.container > div > h1:nth-child(4) span{
+    animation: text_box 1s ease forwards;
+    animation-delay: 3.5s;
+}
+
+@keyframes text_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+
+    100%{
+        width: 0;
+        left: 100%;
+    }
+
+}
+
+@keyframes text_reveal_name{
+    100%{
+        color: rgb(250, 204, 0);
+    }
+}
+
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+
+
+
+
+
+/* about...///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+main > #about {
+    display: flex;
+    position: relative;
+    background-color: rgb(12, 12, 12);
+    height: 700px;
+
+}
+
+#about > div {
+    position: relative;
+    background-color: rgb(39, 39, 39);
+    height: 95%;
+    width: 98%;
+    border-radius: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#about > div > h1 {
+    font-size: 3rem;
+    color: white;
+    top: 0;
+    position: absolute;
+    margin-left: 42%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#about > div > h1 > span {
+    font-size: 3rem;
+    color:  rgb(238, 202, 0);
+}
+
+#about > div > p {
+    font-size: 1rem;
+    color: white;
+    position: absolute;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    margin-top: 11%;
+    margin-left: 40%;
+    letter-spacing: 1px;
+
+}
+
+#about > div > img {
+    width: 290px;
+    height: 350px;
+    background-size: cover;
+    box-shadow: 15px -15px 1px 1px rgb(90, 90, 90);
+    position: absolute;
+    margin-top: 12%;
+    margin-left: 10%;
+    border: solid rgb(173, 137, 19) 5px;
+}
+
+#about > div > :nth-child(4){
+    background-color: rgb(78, 78, 78);
+    position: absolute;
+    width: 800px;
+    height: 40px;
+    margin-left: 40%;
+    margin-top: 16%;
+}
+
+#about > div > :nth-child(4) > p{
+    color: white;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 10px;
+    margin-left: 12px;
+
+}
+
+#about > div > :nth-child(5){
+    position: absolute;
+    background-color: rgb(78, 78, 78);
+    width: 800px;
+    height: 300px;
+    margin-left: 40%;
+    margin-top: 21%;
+    color: white;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 10px;
+}
+
+#about > div > :nth-child(5) > pre{
+    padding-left: 60px;
+    padding-top: 22px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+#about > div > :nth-child(6) > p{
+    padding-left: 1px;
+    padding-top: 22px;
+}
+
+#about > div > .cv{
+    color: white;
+    text-decoration: none;
+    border: 3px solid rgb(219, 184, 26);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    margin-top: 38%;
+    margin-left: 14.5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+#about > div > .cv:hover{
+    background-color: rgb(192, 20, 20);
+    border: solid white;
+}
+
+/* skill //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+main > #skill {
+    display: flex;
+    position: relative;
+    background-color: rgb(12, 12, 12);
+    height: 1100px;
+
+}
+
+#skill > div {
+    position: absolute;
+    background-color: rgb(39, 39, 39);
+    height: 100%;
+    width: 98%;
+    border-radius: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#skill > div > h1 {
+    font-size: 3rem;
+    color: white;
+    top: 0;
+    position: absolute;
+    margin-left: 42%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#skill > div > h1 > span {
+    font-size: 3rem;
+    color:  rgb(238, 202, 0);
+}
+
+#skill > div > p{
+    text-align: center;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin-top: 10%;
+    letter-spacing: 0.95px;
+}
+
+#skill > div > p > span{
+    color: rgb(255, 215, 104);
+}
+
+#skill > div > #program {
+    position: relative;
+    background-color: rgb(88, 87, 87);
+    height: 35%;
+    width: 87%;
+    border-radius: 15px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#skill > div > #network {
+    position: relative;
+    background-color: rgb(88, 87, 87);
+    height: 35%;
+    width: 87%;
+    border-radius: 15px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 40px;
+}
+
+#skill > div > #network > h1{
+    padding: 20px;
+    font-size: 27px;
+    color: #fff;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#skill > div > #program > h1{
+    padding: 20px;
+    font-size: 27px;
+    color: #fff;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#skill > div > #program > div{
+    position: absolute;
+    border: solid rgb(214, 0, 0) 5px;
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-left: 12%;
+    margin-top: 30px;
+}
+
+#skill > div > #program > div:nth-child(2){
+    background-image: url(../image/p1.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+#skill > div > #program > div:nth-child(3){
+    left: calc(100%/5);
+    background-image: url(../image/p2.png);
+    background-size: cover;
+}
+#skill > div > #program > div:nth-child(4){
+    left: calc((100%/5)*2);
+    background-image: url(../image/p3.png);
+    background-size: cover;
+}
+#skill > div > #program > div:nth-child(5){
+    left: calc((100%/5)*3);
+    background-image: url(../image/p4.jpg);
+    background-size: cover;
+}
+
+#skill > div > #network > div{
+    position: absolute;
+    border: solid rgb(214, 0, 0) 5px;
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-left: 12%;
+    margin-top: 30px;
+}
+
+#skill > div > #network > div:nth-child(2){
+    background-image: url(../image/n1.jpg);
+    background-size: cover;
+}
+
+#skill > div > #network > div:nth-child(3){
+    left: calc(100%/5);
+    background-image: url(../image/n2.jpg);
+    background-size: cover;
+}
+
+#skill > div > #network > div:nth-child(4){
+    left: calc((100%/5)*2);
+    background-image: url(../image/n3.jpg);
+    background-size: cover;
+}
+
+#skill > div > #network > div:nth-child(5){
+    left: calc((100%/5)*3);
+    background-image: url(../image/n4.png);
+    background-size: cover;
+    background-position-x: center;
+}
+
+/* projects ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+main > #project {
+    display: flex;
+    position: relative;
+    background-color: rgb(12, 12, 12);
+    height: 1000px;
+}
+
+#project > div {
+    position: absolute;
+    background-color: rgb(39, 39, 39);
+    height: 96%;
+    width: 98%;
+    border-radius: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#project > div > h1 {
+    font-size: 3rem;
+    color: white;
+    top: 0;
+    position: absolute;
+    text-align: center;
+    margin-left: 42%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#project > div > h1 > span {
+    font-size: 3rem;
+    color:  rgb(238, 202, 0);
+}
+
+#project > div > p{
+    text-align: center;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin-top: 10%;
+    letter-spacing: 0.95px;
+}
+
+#project > div > p > span{
+    color: rgb(255, 215, 104);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#project > div > .projects{
+    position: relative;
+    background-color: rgb(88, 87, 87);
+    height: 70%;
+    width: 90%;
+    border-radius: 15px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.projects > div{
+    position: absolute;
+    display: inline-block;
+    border: solid rgb(0, 120, 233) 5px;
+    background-color: #fff;
+    width: 380px;
+    height: 240px;
+    border-radius: 10px;
+    margin-left: 2%;
+    margin-top: 60px;
+    color: transparent;
+    z-index: 1;
+}
+
+.projects > div::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+.projects > div:nth-child(1){
+    background-image: url(../image/hotel.png);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.projects > div:nth-child(1) > p{
+    margin-top: 70px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.projects > div:nth-child(1) > p span{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.projects > div:nth-child(1):hover{
+    color: rgb(255, 179, 179);
+    transition-duration: 00.8s;
+}
+
+.projects > div a .buton{
+    width: 100px;
+    height: 20px;
+    margin-left: 20px;
+    border: solid rgb(252, 156, 156) 2px;
+    color: rgb(252, 156, 156);
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 1px;
+}
+
+.buton span{
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.projects > div a .buton:hover{
+    color: rgb(248, 74, 43);
+    border: solid rgb(248, 74, 43);
+}
+
+.projects > div:nth-child(2){
+    left: calc(100%/3);
+    background-image: url(../image/wholesale.png);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.projects > div:nth-child(2) > p{
+    margin-top: 70px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.projects > div:nth-child(2) > p span{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.projects > div:nth-child(2):hover{
+    color: rgb(255, 179, 179);
+    transition-duration: 00.8s;
+}
+
+.projects > div:nth-child(3){
+    left: calc((100%/3)*2);
+    background-image: url(../image/vehicle.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.projects > div:nth-child(3) > p{
+    margin-top: 70px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.projects > div:nth-child(3) > p span{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.projects > div:nth-child(3):hover{
+    color: rgb(255, 179, 179);
+    transition-duration: 00.8s;
+}
+
+.projects > div:nth-child(4){
+    top: calc(100%/2);
+    background-image: url(../image/super.webp);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.projects > div:nth-child(4) > p{
+    margin-top: 70px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.projects > div:nth-child(4) > p span{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.projects > div:nth-child(4):hover{
+    color: rgb(255, 179, 179);
+    transition-duration: 00.8s;
+}
+
+.projects > div:nth-child(5){
+    top: calc(100%/2);
+    left: calc(100%/3);
+    background-image: url(../image/student.png);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.projects > div:nth-child(5) > p{
+    margin-top: 70px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.projects > div:nth-child(5) > p span{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.projects > div:nth-child(5):hover{
+    color: rgb(255, 179, 179);
+    transition-duration: 00.8s;
+}
+
+.projects > div:nth-child(6){
+    top: calc(100%/2);
+    left: calc((100%/3)*2);
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.projects > div:nth-child(6) > a{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(94, 193, 250);
+    position: absolute;
+    margin-top: 30%;
+    margin-left: 35%;
+    text-decoration-line: underline;
+}
+
+.projects > div:nth-child(6) > a:hover{
+    color: rgb(176, 249, 252);
+}
+
+.projects > div > .name{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(29, 58, 121);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.name > span{
+    position: absolute;
+    left: 20px;
+    top: 8px;
+
+}
+
+
+/* education /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+main > #education {
+    display: flex;
+    position: relative;
+    background-color: rgb(12, 12, 12);
+    height: 1000px;
+}
+
+#education > div {
+    position: absolute;
+    background-color: rgb(39, 39, 39);
+    height: 100%;
+    width: 98%;
+    border-radius: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#education > div > h1 {
+    font-size: 3rem;
+    color: white;
+    top: 0;
+    position: absolute;
+    text-align: center;
+    margin-left: 40%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#education > div > h1 > span {
+    font-size: 3rem;
+    color:  rgb(238, 202, 0);
+}
+
+#education > div > p{
+    text-align: center;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin-top: 10%;
+    letter-spacing: 0.95px;
+}
+
+#education > div > p > span{
+    color: rgb(255, 215, 104);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#education > div > .edu{
+    position: relative;
+    background-color: rgb(88, 87, 87);
+    height: 70%;
+    width: 90%;
+    border-radius: 15px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.edu >section{
+    position: absolute;
+    width: 8px;
+    height: 600px;
+    left: 49%;
+    top: 8%;
+    background-color: rgb(96, 191, 255);
+    border-radius: 100%;
+}
+
+.edu > div{
+    color: white;
+    left: 10%;
+    width: 350px;
+    height: 200px;
+    position: absolute;
+}
+
+.edu > div > div{
+    width: 100%;
+    height: 30%;
+    background-color: rgb(131, 131, 131);
+}
+
+.edu > div:nth-child(2){
+    border-left: solid rgb(0, 160, 144) 8px;
+    left: 240px;
+    top: 100px;
+}
+
+.edu > div:nth-child(3){
+    border-right: solid rgb(0, 160, 144) 8px;
+    left: 710px;
+    top: 250px;
+}
+
+.edu > div:nth-child(4){
+    border-left: solid rgb(0, 160, 144) 8px;
+    left: 240px;
+    top: 400px;
+}
+
+.edu > div > h1{
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.edu > div > div > span{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.edu > div > span{
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.edu > div:nth-child(3) > span{
+    margin-left: 70px;
+}
+
+
+/* services ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+main > #service {
+    display: flex;
+    position: relative;
+    background-color: rgb(12, 12, 12);
+    height: 900px;
+}
+
+#service > div {
+    position: relative;
+    background-color: rgb(39, 39, 39);
+    height: 96%;
+    width: 98%;
+    border-radius: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#service > div > h1 {
+    font-size: 3rem;
+    color: white;
+    top: 0;
+    position: absolute;
+    text-align: center;
+    margin-left: 40%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#service > div > h1 > span {
+    font-size: 3rem;
+    color:  rgb(238, 202, 0);
+}
+
+#service > div > .services{
+    position: relative;
+    background-color: rgb(99, 99, 99);
+    height: 75%;
+    width: 90%;
+    border-radius: 15px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.services > div{
+    width: 380px;
+    height: 300px;
+    background-color: thistle;
+    position: absolute;
+    border: solid rgb(190, 167, 31) 3px;
+    z-index: 1;
+    color: transparent;
+}
+
+
+.services > div:nth-child(1){
+    margin-top: 12%;
+    margin-left: 5%;
+    background-image: url(../image/desktop.png);
+    background-size: cover;
+    background-position-x: center;
+    perspective: 3000px;
+    position: absolute;
+}
+
+.services > div:nth-child(1) > p{
+    margin-top: 50px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.services > div:nth-child(1) > p span{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.services > div:nth-child(1):hover{
+    color: rgb(102, 255, 127);
+    transition-duration: 00.8s;
+    transform: translateY(-10%);
+}
+
+.services > div:nth-child(2){
+    margin-top: 12%;
+    margin-left: 36%;
+    background-image: url(../image/mobile.jpg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.services > div:nth-child(2) > p{
+    margin-top: 50px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.services > div:nth-child(2) > p span{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.services > div:nth-child(2):hover{
+    color: rgb(102, 255, 127);
+    transition-duration: 00.8s;
+    transform: translateY(-10%);
+
+}
+
+.services > div:nth-child(3){
+    margin-top: 12%;
+    margin-left: 67%;
+    background-image: url(../image/network.jpg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.services > div:nth-child(3) > p{
+    margin-top: 50px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.services > div:nth-child(3) > p span{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.services > div:nth-child(3):hover{
+    color: rgb(102, 255, 127);
+    transition-duration: 00.8s;
+    transform: translateY(-10%);
+}
+
+.services > div:nth-child(3)
+{
+    animation-name: box;
+    animation-direction: alternate;
+    transition-duration: 00.8s;
+    animation-duration: 0.9s;
+    animation-iteration-count: 1;
+}
+
+@keyframes box {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(10deg);
+    }
+
+    50%{
+        transform: rotate(-10deg);
+    }
+
+    75%{
+        transform: rotate(-10deg);
+    }
+
+    100%{
+        transform: rotate(10deg);
+    }
+}
+
+.services > div::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+.services > div > div{
+    position: relative;
+    width: 100%;
+    height: 15%;
+    background-color: rgb(90, 90, 90);
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: rgb(185, 255, 176);
+}
+
+.services > div > div > span{
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    justify-content: center;
+}
+
+.services > a > span{
+    text-decoration: underline;
+    position: absolute;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 232, 232);
+    top: 550px;
+    left: 45%;
+    font-weight: 500;
+}
+
+.services > a > span:hover{
+    color: rgb(143, 191, 255);
+    font-weight: 510;
+}
+
+
+/* contact///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+main > #contact {
+    display: flex;
+    position: relative;
+    background-color: rgb(12, 12, 12);
+    height: 900px;
+}
+
+#contact > div {
+    position: relative;
+    background-color: rgb(39, 39, 39);
+    height: 96%;
+    width: 98%;
+    border-radius: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#contact > div > h1 {
+    font-size: 3rem;
+    color: white;
+    top: 0;
+    position: absolute;
+    text-align: center;
+    margin-left: 40%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#contact > div > h1 > span {
+    font-size: 3rem;
+    color:  rgb(238, 202, 0);
+}
+
+#contact > div > .detail{
+    background-color: transparent;
+    position: absolute;
+    height: 75%;
+    width: 40%;
+    border-radius: 15px;
+    left: 5%;
+    margin-top: 10%;
+
+}
+
+.detail p:nth-child(1){
+    font-size: 35px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    font-weight: 800;
+    margin-left: 10%;
+}
+
+.detail div:nth-child(2) {
+    margin-left: 10%;
+    width: 60%;
+    height: 26%;
+    background-color: rgb(99, 99, 99);
+    border-radius: 8px;
+}
+
+.detail  div:nth-child(2) a img{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 130px;
+}
+
+.detail  div:nth-child(2) a  span {
+    position: absolute;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    color: white;
+    margin-top: 130px;
+    margin-left: 105px;
+}
+
+.detail div:nth-child(3) {
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 60%;
+    height: 26%;
+    background-color: rgb(99, 99, 99);
+    border-radius: 8px;
+}
+
+.detail  div:nth-child(3) img{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 130px;
+}
+
+.detail div:nth-child(3) span{
+    position: absolute;
+    font-size: 22px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    color: white;
+    margin-top: 120px;
+    margin-left: 115px;
+}
+
+.detail div:nth-child(4){
+    margin-top: 40px;
+    margin-left: 9%;
+    width: 60%;
+    height: 7%;
+}
+
+.detail p:nth-child(5){
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    margin-top: 40px;
+    margin-left: 10%;
+}
+
+.icons  a img {
+    width: 35px;
+    margin: 10px;
+}
+
+.icons  a img:hover {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(129, 188, 255);
+}
+
+#contact  div  .inputs{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(99, 99, 99);
+    height: 70%;
+    width: 50%;
+    border-radius: 15px;
+    margin-left: 40%;
+    margin-top: 13%;
+}
+
+input[type=text], select {
+    width: 70%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 3px solid #c01725;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 10%;
+    left: 30px;
+}
+
+input[type=text]:hover {
+    border: 3px solid #389bc2;
+}
+
+input[type=email], select {
+    width: 70%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 3px solid #c01725;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    left: 30px;
+}
+
+input[type=email]:hover {
+    border: 3px solid #3e9bc0;
+}
+
+input[type=subject], select {
+    width: 70%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 3px solid #c01725;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40%;
+    left: 30px;
+}
+
+input[type=subject]:hover {
+    border: 3px solid #3294bb;
+}
+
+input[type=textarea], select {
+    width: 80%;
+    height: 165px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #c01725;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 55%;
+    left: 30px;
+}
+
+input[type=textarea]:hover {
+    border: 3px solid #3996bb;
+}
+
+.button{
+    width: 100px;
+    padding: 9px 15px;
+    height: 21px;
+    background-color: #b92e3a;
+    cursor: pointer;
+    border: solid rgb(255, 185, 185) 2px;
+    font-weight: 500;
+    border-radius: 8px;
+    position: absolute;
+    top: 88%;
+    left: 33px;
+    color: white;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.button:hover{
+    background-color: rgb(255, 68, 68);
+}

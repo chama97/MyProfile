@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyServices</title>
+    <style>
+
+        header {
+            position: relative;
+            height: 75px;
+            box-shadow: -2px 6px 9px -4px #fffefe;
+            background-color: #363636;
+            border-bottom: 3px solid rgb(226, 226, 226);
+        }
+
+        header > img {
+            position: absolute;
+            width: 40px;
+            margin: 15px;
+            margin-left: 3%;
+        }
+
+        header >  h1  {   
+            position: absolute;
+            font-size: 28px;
+            font-family: 'Syncopate', sans-serif;
+            letter-spacing: 3px;
+            color: #fff;
+            margin-left: 6%;
+            margin-top: 23px;
+        }
+
+        body > main  {
+            position: relative;
+        }
+
+        main > #service {
+            display: flex;
+            position: relative;
+            background-color: rgb(12, 12, 12);
+            height: 1500px;
+        }
+
+        #service > div {
+            position: relative;
+            background-color: rgb(39, 39, 39);
+            height: 96%;
+            width: 98%;
+            border-radius: 20px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #service > div > h1 {
+            font-size: 3rem;
+            color: white;
+            top: 0;
+            position: absolute;
+            text-align: center;
+            margin-left: 40%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;     
+        }
+
+        #service > div > h1 > span {
+            font-size: 3rem;
+            color:  rgb(238, 202, 0);   
+        }
+
+        #service > div > .services{
+            position: relative;
+            background-color: rgb(99, 99, 99);
+            height: 80%;
+            width: 90%;
+            border-radius: 15px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: 10%;
+        }
+
+        .services > div{
+            width: 380px;
+            height: 300px;
+            background-color: thistle;
+            position: absolute;
+            border: solid rgb(190, 167, 31) 3px;
+            z-index: 1;
+            color: transparent;
+        }
+
+
+        .services > div:nth-child(1){
+            margin-top: 9%;
+            margin-left: 5%;
+            background-image: url(assets/image/desktop.png);  
+            background-size: cover;
+            background-position-x: center;        
+            perspective: 3000px;
+            position: absolute;
+        }
+
+        .services > div:nth-child(1) > p{
+            margin-top: 50px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .services > div:nth-child(1) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .services > div:nth-child(1):hover{
+            color: rgb(102, 255, 127);
+            transition-duration: 00.8s;
+            transform: translateY(-10%);
+            transform-style: preserve -3d;
+        }
+
+        .services > div:nth-child(2){
+            margin-top: 9%;
+            margin-left: 36%;
+            background-image: url(assets/image/mobile.jpg);  
+            background-size: cover;
+            background-position-y: center;
+        }
+
+        .services > div:nth-child(2) > p{
+            margin-top: 50px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .services > div:nth-child(2) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .services > div:nth-child(2):hover{
+            color: rgb(102, 255, 127);
+            transition-duration: 00.8s;
+            transform: translateY(-10%);
+            transform-style: preserve -3d;
+        }
+
+        .services > div:nth-child(3){
+            margin-top: 9%;
+            margin-left: 67%;
+            background-image: url(assets/image/network.jpg);  
+            background-size: cover;
+            background-position-y: center;
+       
+        }
+
+        .services > div:nth-child(3) > p{
+            margin-top: 50px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .services > div:nth-child(3) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .services > div:nth-child(3):hover{
+            color: rgb(102, 255, 127);
+            transition-duration: 00.8s;
+            transform: translateY(-10%);
+            transform-style: preserve -3d;
+        }
+
+        .services > div:nth-child(4){
+            margin-top: 40%;
+            margin-left: 5%;
+            background-image: url(assets/image/network.jpg);  
+            background-size: cover;
+            background-position-y: center;
+       
+        }
+
+        .services > div:nth-child(4) > p{
+            margin-top: 50px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .services > div:nth-child(4) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .services > div:nth-child(4):hover{
+            color: rgb(102, 255, 127);
+            transition-duration: 00.8s;
+            transform: translateY(-10%);
+            transform-style: preserve -3d;
+        }
+
+        .services > div:nth-child(5){
+            margin-top: 40%;
+            margin-left: 36%;
+        }
+
+        .services > div:nth-child(6){
+            margin-top: 40%;
+            margin-left: 67%;
+        }
+        
+
+        .services > div::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: .7; 
+            z-index: -1; 
+        }
+
+        .services > div > div{
+            position: relative;
+            width: 100%;
+            height: 15%;
+            background-color: rgb(90, 90, 90);
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+            color: rgb(185, 255, 176);
+        }
+
+        .services > div > div > span{
+            position: absolute;
+            top: 13px;
+            left: 15px;
+            justify-content: center;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img alt="" src="assets/image/img0.png">
+         <h1>CTech.com</h1>
+    </header>
+
+    <main>
+        <section id="service">
+            <div>
+                <h1> My<span> Services</span></h1>
+                <section class="services">
+                    <div>
+                        <div><span>Desktop Applicaton</span></div>
+                         <p>Create and develop desktop applications <br><br><span>Java, MySQL, Hibernate</span><br> <br> life-Time guaranty</p>
+                    </div>
+
+                    <div>
+                        <div><span>Mobile Applicaton</span></div>
+                        <p>Create and develop Mobile applications <br><br><span>Java, MySQL, Hibernate</span> <br><br> life-Time guaranty</p>
+                    </div>
+
+                    <div>
+                        <div><span>Computer Networking</span></div>
+                        <p>Slove your Computer network troubleshooting <br><br><span>Network wiring</span> <br><br> Router and Switching</p>
+                    </div>
+
+                    <div>
+                        <div><span>Web Applicaton</span></div>
+                        <p>Create and develop web applications <br><br><span>Html, CSS, JavaScript</span> <br><br> life-Time guaranty</p>
+                        
+                    </div>
+
+                    <div></div>
+                    <div></div>
+                    
+                </section>
+            </div>
+        </section>
+
+    </main>
+    
+</body>
+</html>

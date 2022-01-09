@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyProjects</title>
+    <style>
+
+        header {
+            position: relative;
+            height: 75px;
+            box-shadow: -2px 6px 9px -4px #fffefe;
+            background-color: #363636;
+            border-bottom: 3px solid rgb(226, 226, 226);
+        }
+
+        header > img {
+            position: absolute;
+            width: 40px;
+            margin: 15px;
+            margin-left: 3%;
+        }
+
+        header >  h1  {   
+            position: absolute;
+            font-size: 28px;
+            font-family: 'Syncopate', sans-serif;
+            letter-spacing: 3px;
+            color: #fff;
+            margin-left: 6%;
+            margin-top: 23px;
+        }
+
+        body > main  {
+            position: relative;
+        }
+
+        main > #project {
+            display: flex;
+            position: relative;
+            background-color: rgb(12, 12, 12);
+            height: 1500px;
+        }
+
+        #project > div {
+            position: absolute;
+            background-color: rgb(39, 39, 39);
+            height: 96%;
+            width: 98%;
+            border-radius: 20px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #project > div > h1 {
+            font-size: 3rem;
+            color: white;
+            top: 0;
+            position: absolute;
+            text-align: center;
+            margin-left: 42%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;     
+        }
+
+        #project > div > h1 > span {
+            font-size: 3rem;
+            color:  rgb(238, 202, 0);   
+        }
+
+        #project > div > p{
+            text-align: center;
+            font-size: 18px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+            margin-top: 10%;
+            letter-spacing: 0.95px;          
+        }
+
+        #project > div > p > span{
+            color: rgb(255, 215, 104);
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        #project > div > .projects{
+            position: relative;
+            background-color: rgb(88, 87, 87);
+            height: 80%;
+            width: 90%;
+            border-radius: 15px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+       .projects > div{
+            position: absolute;
+            display: inline-block;         
+            border: solid rgb(0, 120, 233) 5px;
+            background-color: #fff;
+            width: 380px;
+            height: 240px;
+            border-radius: 10px;
+            margin-left: 2%; 
+            margin-top: 60px;   
+            color: transparent;
+            z-index: 1;                       
+        }
+
+        .projects > div::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: .7; 
+            z-index: -1; 
+        }
+
+        .projects > div:nth-child(1){      
+            background-image: url(assets/image/hotel.png);  
+            background-size: cover;
+            background-position-x: center;
+        }
+
+        .projects > div:nth-child(1) > p{
+            margin-top: 70px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .projects > div:nth-child(1) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .projects > div:nth-child(1):hover{
+            color: rgb(255, 179, 179);
+            transition-duration: 00.8s;
+        }
+
+        .projects > div a .buton{
+            width: 100px;
+            height: 20px;
+            margin-left: 20px;
+            border: solid rgb(252, 156, 156) 2px;
+            color: rgb(252, 156, 156);
+            text-align: center;
+            padding-top: 3px;
+            padding-bottom: 1px;
+        }
+
+        .buton span{
+            text-decoration: none; 
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .projects > div a .buton:hover{
+            color: rgb(248, 74, 43);
+            border: solid rgb(248, 74, 43);
+        }
+
+        .projects > div:nth-child(2){
+            left: calc(100%/3);
+            background-image: url(assets/image/wholesale.png);  
+            background-size: cover;
+            background-position-x: center;
+        }
+
+        .projects > div:nth-child(2) > p{
+            margin-top: 70px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .projects > div:nth-child(2) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .projects > div:nth-child(2):hover{
+            color: rgb(255, 179, 179);
+            transition-duration: 00.8s;
+        }
+
+        .projects > div:nth-child(3){
+            left: calc((100%/3)*2); 
+            background-image: url(assets/image/vehicle.jpg);  
+            background-size: cover;
+            background-position-x: center;
+        }
+
+        .projects > div:nth-child(3) > p{
+            margin-top: 70px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .projects > div:nth-child(3) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .projects > div:nth-child(3):hover{
+            color: rgb(255, 179, 179);
+            transition-duration: 00.8s;
+        }
+
+        .projects > div:nth-child(4){
+            top: calc(100%/3); 
+            background-image: url(assets/image/super.webp);  
+            background-size: cover;
+            background-position-x: center;
+        }
+
+        .projects > div:nth-child(4) > p{
+            margin-top: 70px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .projects > div:nth-child(4) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .projects > div:nth-child(4):hover{
+            color: rgb(255, 179, 179);
+            transition-duration: 00.8s;
+        }
+
+        .projects > div:nth-child(5){
+            top: calc(100%/3); 
+            left: calc(100%/3); 
+            background-image: url(assets/image/student.png);  
+            background-size: cover;
+            background-position-x: center;
+        }
+
+        .projects > div:nth-child(5) > p{
+            margin-top: 70px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .projects > div:nth-child(5) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .projects > div:nth-child(5):hover{
+            color: rgb(255, 179, 179);
+            transition-duration: 00.8s;
+        }
+
+        .projects > div:nth-child(6){
+            top: calc(100%/3); 
+            left: calc((100%/3)*2);
+            background-color: transparent;
+            border-color: transparent;                         
+        }
+
+        .projects > div:nth-child(6) > span{
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            color: rgb(119, 119, 119);
+            position: absolute;
+            margin-top: 30%;
+            margin-left: 37%;
+            text-decoration-line: underline;
+        }
+
+        .projects > div:nth-child(7){
+            top: calc((100%/3)*2); 
+            background-color: transparent;
+            border-color: transparent;                         
+        }
+
+        .projects > div:nth-child(7) > span{
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            color: rgb(119, 119, 119);
+            position: absolute;
+            margin-top: 30%;
+            margin-left: 37%;
+            text-decoration-line: underline;
+        }
+
+        .projects > div:nth-child(8){
+            top: calc((100%/3)*2); 
+            left: calc(100%/3);
+            background-color: transparent;
+            border-color: transparent;                         
+        }
+
+        .projects > div:nth-child(8) > span{
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            color: rgb(119, 119, 119);
+            position: absolute;
+            margin-top: 30%;
+            margin-left: 37%;
+            text-decoration-line: underline;
+        }
+
+        .projects > div:nth-child(9){
+            top: calc((100%/3)*2); 
+            left: calc((100%/3)*2);
+            background-color: transparent;
+            border-color: transparent;                         
+        }
+
+        .projects > div:nth-child(9) > span{
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            color: rgb(119, 119, 119);
+            position: absolute;
+            margin-top: 30%;
+            margin-left: 37%;
+            text-decoration-line: underline;
+        }
+
+
+
+        
+        .projects > div > .name{
+            width: 100%;
+            height: 20%;
+            position: absolute;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgb(29, 58, 121);
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+
+        .name > span{
+            position: absolute;
+            left: 20px;
+            top: 8px;
+            
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img alt="" src="assets/image/img0.png">
+         <h1>CTech.com</h1>
+    </header>
+
+    <main>
+        <section id="project">
+            <div>
+                <h1> My<span> projects</span></h1>
+                <p> I have done some projects using <span> Java(MySQL)</span> as (Student Management System, Hotel Management System, Wholesale Management System, etc) . <br> And 
+                    I have Used  <span> Hibernate </span>  framework to some projects.
+                </p>
+                <section class="projects">
+                    <div>
+                        <div class="name"><span>Hotel Management System</span></div>
+                        <p><span>JavaFX (MVC), MySQL</span> <br> Reserve room <br>Select meals packages <br>Rent Vehicle <br>Income Report</p>
+                        <a href="https://github.com/chama97/Hotel_Management_System">
+                            <div class="buton"> <span>Download</span></div>
+                        </a>
+                    </div>
+
+                    <div>
+                        <div class="name"><span>Wholesale Management System</span></div>    
+                        <p><span>JavaFX (MVC), MySQL</span> <br> Place Order <br> Income Report <br>Customer Details <br> Item Details</p>
+                        <a href="https://github.com/chama97/Wholesale_Management_System">
+                            <div class="buton"> <span>Download</span></div>   
+                        </a>
+                    </div>
+
+                    <div>
+                        <div class="name"><span>Vehicle Parking System</span></div>
+                        <p><span>JavaFX(MVC) OOp Concepts</span> <br> Add Vehicle <br> Add driver <br>Find Parking slot <br>View Vehicle</p>
+                        <a href="https://github.com/chama97/Vehicle_Parking_System">
+                            <div class="buton"> <span>Download</span></div>   
+                        </a>
+                    </div>
+
+                    <div>
+                        <div class="name"><span>Supermarket Management System</span></div>
+                        <p><span>JavaFX(Layered), MySQL</span> <br> Place Order <br> Customer Details<br>Income Report <br>View Order details</p>
+                        <a href="https://github.com/chama97/Super_Market_Management_System-Hibernate-">
+                            <div class="buton"> <span>Download</span></div>   
+                        </a>
+                    </div>
+
+                    <div>
+                        <div class="name"><span>Institute Management System</span></div>
+                        <p><span>JavaFX, MySQL, Hibernate</span> <br> Add student <br>Add Program <br>View Details <br>Income report</p>
+                        <a href="https://github.com/chama97/Institute_Management_System">
+                            <div class="buton"> <span>Download</span></div>
+                        </a>
+                    </div>
+
+                    <div>
+                       <span>Empty</span>
+                    </div>
+
+                    <div>
+                        <span>Empty</span>
+                     </div>
+
+                     <div>
+                        <span>Empty</span>
+                     </div>
+
+                     <div>
+                        <span>Empty</span>
+                     </div>
+        
+
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

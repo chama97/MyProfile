@@ -10,8 +10,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Syncopate&display=swap" rel="stylesheet">
     <style>
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ffd04f;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #daa700;
+        }
+        
         header {
             position: relative;
+            width: 100%;
             height: 75px;
             box-shadow: -2px 6px 9px -4px #fffefe;
             background-color: #363636;
@@ -103,26 +121,33 @@
         }
 
 
-        main > #home > .icon > img {     
+        main > #home > .icon a img {     
             width: 40px;
             margin: 15px;
        
         }
 
-        .icon > img:hover {   
+        .icon a img:hover {   
             width: 45px;
             cursor: pointer;
             border-radius: 5px;
             background-color: tomato;
         }
 
-          .container {
+        .container {
            min-height: 100vh;
            width: 100%;
            display: flex;  
         }
 
-        #home > .container > div > h1 {
+        .container > div > h1{  
+            animation-delay: 1s;
+            color: transparent;
+        }
+
+       .container > div > h1:nth-child(1) {
+            animation: text_reveal 0.5s ease forwards;
+            animation-delay: 1s;
             display: block;
             font-family: Arial;
             width: fit-content;
@@ -130,29 +155,102 @@
             padding-left: 15%;
             margin-top: 15%;
             position: relative;
-            color: #fff;
         }
 
-        #home > .container > div > h2 {
+        .container > div > h1:nth-child(2) {
+            animation: text_reveal 0.5s ease forwards;
+            animation-delay: 2s;
             display: block;
+            font-family: Arial;
+            width: fit-content;
+            font-size: 3rem;
+            padding-left: 15%;
+            margin-top: 7%;
+            position: relative;
+        }
+
+        .container > div > h1:nth-child(3) {
+            animation: text_reveal_name 1.5s ease forwards;
+            animation-delay: 3s;
+            display: block;
+            font-family: serif;
             width: fit-content;
             font-size: 5rem;
             padding-left: 15%;
             margin-top: 15%;
             position: relative;
-            color: rgb(238, 154, 27);
         }
 
-        #home > .container > div > h3 {
+        .container > div > h1:nth-child(4) {
+            animation: text_reveal 1s ease forwards;
+            animation-delay: 4s;
             display: block;
             font-family: Arial;
             width: fit-content;
             padding-left: 15%;
-            margin-top: 20%;
+            margin-top: 15%;
             font-size: 1.5rem;
             position: relative;
-            color: rgb(255, 242, 221);
         }
+
+        .container > div > h1 > span{
+            top: 0;
+            width: 0;
+            left: 0;
+            position: absolute;
+           
+            animation-delay: 0.5s;
+            background-color: tomato;
+        }
+
+        .container > div > h1:nth-child(1) span{
+            animation: text_box 1s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .container > div > h1:nth-child(2) span{
+            animation: text_box 1s ease forwards;
+            animation-delay: 1.5s;
+        }
+
+        .container > div > h1:nth-child(3) span{
+            animation: text_box 1s ease forwards;
+            animation-delay: 2.5s;
+        }
+
+        .container > div > h1:nth-child(4) span{
+            animation: text_box 1s ease forwards;
+            animation-delay: 3.5s;
+        }
+        
+        @keyframes text_box{
+            50%{
+                width: 100%;
+                left: 0;
+            }
+
+            100%{
+                width: 0;
+                left: 100%;
+            }
+
+        }
+
+        @keyframes text_reveal_name{
+            100%{
+                color: rgb(250, 204, 0);
+            }
+        }
+
+        @keyframes text_reveal{
+            100%{
+                color: white;
+            }
+        }
+
+       
+
+
 
         /* about...///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -207,7 +305,7 @@
             width: 290px;
             height: 350px;
             background-size: cover;
-            box-shadow: 10px -10px 1px 1px rgb(179, 170, 134);  
+            box-shadow: 15px -15px 1px 1px rgb(90, 90, 90);  
             position: absolute;
             margin-top: 12%;
             margin-left: 10%;
@@ -271,13 +369,11 @@
             margin-left: 14.5%;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-weight: 600;
-
         }
 
         #about > div > .cv:hover{
-            background-color: rgb(218, 0, 0);
+            background-color: rgb(192, 20, 20);
             border: solid white;
-            font-size: 18px;
         }
 
         /* skill //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -494,7 +590,7 @@
             font-weight: 500;
         }
 
-        #project > div > section{
+        #project > div > .projects{
             position: relative;
             background-color: rgb(88, 87, 87);
             height: 70%;
@@ -508,7 +604,7 @@
             margin-top: 50px;
         }
 
-        #project > div > section > div{
+       .projects > div{
             position: absolute;
             display: inline-block;         
             border: solid rgb(0, 120, 233) 5px;
@@ -518,69 +614,198 @@
             border-radius: 10px;
             margin-left: 2%; 
             margin-top: 60px;   
+            color: transparent;
             z-index: 1;                       
         }
 
-        #project > div > section > div:nth-child(1){
-            background-image: url(assets/image/p1.jpg);  
+        .projects > div::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: .7; 
+            z-index: -1; 
+        }
+
+        .projects > div:nth-child(1){      
+            background-image: url(assets/image/hotel.png);  
             background-size: cover;
             background-position-x: center;
         }
 
-        #project > div > section > div:nth-child(2){
+        .projects > div:nth-child(1) > p{
+            margin-top: 70px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .projects > div:nth-child(1) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .projects > div:nth-child(1):hover{
+            color: rgb(255, 179, 179);
+            transition-duration: 00.8s;
+        }
+
+        .projects > div a .buton{
+            width: 100px;
+            height: 20px;
+            margin-left: 20px;
+            border: solid rgb(252, 156, 156) 2px;
+            color: rgb(252, 156, 156);
+            text-align: center;
+            padding-top: 3px;
+            padding-bottom: 1px;
+        }
+
+        .buton span{
+            text-decoration: none; 
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .projects > div a .buton:hover{
+            color: rgb(248, 74, 43);
+            border: solid rgb(248, 74, 43);
+        }
+
+        .projects > div:nth-child(2){
             left: calc(100%/3);
-            background-image: url(assets/image/p1.jpg);  
+            background-image: url(assets/image/wholesale.png);  
             background-size: cover;
             background-position-x: center;
         }
 
-        #project > div > section > div:nth-child(3){
+        .projects > div:nth-child(2) > p{
+            margin-top: 70px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .projects > div:nth-child(2) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .projects > div:nth-child(2):hover{
+            color: rgb(255, 179, 179);
+            transition-duration: 00.8s;
+        }
+
+        .projects > div:nth-child(3){
             left: calc((100%/3)*2); 
-            background-image: url(assets/image/p1.jpg);  
+            background-image: url(assets/image/vehicle.jpg);  
             background-size: cover;
             background-position-x: center;
         }
 
-        #project > div > section > div:nth-child(4){
+        .projects > div:nth-child(3) > p{
+            margin-top: 70px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .projects > div:nth-child(3) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .projects > div:nth-child(3):hover{
+            color: rgb(255, 179, 179);
+            transition-duration: 00.8s;
+        }
+
+        .projects > div:nth-child(4){
             top: calc(100%/2); 
-            background-image: url(assets/image/p1.jpg);  
+            background-image: url(assets/image/super.webp);  
             background-size: cover;
             background-position-x: center;
         }
 
-        #project > div > section > div:nth-child(5){
+        .projects > div:nth-child(4) > p{
+            margin-top: 70px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .projects > div:nth-child(4) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .projects > div:nth-child(4):hover{
+            color: rgb(255, 179, 179);
+            transition-duration: 00.8s;
+        }
+
+        .projects > div:nth-child(5){
             top: calc(100%/2); 
             left: calc(100%/3); 
-            background-image: url(assets/image/p1.jpg);  
+            background-image: url(assets/image/student.png);  
             background-size: cover;
             background-position-x: center;
         }
 
-        #project > div > section > div:nth-child(6){
+        .projects > div:nth-child(5) > p{
+            margin-top: 70px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .projects > div:nth-child(5) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .projects > div:nth-child(5):hover{
+            color: rgb(255, 179, 179);
+            transition-duration: 00.8s;
+        }
+
+        .projects > div:nth-child(6){
             top: calc(100%/2); 
             left: calc((100%/3)*2);
             background-color: transparent;
             border-color: transparent;                         
         }
 
-        #project > div > section > div:nth-child(6) > a{
+        .projects > div:nth-child(6) > a{
             font-size: 20px;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: 600;
             text-align: center;
-            color: rgb(111, 202, 255);
+            color: rgb(94, 193, 250);
             position: absolute;
-            margin-top: 35%;
-            margin-left: 30%;
+            margin-top: 30%;
+            margin-left: 35%;
             text-decoration-line: underline;
         }
 
-        #project > div > section > div:nth-child(6) > a:hover{
-            color: rgb(162, 244, 247);
-            font-size: 23px;
+        .projects > div:nth-child(6) > a:hover{
+            color: rgb(176, 249, 252);
         }
 
-       .detail{
+        .projects > div > .name{
             width: 100%;
             height: 20%;
             position: absolute;
@@ -593,7 +818,7 @@
             border-top-right-radius: 6px;
         }
 
-        .detail > span{
+        .name > span{
             position: absolute;
             left: 20px;
             top: 8px;
@@ -797,6 +1022,7 @@
             position: absolute;
             border: solid rgb(190, 167, 31) 3px;
             z-index: 1;
+            color: transparent;
         }
 
 
@@ -810,10 +1036,26 @@
             position: absolute;
         }
 
-        /* .services > div:nth-child(1):hover{
-            transform: translate(-50%, -50%);
-            transform-style: preserve-3d;
-        } */
+        .services > div:nth-child(1) > p{
+            margin-top: 50px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .services > div:nth-child(1) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .services > div:nth-child(1):hover{
+            color: rgb(102, 255, 127);
+            transition-duration: 00.8s;
+            transform: translateY(-10%);
+            transform-style: preserve -3d;
+        }
 
         .services > div:nth-child(2){
             margin-top: 12%;
@@ -823,13 +1065,85 @@
             background-position-y: center;
         }
 
+        .services > div:nth-child(2) > p{
+            margin-top: 50px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .services > div:nth-child(2) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .services > div:nth-child(2):hover{
+            color: rgb(102, 255, 127);
+            transition-duration: 00.8s;
+            transform: translateY(-10%);
+            transform-style: preserve -3d;
+        }
+
         .services > div:nth-child(3){
             margin-top: 12%;
             margin-left: 67%;
             background-image: url(assets/image/network.jpg);  
             background-size: cover;
-            background-position-y: center;
-       
+            background-position-y: center;  
+        }
+
+        .services > div:nth-child(3) > p{
+            margin-top: 50px;
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .services > div:nth-child(3) > p span{            
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .services > div:nth-child(3):hover{
+            color: rgb(102, 255, 127);
+            transition-duration: 00.8s;
+            transform: translateY(-10%);
+            transform-style: preserve -3d; 
+        }
+
+        .services > div:nth-child(3)
+        {
+            animation-name: box;
+            animation-direction: alternate;
+            transition-duration: 00.8s;
+            animation-duration: 0.9s;
+            animation-iteration-count: 1;  
+        }
+
+        @keyframes box {
+           0%{
+               transform: rotate(0deg);    
+           }
+
+           25%{
+               transform: rotate(10deg 10deg);
+           }
+
+           50%{
+               transform: rotate(-10deg);
+           }
+
+           75%{
+               transform: rotate(-10deg);
+           }
+
+           100%{
+               transform: rotate(10deg);
+           }
         }
 
         .services > div::after {
@@ -863,22 +1177,258 @@
         }
 
         .services > a > span{
+            text-decoration: underline;
             position: absolute;
             font-size: 20px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: white;
+            color: rgb(255, 232, 232);
             top: 550px;
-            left: 48%;
+            left: 45%;
             font-weight: 500;   
         } 
 
         .services > a > span:hover{
-            color: rgb(131, 185, 255);
-            font-weight: 550;
+            color: rgb(143, 191, 255);
+            font-weight: 510;
         }
 
-    
 
+        /* contact///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+        main > #contact {
+            display: flex;
+            position: relative;
+            background-color: rgb(12, 12, 12);
+            height: 900px;
+        }
+
+        #contact > div {
+            position: relative;
+            background-color: rgb(39, 39, 39);
+            height: 96%;
+            width: 98%;
+            border-radius: 20px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #contact > div > h1 {
+            font-size: 3rem;
+            color: white;
+            top: 0;
+            position: absolute;
+            text-align: center;
+            margin-left: 40%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;     
+        }
+
+        #contact > div > h1 > span {
+            font-size: 3rem;
+            color:  rgb(238, 202, 0);   
+        }
+
+        #contact > div > .detail{
+            background-color: transparent;
+            position: absolute;
+            height: 75%;
+            width: 40%;
+            border-radius: 15px;
+            left: 5%;
+            margin-top: 10%;
+
+        }
+
+        .detail p:nth-child(1){
+            font-size: 35px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #fff;
+            font-weight: 800;
+            margin-left: 10%;
+        }
+
+        .detail div:nth-child(2) {
+            margin-left: 10%;
+            width: 60%;
+            height: 26%;
+            background-color: rgb(99, 99, 99);
+            border-radius: 8px;
+        }
+
+        .detail  div:nth-child(2) a img{
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            margin-top: 40px;
+            margin-left: 130px;
+        }
+
+        .detail  div:nth-child(2) a  span {
+            position: absolute;
+            font-size: 18px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-decoration: none;
+            color: white;
+            margin-top: 130px;
+            margin-left: 105px;
+        }
+
+        .detail div:nth-child(3) {
+            margin-top: 20px;
+            margin-left: 10%;
+            width: 60%;
+            height: 26%;
+            background-color: rgb(99, 99, 99);
+            border-radius: 8px;
+        }
+
+        .detail  div:nth-child(3) img{
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            margin-top: 40px;
+            margin-left: 130px;
+        }
+
+        .detail div:nth-child(3) span{
+            position: absolute;
+            font-size: 22px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-decoration: none;
+            color: white;
+            margin-top: 120px;
+            margin-left: 115px;
+        }
+
+        .detail div:nth-child(4){
+            margin-top: 40px;
+            margin-left: 9%;
+            width: 60%;
+            height: 7%;
+        }
+
+        .detail p:nth-child(5){
+            font-size: 14px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #fff;
+            margin-top: 40px;
+            margin-left: 10%;
+        }
+
+        .icons  a img {     
+            width: 35px;
+            margin: 10px;      
+        }
+
+        .icons  a img:hover {   
+            width: 40px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: rgb(129, 188, 255);
+        }
+
+        #contact  div  .inputs{
+            position: relative;
+            display: inline-block;
+            background-color: rgb(99, 99, 99);
+            height: 70%;
+            width: 50%;
+            border-radius: 15px;
+            margin-left: 40%;
+            margin-top: 13%;
+        }
+
+        input[type=text], select {
+            width: 70%;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 3px solid #c01725;
+            border-radius: 10px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 10%;
+            left: 30px;
+        }
+
+        input[type=text]:hover {
+            border: 3px solid #389bc2;
+        }
+
+        input[type=email], select {
+            width: 70%;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 3px solid #c01725;
+            border-radius: 10px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 25%;
+            left: 30px;
+        }
+
+        input[type=email]:hover {
+            border: 3px solid #3e9bc0;
+        }
+
+        input[type=subject], select {
+            width: 70%;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 3px solid #c01725;
+            border-radius: 10px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 40%;
+            left: 30px;
+        }
+
+        input[type=subject]:hover {
+            border: 3px solid #3294bb;
+        }
+
+        input[type=textarea], select {
+            width: 80%;
+            height: 165px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 3px solid #c01725;
+            border-radius: 10px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 55%;
+            left: 30px;
+        }
+
+        input[type=textarea]:hover {
+            border: 3px solid #3996bb;
+        }
+
+        .button{
+            width: 100px;
+            padding: 9px 15px;
+            height: 21px;
+            background-color: #b92e3a;
+            cursor: pointer;
+            border: solid rgb(255, 185, 185) 2px;
+            font-weight: 500;
+            border-radius: 8px;
+            position: absolute;
+            top: 88%;
+            left: 33px;
+            color: white;
+            font-size: 14px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .button:hover{
+            background-color: rgb(255, 68, 68);
+        }
+
+       
+        
 
 
 
@@ -902,18 +1452,19 @@
     <main>
         <section id="home">
             <div class="icon">
-                <img alt="" src="assets/image/fb.png">
-                <img alt="" src="assets/image/whatsapp.png">
-                <img alt="" src="assets/image/Instagram.png">
-                <img alt="" src="assets/image/linkedin.png">
-                <img alt="" src="assets/image/YouTube.png">
+                <a href="https://www.facebook.com/profile.php?id=100011795520810"><img alt="" src="assets/image/fb.png"></a>
+                <a href="https://web.whatsapp.com/"><img alt="" src="assets/image/whatsapp.png"></a>
+                <a href="https://www.instagram.com/?hl=en"><img alt="" src="assets/image/Instagram.png"></a>
+                <a href="https://www.linkedin.com/in/chamath-manchanayake-084565225/"><img alt="" src="assets/image/linkedin.png"></a>
+                <a href="https://www.youtube.com/channel/UCi4KSK1eQrWLihAE74F_3fQ/featured"><img alt="" src="assets/image/YouTube.png"></a>
             </div>
             
             <div class="home container">
                 <div>
-                    <h1> Hello there, <br> I am </h1> 
-                    <h2> Chamath <br> Manchanayake </h2>
-                    <h3> - Programmer & <br> - Network Technician </h3>
+                    <h1>  Hello there, <span></span> </h1> 
+                    <h1> I am <span></span></h1>
+                    <h1>  Chamath   <br> Manchanayake <span></span></h1>
+                    <h1> - Programmer & <br> - Network Technician <span></span></h1>
                 </div>
             </div>
 
@@ -980,25 +1531,49 @@
                 <p> I have done some projects using <span> Java(MySQL)</span> as (Student Management System, Hotel Management System, Wholesale Management System, etc) . <br> And 
                     I have Used  <span> Hibernate </span>  framework to some projects.
                 </p>
-                <section>
+                <section class="projects">
                     <div>
-                        <a href="#">
-                            <div class="detail"><span>Hotel Management System</span></div>
+                        <div class="name"><span>Hotel Management System</span></div>
+                        <p><span>JavaFX (MVC), MySQL</span> <br> Reserve room <br>Select meals packages <br>Rent Vehicle <br>Income Report</p>
+                        <a href="https://github.com/chama97/Hotel_Management_System">
+                            <div class="buton"> <span>Download</span></div>
                         </a>
                     </div>
-                    <div><a href="#">
-                        <div class="detail"><span>Wholesale Management System</span></div>
-                    </a></div>
-                    <div><a href="#">
-                        <div class="detail"><span>Vehicle Parking System</span></div>
-                    </a></div>
-                    <div><a href="#">
-                        <div class="detail"><span>Supermarket Management System</span></div>
-                    </a></div>
-                    <div><a href="#">
-                        <div class="detail"><span>Institute Management System</span></div></a></div>
+
                     <div>
-                        <a href="#">Sea more..</a>>
+                        <div class="name"><span>Wholesale Management System</span></div>    
+                        <p><span>JavaFX (MVC), MySQL</span> <br> Place Order <br> Income Report <br>Customer Details <br> Item Details</p>
+                        <a href="https://github.com/chama97/Wholesale_Management_System">
+                            <div class="buton"> <span>Download</span></div>   
+                        </a>
+                    </div>
+
+                    <div>
+                        <div class="name"><span>Vehicle Parking System</span></div>
+                        <p><span>JavaFX(MVC) OOp Concepts</span> <br> Add Vehicle <br> Add driver <br>Find Parking slot <br>View Vehicle</p>
+                        <a href="https://github.com/chama97/Vehicle_Parking_System">
+                            <div class="buton"> <span>Download</span></div>   
+                        </a>
+                    </div>
+
+                    <div>
+                        <div class="name"><span>Supermarket Management System</span></div>
+                        <p><span>JavaFX(Layered), MySQL</span> <br> Place Order <br> Customer Details<br>Income Report <br>View Order details</p>
+                        <a href="https://github.com/chama97/Super_Market_Management_System-Hibernate-">
+                            <div class="buton"> <span>Download</span></div>   
+                        </a>
+                    </div>
+
+                    <div>
+                        <div class="name"><span>Institute Management System</span></div>
+                        <p><span>JavaFX, MySQL, Hibernate</span> <br> Add student <br>Add Program <br>View Details <br>Income report</p>
+                        <a href="https://github.com/chama97/Institute_Management_System">
+                            <div class="buton"> <span>Download</span></div>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="file:///F:/WorkArea/MyProfile/projectindex.html">< View more ></View></a>>
                     </div>
                     <aside></aside>
 
@@ -1037,10 +1612,21 @@
             <div>
                 <h1> My<span> Services</span></h1>
                 <section class="services">
-                    <div><div><span>Desktop Applicaton</span></div> <p></p></div>
-                    <div><div><span>Mobile Applicaton</span></div><p></p></div>
-                    <div><div><span>Computer Networking</span></div><p></p></div>
-                    <a href="#"> <span> < Sea more > </span></a> 
+                    <div>
+                        <div><span>Desktop Applicaton</span></div>
+                         <p>Create and develop desktop applications <br><br><span>Java, MySQL, Hibernate</span><br> <br> life-Time guaranty</p>
+                    </div>
+
+                    <div>
+                        <div><span>Mobile Applicaton</span></div>
+                        <p>Create and develop Mobile applications <br><br><span>Java, MySQL, Hibernate</span> <br><br> life-Time guaranty</p>
+                    </div>
+
+                    <div>
+                        <div><span>Computer Networking</span></div>
+                        <p>Slove your Computer network troubleshooting <br><br><span>Network wiring</span> <br><br> Router and Switching</p>
+                    </div>
+                    <a href="file:///F:/WorkArea/MyProfile/serviceindex.html"> <span> < View more > </span></a> 
                 </section>
             </div>
         </section>
@@ -1049,6 +1635,33 @@
         <section id="contact">
             <div>
                 <h1>My <span> Contact</span></h1>
+                <aside class="detail">   
+                    <p>Want to get in <br> touch with me</p>
+                    <div><a href="#">  <img alt="" src="assets/image/marker.png"> <span>Horana, SriLanka</span></a></div>
+                    <div><img alt="" src="assets/image/phone.png"> <span>   076-2988833</span></div>
+                    <div class="icons">
+                        <a href="https://www.facebook.com/profile.php?id=100011795520810"><img alt="" src="assets/image/fb.png"></a>
+                        <a href="https://web.whatsapp.com/"><img alt="" src="assets/image/whatsapp.png"></a>
+                        <a href="https://www.instagram.com/?hl=en"><img alt="" src="assets/image/Instagram.png"></a>
+                        <a href="https://www.linkedin.com/in/chamath-manchanayake-084565225/"><img alt="" src="assets/image/linkedin.png"></a>
+                        <a href="https://www.youtube.com/channel/UCi4KSK1eQrWLihAE74F_3fQ/featured"><img alt="" src="assets/image/YouTube.png"></a>
+                    </div>
+                    <p>Copyright 2021, powerd by CMdeveloper</p>
+                </aside>
+
+                <aside class="inputs">
+                    <input type="text" name="name"
+                    placeholder="Your name">
+                    <input type="email"  name="email"
+                    placeholder="Email">
+                    <input type="subject" name="subject"
+                    placeholder="Subject">
+                    <input type="textarea" name="message"
+                    placeholder="Message..">
+                    <div class="button">Send Message</div>
+                </aside>
+                
+
             </div>
         </section>
         

@@ -56,6 +56,7 @@ header >  ul > li {
 }
 
 header >  ul > li > a {
+    transition-duration: 1s;
     padding: 5px 10px;
     text-decoration: none;
     border: 1px solid transparent;
@@ -103,15 +104,14 @@ main > #home::after {
 
 .icon {
     position: absolute;
-    margin-left: 71%;
-    margin-top: 37%;
+    margin-left: 68%;
+    margin-top: 570px;
 }
 
 
-main > #home > .icon a img {
+#home > .icon a img {  
     width: 40px;
     margin: 15px;
-
 }
 
 .icon a img:hover {
@@ -121,18 +121,18 @@ main > #home > .icon a img {
     background-color: tomato;
 }
 
-.container {
+.home_text {
     min-height: 100vh;
     width: 100%;
     display: flex;
 }
 
-.container > div > h1{
+.home_text > div > h1{
     animation-delay: 1s;
     color: transparent;
 }
 
-.container > div > h1:nth-child(1) {
+.home_text > div > h1:nth-child(1) {
     animation: text_reveal 0.5s ease forwards;
     animation-delay: 1s;
     display: block;
@@ -144,7 +144,7 @@ main > #home > .icon a img {
     position: relative;
 }
 
-.container > div > h1:nth-child(2) {
+.home_text > div > h1:nth-child(2) {
     animation: text_reveal 0.5s ease forwards;
     animation-delay: 2s;
     display: block;
@@ -156,7 +156,7 @@ main > #home > .icon a img {
     position: relative;
 }
 
-.container > div > h1:nth-child(3) {
+.home_text > div > h1:nth-child(3) {
     animation: text_reveal_name 1.5s ease forwards;
     animation-delay: 3s;
     display: block;
@@ -168,7 +168,7 @@ main > #home > .icon a img {
     position: relative;
 }
 
-.container > div > h1:nth-child(4) {
+.home_text > div > h1:nth-child(4) {
     animation: text_reveal 1s ease forwards;
     animation-delay: 4s;
     display: block;
@@ -180,7 +180,7 @@ main > #home > .icon a img {
     position: relative;
 }
 
-.container > div > h1 > span{
+.home_text > div > h1 > span{
     top: 0;
     width: 0;
     left: 0;
@@ -190,22 +190,22 @@ main > #home > .icon a img {
     background-color: tomato;
 }
 
-.container > div > h1:nth-child(1) span{
+.home_text > div > h1:nth-child(1) span{
     animation: text_box 1s ease forwards;
     animation-delay: 0.5s;
 }
 
-.container > div > h1:nth-child(2) span{
+.home_text > div > h1:nth-child(2) span{
     animation: text_box 1s ease forwards;
     animation-delay: 1.5s;
 }
 
-.container > div > h1:nth-child(3) span{
+.home_text > div > h1:nth-child(3) span{
     animation: text_box 1s ease forwards;
     animation-delay: 2.5s;
 }
 
-.container > div > h1:nth-child(4) span{
+.home_text > div > h1:nth-child(4) span{
     animation: text_box 1s ease forwards;
     animation-delay: 3.5s;
 }
@@ -294,18 +294,18 @@ main > #about {
     background-size: cover;
     box-shadow: 15px -15px 1px 1px rgb(90, 90, 90);
     position: absolute;
-    margin-top: 12%;
-    margin-left: 10%;
+    margin-top: 160px;
+    margin-left: 150px;
     border: solid rgb(173, 137, 19) 5px;
 }
 
 #about > div > :nth-child(4){
     background-color: rgb(78, 78, 78);
     position: absolute;
-    width: 800px;
-    height: 40px;
+    width: 55%;
+    height: 7%;
     margin-left: 40%;
-    margin-top: 16%;
+    margin-top: 240px;
 }
 
 #about > div > :nth-child(4) > p{
@@ -320,10 +320,10 @@ main > #about {
 #about > div > :nth-child(5){
     position: absolute;
     background-color: rgb(78, 78, 78);
-    width: 800px;
-    height: 300px;
+    width: 55%;
+    height: 45%;
     margin-left: 40%;
-    margin-top: 21%;
+    margin-top: 300px;
     color: white;
     font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -352,8 +352,8 @@ main > #about {
     padding-top: 10px;
     padding-bottom: 10px;
     position: absolute;
-    margin-top: 38%;
-    margin-left: 14.5%;
+    margin-top: 560px;
+    margin-left: 210px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
 }
@@ -441,7 +441,7 @@ main > #skill {
     margin-top: 40px;
 }
 
-#skill > div > #network > h1{
+#network > h1{
     padding: 20px;
     font-size: 27px;
     color: #fff;
@@ -449,7 +449,7 @@ main > #skill {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#skill > div > #program > h1{
+#program > h1{
     padding: 20px;
     font-size: 27px;
     color: #fff;
@@ -457,68 +457,69 @@ main > #skill {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#skill > div > #program > div{
+#program > div{
     position: absolute;
     border: solid rgb(214, 0, 0) 5px;
     background-color: #fff;
-    width: 200px;
-    height: 200px;
+    width: 16%;
+    height: 52%;
     border-radius: 10px;
     margin-left: 12%;
     margin-top: 30px;
 }
 
-#skill > div > #program > div:nth-child(2){
+#program > div:nth-child(2){
     background-image: url(../image/p1.jpg);
     background-size: cover;
     background-position-x: center;
 }
 
-#skill > div > #program > div:nth-child(3){
+#program > div:nth-child(3){
     left: calc(100%/5);
     background-image: url(../image/p2.png);
     background-size: cover;
 }
-#skill > div > #program > div:nth-child(4){
+#program > div:nth-child(4){
     left: calc((100%/5)*2);
     background-image: url(../image/p3.png);
     background-size: cover;
 }
-#skill > div > #program > div:nth-child(5){
+
+#program > div:nth-child(5){
     left: calc((100%/5)*3);
     background-image: url(../image/p4.jpg);
     background-size: cover;
 }
 
-#skill > div > #network > div{
+#network > div{
     position: absolute;
     border: solid rgb(214, 0, 0) 5px;
     background-color: #fff;
-    width: 200px;
-    height: 200px;
+    width: 16%;
+    height: 52%;
     border-radius: 10px;
     margin-left: 12%;
     margin-top: 30px;
 }
 
-#skill > div > #network > div:nth-child(2){
+#network > div:nth-child(2){
     background-image: url(../image/n1.jpg);
     background-size: cover;
 }
 
-#skill > div > #network > div:nth-child(3){
+#network > div:nth-child(3){
     left: calc(100%/5);
     background-image: url(../image/n2.jpg);
     background-size: cover;
 }
 
-#skill > div > #network > div:nth-child(4){
+#network > div:nth-child(4){
     left: calc((100%/5)*2);
     background-image: url(../image/n3.jpg);
     background-size: cover;
 }
 
-#skill > div > #network > div:nth-child(5){
+#network > div:nth-child(5){
     left: calc((100%/5)*3);
     background-image: url(../image/n4.png);
     background-size: cover;
@@ -529,13 +530,13 @@ main > #skill {
 
 main > #project {
     display: flex;
-    position: relative;
+   
     background-color: rgb(12, 12, 12);
     height: 1000px;
 }
 
 #project > div {
-    position: absolute;
+    position: relative;
     background-color: rgb(39, 39, 39);
     height: 96%;
     width: 98%;
@@ -593,11 +594,10 @@ main > #project {
 
 .projects > div{
     position: absolute;
-    display: inline-block;
     border: solid rgb(0, 120, 233) 5px;
     background-color: #fff;
-    width: 380px;
-    height: 240px;
+    width: 28%;
+    height: 36%;
     border-radius: 10px;
     margin-left: 2%;
     margin-top: 60px;
@@ -624,8 +624,8 @@ main > #project {
 }
 
 .projects > div:nth-child(1) > p{
-    margin-top: 70px;
-    margin-left: 20px;
+    margin-top: 20%;
+    margin-left: 5%;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
@@ -637,15 +637,20 @@ main > #project {
     font-weight: 600;
 }
 
-.projects > div:nth-child(1):hover{
+.projects > div:hover{
     color: rgb(255, 179, 179);
     transition-duration: 00.8s;
+    animation-name: box;
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
 }
 
 .projects > div a .buton{
+    position: absolute;
     width: 100px;
     height: 20px;
-    margin-left: 20px;
+    margin-left: 5%;
     border: solid rgb(252, 156, 156) 2px;
     color: rgb(252, 156, 156);
     text-align: center;
@@ -672,8 +677,8 @@ main > #project {
 }
 
 .projects > div:nth-child(2) > p{
-    margin-top: 70px;
-    margin-left: 20px;
+    margin-top: 20%;
+    margin-left: 5%;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
@@ -685,11 +690,6 @@ main > #project {
     font-weight: 600;
 }
 
-.projects > div:nth-child(2):hover{
-    color: rgb(255, 179, 179);
-    transition-duration: 00.8s;
-}
-
 .projects > div:nth-child(3){
     left: calc((100%/3)*2);
     background-image: url(../image/vehicle.jpg);
@@ -698,8 +698,8 @@ main > #project {
 }
 
 .projects > div:nth-child(3) > p{
-    margin-top: 70px;
-    margin-left: 20px;
+    margin-top: 20%;
+    margin-left: 5%;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
@@ -711,11 +711,6 @@ main > #project {
     font-weight: 600;
 }
 
-.projects > div:nth-child(3):hover{
-    color: rgb(255, 179, 179);
-    transition-duration: 00.8s;
-}
-
 .projects > div:nth-child(4){
     top: calc(100%/2);
     background-image: url(../image/super.webp);
@@ -724,8 +719,8 @@ main > #project {
 }
 
 .projects > div:nth-child(4) > p{
-    margin-top: 70px;
-    margin-left: 20px;
+    margin-top: 20%;
+    margin-left: 5%;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
@@ -737,11 +732,6 @@ main > #project {
     font-weight: 600;
 }
 
-.projects > div:nth-child(4):hover{
-    color: rgb(255, 179, 179);
-    transition-duration: 00.8s;
-}
-
 .projects > div:nth-child(5){
     top: calc(100%/2);
     left: calc(100%/3);
@@ -751,8 +741,8 @@ main > #project {
 }
 
 .projects > div:nth-child(5) > p{
-    margin-top: 70px;
-    margin-left: 20px;
+    margin-top: 20%;
+    margin-left: 5%;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
@@ -762,11 +752,6 @@ main > #project {
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-}
-
-.projects > div:nth-child(5):hover{
-    color: rgb(255, 179, 179);
-    transition-duration: 00.8s;
 }
 
 .projects > div:nth-child(6){
@@ -796,11 +781,11 @@ main > #project {
     width: 100%;
     height: 20%;
     position: absolute;
-    font-weight: 600;
-    font-size: 1.4rem;
-    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: rgb(204, 204, 204);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: rgb(29, 58, 121);
+    background-color: rgb(28, 53, 107);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
@@ -884,7 +869,7 @@ main > #education {
     width: 8px;
     height: 600px;
     left: 49%;
-    top: 8%;
+    top: 70px;
     background-color: rgb(96, 191, 255);
     border-radius: 100%;
 }
@@ -905,20 +890,20 @@ main > #education {
 
 .edu > div:nth-child(2){
     border-left: solid rgb(0, 160, 144) 8px;
-    left: 240px;
-    top: 100px;
+    left: 20%;
+    top: 80px;
 }
 
 .edu > div:nth-child(3){
     border-right: solid rgb(0, 160, 144) 8px;
-    left: 710px;
-    top: 250px;
+    left: 51%;
+    top: 260px;
 }
 
 .edu > div:nth-child(4){
     border-left: solid rgb(0, 160, 144) 8px;
-    left: 240px;
-    top: 400px;
+    left: 20%;
+    top: 420px;
 }
 
 .edu > div > h1{
@@ -1003,8 +988,8 @@ main > #service {
 }
 
 .services > div{
-    width: 380px;
-    height: 300px;
+    width: 28%;
+    height: 50%;
     background-color: thistle;
     position: absolute;
     border: solid rgb(190, 167, 31) 3px;
@@ -1039,8 +1024,8 @@ main > #service {
 
 .services > div:nth-child(1):hover{
     color: rgb(102, 255, 127);
-    transition-duration: 00.8s;
-    transform: translateY(-10%);
+    transition-duration: 00.6s;
+    transform: translateY(-7%);
 }
 
 .services > div:nth-child(2){
@@ -1067,9 +1052,8 @@ main > #service {
 
 .services > div:nth-child(2):hover{
     color: rgb(102, 255, 127);
-    transition-duration: 00.8s;
-    transform: translateY(-10%);
-
+    transition-duration: 00.6s;
+    transform: translateY(-7%);
 }
 
 .services > div:nth-child(3){
@@ -1096,16 +1080,16 @@ main > #service {
 
 .services > div:nth-child(3):hover{
     color: rgb(102, 255, 127);
-    transition-duration: 00.8s;
-    transform: translateY(-10%);
+    transition-duration: 00.6s;
+    transform: translateY(-7%);
 }
 
-.services > div:nth-child(3)
-{
+.services > div:nth-child(3)::after{
     animation-name: box;
     animation-direction: alternate;
+    animation-delay: 1s;
     transition-duration: 00.8s;
-    animation-duration: 0.9s;
+    animation-duration: 0.6s;
     animation-iteration-count: 1;
 }
 
@@ -1115,19 +1099,19 @@ main > #service {
     }
 
     25%{
-        transform: rotate(10deg);
+        transform: rotate(6deg);
     }
 
     50%{
-        transform: rotate(-10deg);
+        transform: rotate(-6deg);
     }
 
     75%{
-        transform: rotate(-10deg);
+        transform: rotate(-6deg);
     }
 
     100%{
-        transform: rotate(10deg);
+        transform: rotate(6deg);
     }
 }
 
@@ -1392,6 +1376,7 @@ input[type=textarea]:hover {
 }
 
 .button{
+    text-decoration: none;
     width: 100px;
     padding: 9px 15px;
     height: 21px;
@@ -1402,7 +1387,7 @@ input[type=textarea]:hover {
     border-radius: 8px;
     position: absolute;
     top: 88%;
-    left: 33px;
+    left: 35px;
     color: white;
     font-size: 14px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -1410,4 +1395,655 @@ input[type=textarea]:hover {
 
 .button:hover{
     background-color: rgb(255, 68, 68);
+}
+
+.button div{
+    position: absolute;
+    left: 15%;
+}
+
+/* tab ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media all and (max-width: 1024px) {
+    header {  
+        width: 100%;
+        height: 65px;
+    }
+    
+    header > img {
+        display: none;
+    }
+    
+    header > ul {
+        left: 16%;
+        font-size: 17px;
+    }
+    
+    header >  h1  {
+        display: none;
+    }
+
+    header >  ul > li > a {
+        padding: 5px 5px;
+    }
+
+    .icon {
+        margin-left: 58%;
+        margin-top: 570px;
+    }
+
+    .home_text > div > h1:nth-child(3) {    
+        font-size: 4rem;
+        padding-left: 15%;
+        margin-top: 20%;  
+    }
+
+    .home_text > div > h1:nth-child(1) {  
+        font-size: 3rem;
+        margin-top: 25%; 
+    }
+
+    .home_text > div > h1:nth-child(4) {
+        margin-top: 21%;
+    }
+
+    #about > div > img {
+        width: 250px;
+        height: 306px;  
+        margin-top: 175px;
+        margin-left: 62px;
+    }
+
+    #about > div > .cv {   
+        margin-top: 538px;
+        margin-left: 115px;  
+    }
+     
+    #about > div > p {
+        font-size: 16px;
+        margin-top: 14%;
+        margin-left: 38%;
+        letter-spacing: 1px;
+    }
+
+    #about > div > :nth-child(5) > pre {
+        padding-left: 32px;
+        padding-top: 22px;
+    }
+
+    #about > div > :nth-child(5) { 
+        width: 57%;
+        height: 45%;
+        margin-left: 38%;
+        margin-top: 300px;
+        font-size: 18px;  
+    }
+
+    #about > div > :nth-child(4) {
+        width: 57%;
+        height: 7%;
+        margin-left: 38%;
+        margin-top: 240px;
+    }
+
+    #skill > div > p {
+        text-align: center;
+        font-size: 15px;
+        margin-top: 11%;
+        letter-spacing: 0.95px;
+    }
+
+    #program > h1 { 
+        font-size: 24px;
+    }
+
+    #program > div {
+        width: 15%;
+        height: 38%;
+        border-radius: 10px;
+        margin-left: 12%;
+        margin-top: 30px;
+    }
+
+    #skill > div > #program {
+        height: 30%;
+        width: 87%;
+        margin-top: 80px;
+    }
+
+    #network > div {    
+        width: 16%;
+        height: 30%;
+        margin-top: 30px;
+    }
+
+    #network > div {
+        width: 15%;
+        height: 38%;
+        border-radius: 10px;
+    }
+
+    #network > h1 {
+        font-size: 24px;  
+    }
+
+    #skill > div > #network {  
+        height: 30%;
+        width: 87%;
+        margin-top: 60px;
+    }
+
+    main > #project {
+        height: 900px;
+    }
+
+    #project > div > p {
+        font-size: 15px;      
+    }
+
+    .projects > div > .name {
+        font-weight: 400;
+        font-size: 14px; 
+    }
+
+    .projects > div:nth-child(1) > p {
+        margin-top: 22%;
+        font-size: 15px;
+    }
+
+    .projects > div:nth-child(1) > p span {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .projects > div:nth-child(2) > p {
+        margin-top: 22%;
+        font-size: 15px;
+    }
+
+    .projects > div:nth-child(2) > p span {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .projects > div:nth-child(3) > p {
+        margin-top: 22%;
+        font-size: 15px;
+    }
+
+    .projects > div:nth-child(3) > p span {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .projects > div:nth-child(4) > p {
+        margin-top: 22%;
+        font-size: 15px;
+    }
+
+    .projects > div:nth-child(4) > p span {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .projects > div:nth-child(5) > p {
+        margin-top: 22%;
+        font-size: 15px;
+    }
+
+    .projects > div:nth-child(5) > p span {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .projects > div:nth-child(6) > a {    
+        margin-top: 41%;
+        margin-left: 25%;
+    }
+
+    #education > div > p {
+        font-size: 15px; 
+    }
+
+    .edu > div {  
+        width: 290px;
+        height: 180px;  
+    }
+
+    .edu > div > h1 {
+        font-size: 18px;
+    }
+
+    .edu > div > div > span {
+        font-size: 16px;  
+    }
+
+    .edu > div > span {  
+        font-size: 18px;
+    }
+
+    .edu > div:nth-child(2) {
+        left: 13%;
+        top: 80px;
+    }
+    .edu > div:nth-child(4) {
+        left: 13%;
+        top: 420px;
+    }
+
+    .edu > div:nth-child(3) {
+        left: 53%;
+        top: 260px;
+    }
+
+    main > #service {
+        height: 850px;
+    }
+
+    main > #contact {
+        height: 850px;
+    }
+
+    .detail div:nth-child(2) {
+        width: 64%;    
+    }
+
+    .detail div:nth-child(3) {
+        width: 64%;
+    }
+    
+    .detail div:nth-child(2) a img {
+        margin-left: 92px;
+    }
+
+    .detail div:nth-child(2) a span {
+        margin-left: 68px;
+    }
+
+    .detail div:nth-child(3) img {
+        margin-left: 96px;
+    }
+
+    .detail div:nth-child(3) span {
+        margin-left: 69px;
+    }
+
+    .detail div:nth-child(4) {
+        margin-top: 40px;
+        margin-left: 9%;
+        width: 73%;
+        height: 7%;
+    }
+
+}
+
+/* mobile //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media all and (max-width: 426px) {
+
+    header > ul {
+        display: none;
+    }
+
+    header > h1 {
+        display: block;
+        margin-left: 22%;
+        margin-top: 23px;
+    }
+
+    header > img {
+        display: block;
+        margin-left: 9%;
+    }
+
+    .home_text > div > h1:nth-child(1) {
+        font-size: 40px;
+        margin-top: 36%;
+    }
+
+    .home_text > div > h1:nth-child(2) {   
+        font-size: 35px;   
+    }
+
+    .home_text > div > h1:nth-child(3) {
+        font-size: 50px;
+    }
+
+    .icon {
+        margin-left: 6%;
+        margin-top: 590px;
+    }
+
+    main > #about {
+        height: 850px;
+    }
+
+    #about > div {
+        height: 97%;
+       
+    }
+
+    #about > div > h1 > span {
+        font-size: 2.5rem;
+    }
+
+    #about > div > h1 {
+        font-size: 2.5rem;
+        margin-left: 28%;
+    }
+
+    #about > div > p {
+        margin-left: 4%;
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 22%;
+        letter-spacing: 0.95px;
+    }
+
+    #about > div > img {
+        width: 230px;
+        height: 280px;
+        margin-top: 198px;
+        margin-left: 84px;
+    }
+
+    #about > div > :nth-child(4) {
+        display: none;
+    }
+
+    #about > div > :nth-child(5) > pre {
+        padding-left: 20px;
+        padding-top: 18px;
+    }
+
+    #about > div > :nth-child(5) {
+        width: 90%;
+        height: 27%;
+        margin-left: 5%;
+        margin-top: 509px;
+        font-size: 12px;
+    }
+
+    #about > div > .cv {
+        margin-top: 750px;
+        margin-left: 117px;
+    }
+    #skill > div > h1 {
+        font-size: 2.5rem;
+        margin-left: 28%;
+    }
+
+    #skill > div > p {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 27%;
+        letter-spacing: 0.95px;
+    }
+
+    #skill > div > #program {
+        height: 33%;
+        width: 87%;
+        margin-top: 26px;
+    }
+
+    #program > h1 {
+        font-size: 21px;
+    }
+
+    #program > div {
+        width: 28%;
+        height: 26%;
+        border-radius: 10px;
+        margin-left: 19%;
+        margin-top: 0px;
+    }
+
+    #program > div:nth-child(3) {
+        left: calc(100%/3);
+    }
+    
+    #program > div:nth-child(4) {
+        left: 0;
+        top: calc((100%/3)*1.7);
+    }
+
+    #program > div:nth-child(5) {
+        left: calc(100%/3);
+        top: calc((100%/3)*1.7);
+    }
+
+    #skill > div > #network {
+        height: 33%;
+        width: 86%;
+        margin-top: 28px;
+    }
+
+    #network > h1 {
+        font-size: 21px;
+    }
+
+    #network > div {
+        width: 28%;
+        height: 26%;
+        margin-top: 0px;
+        margin-left: 19%;
+    }
+
+    #network > div:nth-child(3) {
+        left: calc(100%/3);
+    }
+
+    #network > div:nth-child(4) {
+        left: 0;
+        top: calc((100%/3)*1.7);
+    }
+
+    #network > div:nth-child(5) {
+        left: calc(100%/3);
+        top: calc((100%/3)*1.7);
+    }
+    #project > div > h1 {
+        font-size: 2.5rem;
+        margin-left: 24%;
+        top: 12px;
+    }
+
+    #project > div > p {
+        font-size: 15px;
+        margin-top: 25%;
+    }
+
+    #project > div > h1 > span {
+        font-size: 2.5rem;
+        margin-top: 19%;
+    }
+
+    .projects > div:nth-child(5) {
+        display: none;
+    }
+
+    .projects > div:nth-child(2) {
+        display: none;
+    }
+
+    .projects > div:nth-child(3) {
+        display: none;
+    }
+
+    .projects > div {
+        width: 83%;
+        height: 36%; 
+        margin-left: 7%;
+        margin-top: 33px;
+    }
+
+    .projects > div:nth-child(4) {
+        top: 43%;
+    }
+
+    .projects > div:nth-child(6) {
+        height: 6%;
+        top: 85%;
+        left: 0;
+    }
+
+    .projects > div:nth-child(6) > a {
+        margin-top: 2%;
+        margin-left: 27%;
+    }
+
+    .projects > div > .name {
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    #project > div > .projects {
+        top: -2%;
+        height: 70%;
+        width: 90%;
+    }
+
+    /* education /////////////////////////////////////////////////////////// */
+
+    #education > div > h1 {
+        font-size: 2.5rem; 
+        top: 0;
+        margin-left: 19%;
+    }
+
+    #education > div > h1 > span {
+        font-size: 2.5rem;
+    }
+
+    #education > div > p {
+        font-size: 14px;
+        margin-top: 26%;
+    }
+
+    #education > div > p > span {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    #education > div > .edu {
+        margin-top: 28px;
+    }
+
+    .edu >section {
+        background-color: rgb(120 120 120);
+    }
+
+    .edu > div:nth-child(2) {
+        left: 12%;
+        top: 24px;
+    }
+
+    .edu > div:nth-child(3) {
+        left: 12%;
+        top: 245px;
+    }
+
+    
+    .edu > div:nth-child(4) {
+        left: 12%;
+        top: 470px;
+    }
+
+    #service > div > h1 {
+        font-size: 2.5rem;
+        margin-left: 24%;
+    }
+
+    #service > div > h1 > span {
+        font-size: 2.5rem;
+    }
+
+    #service > div > .services {
+        height: 82%;
+        width: 90%;
+        top: 56px;
+    }
+
+    .services > div:nth-child(2) {
+        display: none;
+    }
+
+    .services > div {
+        width: 73%;
+        height: 40%;
+    }
+
+    .services > div:nth-child(1) {
+        margin-top: 5%;
+        margin-left: 13%;
+    }
+
+    .services > div:nth-child(3) {
+        margin-top: 86%;
+        margin-left: 13%;
+    }
+
+    .services > a > span {
+        font-size: 20px;
+        top: 616px;
+        left: 29%;
+    }
+ /* contact /////////////////////////////////////////////////////////////////////////////////////////// */
+
+    #contact > div > h1 {
+        font-size: 2.5rem;
+        margin-left: 25%;
+    }
+
+    #contact > div > h1 > span {
+        font-size: 2.5rem;
+    }
+
+    .detail div:nth-child(2) {
+        display: none;
+    }
+
+    .detail div:nth-child(3) {
+        display: none;
+    }
+
+    #contact div .inputs {
+        height: 56%;
+        width: 86%;
+        margin-left: 8%;
+        margin-top: 24%;
+    }
+
+    #contact > div > .detail {
+        height: 35%;
+        width: 100%;
+        left: 5%;
+        margin-top: 123%;
+    }
+
+    .detail p:nth-child(1) {
+        font-size: 23px;
+        font-weight: 700;
+        margin-left: 8%;
+        margin-top: 20%;
+    }
+
+    .detail div:nth-child(4) {
+        margin-top: 29px;
+        margin-left: 6%;
+        width: 73%;
+        height: 11%;
+    }
+
+    .detail p:nth-child(5) {
+        font-size: 14px;
+        margin-top: 50px;
+        margin-left: 14%;
+    }
+
+    input[type=textarea], select {
+        height: 126px;
+    }
+
 }

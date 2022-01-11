@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            width: 800px;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            overflow: hidden;       
+    
+        }
+
+        main > section {
+            width: 400%;
+            height: 100%;
+            display: flex;
+            border: solid red 3px;
+            animation-name: road;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;       
+        }
+
+
+        main > section > div {
+            width: 100%;
+        }
+
+        section > div:nth-child(1){
+            background-image: url(assets/img/road.webp);
+            background-position: center;
+            background-size: cover;
+        }
+
+        section > div:nth-child(1) img{
+            width: 150px;
+            height: 130px;
+            margin-top: 24%;
+            margin-left: 25%;
+            animation-name: car;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;  
+        }
+
+
+
+        section > div:nth-child(2){
+            background-image: url(assets/img/road.webp);
+            background-position: center;
+            background-size: cover;
+        }
+
+        section > div:nth-child(2) img{
+            animation-name: car;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;  
+            width: 150px;
+            height: 130px;
+            margin-top: 24%;
+            margin-left: 25%;
+        }
+
+        @keyframes road {
+            0%{
+                transform: translateX(0);
+            }
+
+            100%{
+                transform: translateX(-50%);
+            }
+        
+        }
+
+        @keyframes car{
+            0%{
+                transform: translateX(0);
+            }
+
+            100%{
+                transform: translateX(1066%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section>
+            
+             <div><img src="assets/img/car1.png" alt=""> 
+                </div>
+
+             <div><img src="assets/img/car1.png" alt="">
+            </div>
+    
+         </section>
+    </main> 
+</body>
+</html>

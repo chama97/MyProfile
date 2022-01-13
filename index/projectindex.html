@@ -41,7 +41,7 @@
             display: flex;
             position: relative;
             background-color: rgb(12, 12, 12);
-            height: 1500px;
+            height: 2500px;
         }
 
         #project > div {
@@ -77,7 +77,7 @@
             font-size: 18px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             color: white;
-            margin-top: 10%;
+            margin-top: 6%;
             letter-spacing: 0.95px;          
         }
 
@@ -106,8 +106,8 @@
             display: inline-block;         
             border: solid rgb(0, 120, 233) 5px;
             background-color: #fff;
-            width: 380px;
-            height: 240px;
+            width: 28%;
+            height: 13%;
             border-radius: 10px;
             margin-left: 2%; 
             margin-top: 60px;   
@@ -127,13 +127,13 @@
             z-index: -1; 
         }
 
-        .projects > div:nth-child(1){      
-            background-image: url(../assets/image/hotel.png);  
-            background-size: cover;
-            background-position-x: center;
+        .projects > div p span{
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
         }
 
-        .projects > div:nth-child(1) > p{
+        .projects > div p{
             margin-top: 70px;
             margin-left: 20px;
             font-size: 18px;
@@ -141,18 +141,16 @@
             font-weight: 500;
         }
 
-        .projects > div:nth-child(1) > p span{            
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-        }
-
-        .projects > div:nth-child(1):hover{
+        .projects > div:hover{
             color: rgb(255, 179, 179);
             transition-duration: 00.8s;
         }
 
-        .projects > div a .buton{
+        .projects > div a{
+            text-decoration: none;
+        }
+
+        .projects > div a .buton{ 
             width: 100px;
             height: 20px;
             margin-left: 20px;
@@ -163,15 +161,42 @@
             padding-bottom: 1px;
         }
 
-        .buton span{
-            text-decoration: none; 
+        .projects > div a .buton:hover{
+            border: solid rgb(253, 77, 77);
+            color: rgb(253, 77, 77);
+        }
+
+        .projects > div a .buton span{
             font-size: 15px;
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .projects > div a .buton:hover{
-            color: rgb(248, 74, 43);
-            border: solid rgb(248, 74, 43);
+        .projects > div a .buton2{
+            width: 100px;
+            height: 20px;
+            margin-left: 20px;
+            margin-top: 10%;
+            border: solid rgb(252, 156, 156) 2px;
+            color: rgb(252, 156, 156);
+            text-align: center;
+            padding-top: 3px;
+            padding-bottom: 1px;
+        }
+
+        .projects > div a .buton2 span{
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .projects > div a .buton2:hover{
+            border: solid rgb(253, 77, 77);
+            color: rgb(253, 77, 77);
+        }  
+
+        .projects > div:nth-child(1){      
+            background-image: url(../assets/image/hotel.png);  
+            background-size: cover;
+            background-position-x: center;
         }
 
         .projects > div:nth-child(2){
@@ -181,25 +206,6 @@
             background-position-x: center;
         }
 
-        .projects > div:nth-child(2) > p{
-            margin-top: 70px;
-            margin-left: 20px;
-            font-size: 18px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 500;
-        }
-
-        .projects > div:nth-child(2) > p span{            
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-        }
-
-        .projects > div:nth-child(2):hover{
-            color: rgb(255, 179, 179);
-            transition-duration: 00.8s;
-        }
-
         .projects > div:nth-child(3){
             left: calc((100%/3)*2); 
             background-image: url(../assets/image/vehicle.jpg);  
@@ -207,152 +213,98 @@
             background-position-x: center;
         }
 
-        .projects > div:nth-child(3) > p{
-            margin-top: 70px;
-            margin-left: 20px;
-            font-size: 18px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 500;
-        }
-
-        .projects > div:nth-child(3) > p span{            
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-        }
-
-        .projects > div:nth-child(3):hover{
-            color: rgb(255, 179, 179);
-            transition-duration: 00.8s;
-        }
-
         .projects > div:nth-child(4){
-            top: calc(100%/3); 
+            top: calc(100%/5); 
             background-image: url(../assets/image/super.webp);  
             background-size: cover;
             background-position-x: center;
         }
 
-        .projects > div:nth-child(4) > p{
-            margin-top: 70px;
-            margin-left: 20px;
-            font-size: 18px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 500;
-        }
-
-        .projects > div:nth-child(4) > p span{            
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-        }
-
-        .projects > div:nth-child(4):hover{
-            color: rgb(255, 179, 179);
-            transition-duration: 00.8s;
-        }
-
         .projects > div:nth-child(5){
-            top: calc(100%/3); 
+            top: calc(100%/5); 
             left: calc(100%/3); 
             background-image: url(../assets/image/student.png);  
             background-size: cover;
             background-position-x: center;
         }
 
-        .projects > div:nth-child(5) > p{
-            margin-top: 70px;
-            margin-left: 20px;
-            font-size: 18px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 500;
-        }
-
-        .projects > div:nth-child(5) > p span{            
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-        }
-
-        .projects > div:nth-child(5):hover{
-            color: rgb(255, 179, 179);
-            transition-duration: 00.8s;
-        }
-
         .projects > div:nth-child(6){
-            top: calc(100%/3); 
+            top: calc(100%/5); 
             left: calc((100%/3)*2);
-            background-color: transparent;
-            border-color: transparent;                         
-        }
-
-        .projects > div:nth-child(6) > span{
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            color: rgb(119, 119, 119);
-            position: absolute;
-            margin-top: 30%;
-            margin-left: 37%;
-            text-decoration-line: underline;
+            background-image: url(../assets/image/assignment.webp);  
+            background-size: cover;
+            background-position-x: center;                   
         }
 
         .projects > div:nth-child(7){
-            top: calc((100%/3)*2); 
-            background-color: transparent;
-            border-color: transparent;                         
-        }
-
-        .projects > div:nth-child(7) > span{
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            color: rgb(119, 119, 119);
-            position: absolute;
-            margin-top: 30%;
-            margin-left: 37%;
-            text-decoration-line: underline;
-        }
+            top: calc((100%/5)*2); 
+            background-image: url(../assets/image/assignment.webp);  
+            background-size: cover;
+            background-position-x: center;                        
+        } 
 
         .projects > div:nth-child(8){
-            top: calc((100%/3)*2); 
+            top: calc((100%/5)*2); 
             left: calc(100%/3);
-            background-color: transparent;
-            border-color: transparent;                         
-        }
-
-        .projects > div:nth-child(8) > span{
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            color: rgb(119, 119, 119);
-            position: absolute;
-            margin-top: 30%;
-            margin-left: 37%;
-            text-decoration-line: underline;
-        }
+            background-image: url(../assets/image/assignment.webp);  
+            background-size: cover;
+            background-position-x: center;                        
+        }      
 
         .projects > div:nth-child(9){
-            top: calc((100%/3)*2); 
+            top: calc((100%/5)*2); 
             left: calc((100%/3)*2);
-            background-color: transparent;
-            border-color: transparent;                         
+            background-image: url(../assets/image/assignment.webp);  
+            background-size: cover;
+            background-position-x: center;                       
+        }      
+
+        .projects > div:nth-child(10){
+            top: calc((100%/5)*3); 
+            background-image: url(../assets/image/assignment.webp);  
+            background-size: cover;
+            background-position-x: center;                      
+        }      
+
+        .projects > div:nth-child(11){
+            top: calc((100%/5)*3); 
+            left: calc(100%/3);
+            background-image: url(../assets/image/assignment.webp);  
+            background-size: cover;
+            background-position-x: center;                        
         }
 
-        .projects > div:nth-child(9) > span{
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            color: rgb(119, 119, 119);
-            position: absolute;
-            margin-top: 30%;
-            margin-left: 37%;
-            text-decoration-line: underline;
+        .projects > div:nth-child(12){
+            top: calc((100%/5)*3); 
+            left: calc((100%/3)*2);
+            background-image: url(../assets/image/assignment.webp);  
+            background-size: cover;
+            background-position-x: center;                       
         }
 
+        .projects > div:nth-child(13){
+            top: calc((100%/5)*4); 
+            background-image: url(../assets/image/assignment.webp);  
+            background-size: cover;
+            background-position-x: center;                      
+        }      
 
+        .projects > div:nth-child(14){
+            top: calc((100%/5)*4); 
+            left: calc(100%/3);
+            background-image: url(../assets/image/assignment.webp);  
+            background-size: cover;
+            background-position-x: center;                        
+        }
 
-        
+        .projects > div:nth-child(15){
+            top: calc((100%/5)*4); 
+            left: calc((100%/3)*2);
+            background-image: url(../assets/image/assignment.webp);  
+            background-size: cover;
+            background-position-x: center;                       
+        }
+      
         .projects > div > .name{
             width: 100%;
             height: 20%;
@@ -369,10 +321,8 @@
         .name > span{
             position: absolute;
             left: 20px;
-            top: 8px;
-            
+            top: 8px;   
         }
-
 
 
     </style>
@@ -433,19 +383,85 @@
                     </div>
 
                     <div>
-                       <span>Empty</span>
+                        <div class="name"><span>Assignment_01</span></div>
+                        <p><span>CSS Layouts</span> <br> Measurement units <br>Absolute position<br>Relative position</p>
+                        <a href="../myProjects/css/Layouts/Case_01/Assignment_01.html">
+                            <div class="buton2"> <span>View</span></div>
+                        </a>
                     </div>
 
                     <div>
-                        <span>Empty</span>
+                        <div class="name"><span>Assignment_02</span></div>
+                        <p><span>CSS Layouts</span> <br> Box-Model <br>Navigation bar</p>
+                        <a href="../myProjects/css/Layouts/Case_02/Assignment_02.html">
+                            <div class="buton2"> <span>View</span></div>
+                        </a>
                      </div>
 
                      <div>
-                        <span>Empty</span>
+                        <div class="name"><span>Assignment_03</span></div>
+                        <p><span>CSS Layouts</span> <br> css positions <br>Fix position</p>
+                        <a href="../myProjects/css/Layouts/Case_03/Assignmet_03.html">
+                            <div class="buton2"> <span>View</span></div>
+                        </a>
                      </div>
 
                      <div>
-                        <span>Empty</span>
+                        <div class="name"><span>Assignment_04</span></div>
+                        <p><span>CSS Layouts</span> <br> css positions <br>Sticky position</p>
+                        <a href="../myProjects/css/Layouts/Case_04/Assignment_04.html">
+                            <div class="buton2"> <span>View</span></div>
+                        </a>
+                     </div>
+
+
+                     <div>
+                        <div class="name"><span>Assignment_05</span></div>
+                        <p><span>CSS Transition</span> <br> Use :hover <br>Menu bar</p>
+                        <a href="../myProjects/css/Transitions/case_01/index.html">
+                            <div class="buton2"> <span>View</span></div>
+                        </a>
+                     </div>
+
+                     <div>
+                        <div class="name"><span>Assignment_06</span></div>
+                        <p><span>CSS Transition</span> <br> Transform: rotate <br>Circle border rotation</p>
+                        <a href="../myProjects/css/Transitions/case_02/index.html">
+                            <div class="buton2"> <span>View</span></div>
+                        </a>
+                     </div>
+
+                     <div>
+                        <div class="name"><span>Assignment_07</span></div>
+                        <p><span>CSS Animation</span> <br> Animation-Rotation <br>Box rotate</p>
+                        <a href="../myProjects/css/Animations/case_01/index.html">
+                            <div class="buton2"> <span>View</span></div>
+                        </a>
+                     </div>
+
+                     <div>
+                        <div class="name"><span>Assignment_08</span></div>
+                        <p><span>CSS Animation</span> <br> Duration Calculate  <br>Slider Animation</p>
+                        <a href="../myProjects/css/Animations/case_02/index.html">
+                            <div class="buton2"> <span>View</span></div>
+                        </a>
+                     </div>
+
+
+                     <div>
+                        <div class="name"><span>Assignment_09</span></div>
+                        <p><span>CSS Animation</span> <br> Water drop <br>Water drop</p>
+                        <a href="../myProjects/css/Animations/case_03/index.html">
+                            <div class="buton2"> <span>View</span></div>
+                        </a>
+                     </div>
+
+                     <div>
+                        <div class="name"><span>Assignment_10</span></div>
+                        <p><span>CSS Animation</span> <br> Car Animation </p>
+                        <a href="../myProjects/css/Animations/case_04/index.html">
+                            <div class="buton2"> <span>View</span></div>
+                        </a>
                      </div>
         
 

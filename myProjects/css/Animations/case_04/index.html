@@ -6,102 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        main{
-            width: 800px;
-            height: 500px;
+        .sky{
+            height: 100vh;
+            width: 100%;
+            background-image: url(assets/img/sky.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .sky #way{
+            height: 200px;
+            width: 500%;
             position: absolute;
-            top: 0;
+            background-image: url(assets/img/road.jpg);
+            display: block;
             bottom: 0;
             left: 0;
             right: 0;
-            margin: auto;
-            overflow: hidden;       
-    
+            z-index: 1;
+            background-repeat: repeat-x;
+            animation: way 5s linear infinite;
         }
 
-        main > section {
-            width: 400%;
-            height: 100%;
-            display: flex;
-            border: solid red 3px;
-            animation-name: road;
-            animation-duration: 8s;
-            animation-iteration-count: infinite;       
+        .sky #city{
+            height: 250px;
+            width: 500%;
+            position: absolute;
+            background-image: url(assets/img/city.png);
+            display: block;
+            bottom: 200px;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            background-repeat: repeat-x;
+            animation: city 15s linear infinite;
         }
 
+        .sky #car{
+            left: 50%;
+            bottom: 100px;
+            position: absolute;
+            width: 400px;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
 
-        main > section > div {
+        #car img{
             width: 100%;
+            animation: car 1s linear infinite;
         }
 
-        section > div:nth-child(1){
-            background-image: url(assets/img/road.webp);
-            background-position: center;
-            background-size: cover;
+        #wheel{
+            left: 50%;
+            bottom: 178px;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 2;
         }
 
-        section > div:nth-child(1) img{
-            width: 150px;
-            height: 130px;
-            margin-top: 24%;
-            margin-left: 25%;
-            animation-name: car;
-            animation-duration: 8s;
-            animation-iteration-count: infinite;  
+        #wheel img{
+            width: 72px;
+            height: 72px;
+            animation: wheel 5s linear infinite;
+        }
+
+        #wheel1{
+            left: -165px;
+            position: absolute;
+        }
+
+        #wheel2{
+            left: 80px;
+            position: absolute;
         }
 
 
-
-        section > div:nth-child(2){
-            background-image: url(assets/img/road.webp);
-            background-position: center;
-            background-size: cover;
-        }
-
-        section > div:nth-child(2) img{
-            animation-name: car;
-            animation-duration: 8s;
-            animation-iteration-count: infinite;  
-            width: 150px;
-            height: 130px;
-            margin-top: 24%;
-            margin-left: 25%;
-        }
-
-        @keyframes road {
-            0%{
-                transform: translateX(0);
-            }
-
+        @keyframes way{
             100%{
-                transform: translateX(-50%);
+                transform: translate(-3000px);
             }
-        
+
+            50%{
+                transform: translate(-1000px);
+            }
+        }
+
+        @keyframes city{
+            100%{
+                transform: translate(-1400px);
+            }
         }
 
         @keyframes car{
+            100%{
+                transform: translateY(-1px);
+            }
+            50%{
+                transform: translateY(1px);
+            }
             0%{
-                transform: translateX(0);
+                transform: translateY(-1px);
+            }
+        }
+
+        @keyframes wheel{
+            100%{
+                transform: rotate(-360deg);
             }
 
-            100%{
-                transform: translateX(1066%);
+            50%{
+                transform: rotate(360deg);
+            }
+
+            0%{
+                transform: rotate(-360deg);
             }
         }
     </style>
 </head>
 <body>
-
-    <main>
-        <section>
-            
-             <div><img src="assets/img/car1.png" alt=""> 
-                </div>
-
-             <div><img src="assets/img/car1.png" alt="">
-            </div>
-    
-         </section>
-    </main> 
+   <div class="sky"> 
+       <div id="way"></div>
+       <div id="city"></div>
+       <div id="car"> <img src="assets/img/car.png" alt=""></div>
+       <div id="wheel">
+           <img src="assets/img/wheel.png" id="wheel1">
+           <img src="assets/img/wheel.png" id="wheel2">
+       </div>
+   </div>
 </body>
 </html>

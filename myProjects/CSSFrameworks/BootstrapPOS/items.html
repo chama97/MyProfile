@@ -8,52 +8,295 @@
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        .nav{
-            font-weight: 700;
-            font-size: 1.6rem;
-            margin-left: 5px;
-            color: rgb(39, 51, 211);
-        }
-        .nav img {
-            margin-right: 5px;
-        }
+      .nav{
+          font-weight: 600;
+          font-size: 1.7rem;
+          margin-left: 5px;
+          color: rgb(231, 231, 250);
+      }
+      .nav img {
+          margin-right: 5px;
+      }
 
-    </style>
+      .nav-item{
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      .customer{
+        height: 60px;
+        background-image: linear-gradient(to right, rgb(50, 66, 158),rgb(231, 231, 250));
+
+      }
+
+      .customer p{
+        font-size: 27px;
+        font-weight: 500;
+        color: white;
+        margin-left: 15px;
+
+      }
+
+      .customer p img{
+        margin-right: 10px;
+      }
+
+      .breadcrumb{
+        margin-left: -10px;
+        font-weight: 500;
+      }
+
+      #addCustomer{
+        background-image: linear-gradient(to right, rgb(6, 156, 51),rgb(144, 211, 161));
+        color: white;
+        font-weight: 500;
+      }
+
+      #deleteCustomer{
+        background-image: linear-gradient(to right, rgb(196, 0, 0),rgb(223, 130, 130));
+        color: white;
+        font-weight: 500;
+      }
+
+      #updateCustomer{
+        background-image: linear-gradient(to right, rgb(0, 104, 202),rgb(130, 163, 223));
+        color: white;
+        font-weight: 500;
+      }
+
+      .btn-group{
+        margin-left: -10px;
+        margin-top: 10px;
+      }
+
+      #search{
+        margin-top: 10px;
+      }
+
+      #dropdownMenuLink{
+        margin-right: 10px;
+      }
+      
+
+  </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5f8ba8;">
-        <div class="container-fluid ">
-          <a class="nav navbar-brand  mt-1" href="#" >
-            <img src="assets/img/icons8_multibanco_96px.png" alt="" width="45" height="45" class="d-inline-block align-text-top">PlaceOrder System</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Customers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="items.html">Items</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="placeOrder.html">PlaceOrder</a>
-              </li>
-            </ul>
-            <button class="btn btn-danger" type="submit">LOGOUT</button>
-          </div>
+  <nav class=" navbar navbar-expand-lg navbar-dark " style="background-color: #5f8ba8;">
+      <div class="container-fluid ">
+        <a class="nav navbar-brand  mt-1" href="#" >
+          <img src="assets/img/icons8_multibanco_96px.png" alt="" width="45" height="45" class="d-inline-block align-text-top"> PLACE ORDER SYSTEM</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Customers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="items.html">Items</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="placeOrder.html">PlaceOrder</a>
+            </li>
+          </ul>
+          <button class="btn btn-danger" type="submit">LOGOUT</button>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-    <section>
+    <section class="container">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb mt-5">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Items</li>
+      </ol>
+    </nav>
+  </section>
 
+  <section class="container">
+    <section class="row">
+        <div class="customer col-12 col-md-12 mt-1">
+          <p class="mt-2"><img src="assets/img/items.png" alt="" width="45" height="45">Items</p>
+        </div>
     </section>
 
+    <section class="row">
+      <div class="col-12 col-md-12 col-lg  mt-5">
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+          <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
+          <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#addModal">Add New Item</button>
+        </div>
+      </div>
 
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div id="deleteCustomer" class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Delete Item</h5>
+              <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to delete this item?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger">Delete Item</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div id="addCustomer" class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add New Item</h5>
+              <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Item Id</label>
+                  <input type="text" class="form-control border-success border-2" id="exampleInputId" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Type</label>
+                  <input type="text" class="form-control border-success border-2" id="exampleInputName">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Qty</label>
+                  <input type="text" class="form-control border-success border-2" id="exampleInputAddress">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Price</label>
+                  <input type="text" class="form-control border-success border-2" id="exampleInputContact">
+                </div>                
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" >Clear</button>
+              <button type="button" class="btn btn-success">Add Item</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div id="updateCustomer" class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Update Item</h5>
+              <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Item Id</label>
+                  <input type="text" class="form-control border-primary border-2" id="exampleInputId" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label ">Type</label>
+                  <input type="text" class="form-control border-primary border-2" id="exampleInputName">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label ">Qty</label>
+                  <input type="text" class="form-control border-primary border-2" id="exampleInputAddress">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label ">Price</label>
+                  <input type="text" class="form-control border-primary border-2" id="exampleInputContact">
+                </div>                
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger">Clear</button>
+              <button type="button" class="btn btn-primary">Update item</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div  class="col col-md-12 col-lg  mt-5">
+        <form id="search" class="d-flex">
+          <input aria-label="Search" class="border form-control me-2  border-primary border-3" placeholder="Search Item" type="search">
+          <div class="dropdown">
+            <a class="btn btn-light btn-lg dropdown-toggle border-success border-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Type
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">ID</a></li>
+              <li><a class="dropdown-item" href="#">Type</a></li>
+              <li><a class="dropdown-item" href="#">Price</a></li>
+            </ul>
+          </div>
+          <button class="btn btn-outline-success border-success border-3" type="submit">Search</button>
+        </form>
+      <div>
+    </section>
+
+    <section class="row">
+      <table class="table  table-striped table-hover table-bordered border-light mt-5" style="background-color: #90bfdf;">
+        <thead class="table-striped" style="background-color: #024877; color: white;">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Type</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">I-001</th>
+            <td>Desktop</td>
+            <td>100</td>
+            <td>150000.00</td>
+          </tr>
+          <tr>
+            <th scope="row">I-002</th>
+            <td>Laptop</td>
+            <td>50</td>
+            <td>180000.00</td>
+          </tr>
+          <tr>
+            <th scope="row">I-003</th>
+            <td>Desktop</td>
+            <td>100</td>
+            <td>150000.00</td>
+          </tr>
+          <tr>
+            <th scope="row">I-004</th>
+            <td>Desktop</td>
+            <td>100</td>
+            <td>150000.00</td>
+          </tr>
+          <tr>
+            <th scope="row">I-005</th>
+            <td>Desktop</td>
+            <td>100</td>
+            <td>150000.00</td>
+          </tr>
+          <tr>
+            <th scope="row">I-006</th>
+            <td>Desktop</td>
+            <td>100</td>
+            <td>150000.00</td>
+          </tr>
+          <tr>
+            <th scope="row">I-007</th>
+            <td>Desktop</td>
+            <td>100</td>
+            <td>150000.00</td>
+          </tr>
+        </tbody>
+      </table>
+  </section>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     
 </body>
 </html>

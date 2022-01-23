@@ -66,6 +66,11 @@
           font-weight: 500;    
         }
 
+        .item_type{
+           margin-left: 5%;
+           width: 100%;
+        }
+
         
 
     </style>
@@ -120,7 +125,7 @@
       <div class="divs"><span class="text text-light">Customer Details</span></div>
       <div class="modal-body">
         <form>
-          <div class="dropdown mt-2">
+          <div class="dropdown mt-3">
             <a class="btn btn-light btn-md dropdown-toggle border-primary border-2" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
               Select Customer
             </a>
@@ -152,7 +157,7 @@
       <div class="divs"><span class="text text-light">Item Details</span></div>
       <div class="modal-body">
         <form>
-          <div class="dropdown mt-2">
+          <div class="dropdown mt-3 d-flex">
             <a class="btn btn-light btn-md dropdown-toggle border-primary border-2" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
               Select Item
             </a>
@@ -160,30 +165,37 @@
               <li><a class="dropdown-item" href="#">I-001</a></li>
               <li><a class="dropdown-item" href="#">I-002</a></li>
               <li><a class="dropdown-item" href="#">I-003</a></li>
-            </ul>
+            </ul> 
+            <div class="item_type">
+              <input type="text" class="form-control border-primary border-2" id="floatingPassword" placeholder="Type">
+            </div>
           </div>
-          <div class="mb-3 mt-3">
-            <label for="exampleInputPassword1" class="form-label ">Type</label>
-            <input type="text" class="form-control border-primary border-2" id="exampleInputName">
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label ">Qty</label>
+         
+          <div class="mb-3 mt-4">
+            <label for="exampleInputPassword1" class="form-label ">Qty On Hand</label>
             <input type="text" class="form-control border-primary border-2" id="exampleInputAddress">
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label ">Price</label>
             <input type="text" class="form-control border-primary border-2" id="exampleInputContact">
-          </div>                
+          </div> 
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label ">Qty For Sale</label>
+            <input type="text" class="form-control border-primary border-2" id="exampleInputAddress">
+          </div>  
+          <div class="form-floating mt-5">
+            <button type="button" class="btn btn-success right">Add to Cart</button>
+            <button type="button" class="btn btn-danger right">Clear</button>
+          </div>              
         </form>
       </div> 
     </div>
 
     <div  class="detail col-11 col-md-11 col-lg-3  mt-5">
-        <div class="divs"><span class="text text-light">Order Details</span></div>
+        <div class="divs"><span class="text text-light ">Order Details</span></div>
         <div class="modal-body">
           <form>
             <div class="mb-3 mt-3">
-              <label for="exampleInputPassword1" class="form-label ">Date</label>
               <input type="date" class="form-control border-primary border-2" id="exampleInputName">
             </div>
             <div class="form-floating mt-3">
@@ -196,8 +208,16 @@
             </div>   
             <div class="form-floating mt-3">
               <input type="text" class="form-control" id="floatingPassword" placeholder="Price">
+              <label for="floatingPassword">Discount</label>
+            </div>   
+            <div class="form-floating mt-3">
+              <input type="text" class="form-control" id="floatingPassword" placeholder="Price">
               <label for="floatingPassword">Balance</label>
-            </div>               
+            </div> 
+            <div class="form-floating mt-4">
+              <button type="button" class="btn btn-success right">Place Order</button>
+              <button type="button" class="btn btn-danger right">Cancel Order</button>
+            </div>              
           </form>
         </div>
     </div>

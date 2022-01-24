@@ -15,12 +15,13 @@ html{
 }
 
 header {
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 75px;
     box-shadow: -2px 6px 9px -4px #fffefe;
     background-color: #363636;
     border-bottom: 3px solid rgb(226, 226, 226);
+    z-index: 1000;
 }
 
 header > img {
@@ -50,7 +51,6 @@ header >  h1  {
     margin-top: 23px;
 }
 
-
 header >  ul > li {
     display: inline-block;
 }
@@ -63,7 +63,6 @@ header >  ul > li > a {
     color: rgb(245, 245, 245);
     transition: 0.6s ease;
     border-radius: 5px;
-
 }
 
 header > ul > li > a:hover{
@@ -81,16 +80,16 @@ body > main  {
     position: relative;
 }
 
-main > #home {
+#home {
     background-image: url("../image/background5.jpg");
     background-size: cover;
     background-position: bottom center;
     position: relative;
-    height: 700px;
+    height: 775px;
     z-index: 1;
 }
 
-main > #home::after {
+#home::after {
     content: '';
     position: absolute;
     left: 0;
@@ -105,7 +104,7 @@ main > #home::after {
 .icon {
     position: absolute;
     margin-left: 68%;
-    margin-top: 570px;
+    margin-top: 640px;
 }
 
 
@@ -128,25 +127,24 @@ main > #home::after {
 }
 
 .home_text > div > h1{
-    animation-delay: 1s;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 2s;
     color: transparent;
 }
 
-.home_text > div > h1:nth-child(1) {
-    animation: text_reveal 0.5s ease forwards;
-    animation-delay: 1s;
+.home_text > div > h1:nth-child(1) { 
+    animation-delay: 2s;
     display: block;
     font-family: Arial;
     width: fit-content;
     font-size: 3rem;
     padding-left: 15%;
-    margin-top: 15%;
+    margin-top: 28%;
     position: relative;
 }
 
-.home_text > div > h1:nth-child(2) {
-    animation: text_reveal 0.5s ease forwards;
-    animation-delay: 2s;
+.home_text > div > h1:nth-child(2) {   
+    animation-delay: 3s;
     display: block;
     font-family: Arial;
     width: fit-content;
@@ -157,8 +155,8 @@ main > #home::after {
 }
 
 .home_text > div > h1:nth-child(3) {
-    animation: text_reveal_name 1.5s ease forwards;
-    animation-delay: 3s;
+    animation: text_reveal_name 0.5s ease forwards;
+    animation-delay: 4s;
     display: block;
     font-family: serif;
     width: fit-content;
@@ -169,8 +167,7 @@ main > #home::after {
 }
 
 .home_text > div > h1:nth-child(4) {
-    animation: text_reveal 1s ease forwards;
-    animation-delay: 4s;
+    animation-delay: 5s;
     display: block;
     font-family: Arial;
     width: fit-content;
@@ -182,61 +179,52 @@ main > #home::after {
 
 .home_text > div > h1 > span{
     top: 0;
-    width: 0;
     left: 0;
+    height: 100%;
+    width: 0;
     position: absolute;
-
     animation-delay: 0.5s;
-    background-color: tomato;
+    background-color: rgb(238, 94, 68);
+    animation: text_reveal_box 1s ease;
+	animation-delay: 0.5s;
 }
 
 .home_text > div > h1:nth-child(1) span{
-    animation: text_box 1s ease forwards;
-    animation-delay: 0.5s;
-}
-
-.home_text > div > h1:nth-child(2) span{
-    animation: text_box 1s ease forwards;
     animation-delay: 1.5s;
 }
 
-.home_text > div > h1:nth-child(3) span{
-    animation: text_box 1s ease forwards;
+.home_text > div > h1:nth-child(2) span{
     animation-delay: 2.5s;
 }
 
-.home_text > div > h1:nth-child(4) span{
-    animation: text_box 1s ease forwards;
+.home_text > div > h1:nth-child(3) span{
     animation-delay: 3.5s;
 }
 
-@keyframes text_box{
-    50%{
-        width: 100%;
-        left: 0;
-    }
-
-    100%{
-        width: 0;
-        left: 100%;
-    }
-
+.home_text > div > h1:nth-child(4) span{
+    animation-delay: 4.5s;
 }
 
-@keyframes text_reveal_name{
-    100%{
-        color: rgb(250, 204, 0);
-    }
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
 }
-
-@keyframes text_reveal{
-    100%{
-        color: white;
-    }
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
 }
-
-
-
+@keyframes text_reveal_name {
+	100% {
+		color: rgb(220, 183, 20);
+	}
+}
 
 
 /* about...///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -246,7 +234,6 @@ main > #about {
     position: relative;
     background-color: rgb(12, 12, 12);
     height: 700px;
-
 }
 
 #about > div {
@@ -285,7 +272,6 @@ main > #about {
     margin-top: 11%;
     margin-left: 40%;
     letter-spacing: 1px;
-
 }
 
 #about > div > img {
@@ -413,7 +399,7 @@ main > #skill {
     color: rgb(255, 215, 104);
 }
 
-#skill > div > #program {
+#program {
     position: relative;
     background-color: rgb(88, 87, 87);
     height: 35%;
@@ -427,7 +413,7 @@ main > #skill {
     margin-top: 50px;
 }
 
-#skill > div > #network {
+#network {
     position: relative;
     background-color: rgb(88, 87, 87);
     height: 35%;
@@ -465,9 +451,11 @@ main > #skill {
     height: 52%;
     border-radius: 10px;
     margin-left: 12%;
-    margin-top: 30px;
+    margin-top: 10px;
+}
 
-    /* position: absolute;
+/* #program > div{
+     position: absolute;
     width: 15.5%;
     height: 52%;
     border-radius: 10px;
@@ -478,10 +466,9 @@ main > #skill {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center; 
 }
-
-/* #program > div::before{
+#program > div::before{
     content: "";
     background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
     width: 250%;

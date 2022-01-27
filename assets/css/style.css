@@ -186,7 +186,6 @@ body > main  {
     animation-delay: 0.5s;
     background-color: rgb(238, 94, 68);
     animation: text_reveal_box 1s ease;
-	animation-delay: 0.5s;
 }
 
 .home_text > div > h1:nth-child(1) span{
@@ -376,8 +375,8 @@ main > #skill {
     font-size: 3rem;
     color: white;
     top: 0;
-    position: absolute;
-    margin-left: 42%;
+    position: relative;
+    text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -391,7 +390,7 @@ main > #skill {
     font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
-    margin-top: 10%;
+    margin-top: 3%;
     letter-spacing: 0.95px;
 }
 
@@ -618,9 +617,9 @@ main > #project {
     font-size: 3rem;
     color: white;
     top: 0;
-    position: absolute;
+    position: relative;
     text-align: center;
-    margin-left: 42%;
+    /* margin-left: 42%; */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -634,7 +633,7 @@ main > #project {
     font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
-    margin-top: 10%;
+    margin-top: 3%;
     letter-spacing: 0.95px;
 }
 
@@ -890,9 +889,8 @@ main > #education {
     font-size: 3rem;
     color: white;
     top: 0;
-    position: absolute;
+    position: relative;
     text-align: center;
-    margin-left: 40%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -906,7 +904,7 @@ main > #education {
     font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
-    margin-top: 10%;
+    margin-top: 3%;
     letter-spacing: 0.95px;
 }
 
@@ -1028,9 +1026,8 @@ main > #service {
     font-size: 3rem;
     color: white;
     top: 0;
-    position: absolute;
+    position: relative;
     text-align: center;
-    margin-left: 40%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -1050,7 +1047,7 @@ main > #service {
     left: 0;
     right: 0;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 3%;
 }
 
 .services > div{
@@ -1254,9 +1251,8 @@ main > #contact {
     font-size: 3rem;
     color: white;
     top: 0;
-    position: absolute;
+    position: relative;
     text-align: center;
-    margin-left: 40%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -1272,7 +1268,7 @@ main > #contact {
     width: 40%;
     border-radius: 15px;
     left: 5%;
-    margin-top: 10%;
+    margin-top: 3%;
 
 }
 
@@ -1372,7 +1368,7 @@ main > #contact {
     width: 50%;
     border-radius: 15px;
     margin-left: 40%;
-    margin-top: 13%;
+    margin-top: 6%;
 }
 
 input[type=text], select {
@@ -1484,7 +1480,11 @@ input[type=textarea]:hover {
     }
     
     header > ul {
-        left: 16%;
+        /* left: 16%; */
+        
+        align-items: center;
+        justify-content: center;
+        display: flex;
         font-size: 17px;
     }
     
@@ -1501,19 +1501,19 @@ input[type=textarea]:hover {
         margin-top: 570px;
     }
 
-    .home_text > div > h1:nth-child(3) {    
-        font-size: 4rem;
-        padding-left: 15%;
-        margin-top: 20%;  
-    }
-
     .home_text > div > h1:nth-child(1) {  
         font-size: 3rem;
         margin-top: 25%; 
     }
 
+    .home_text > div > h1:nth-child(3) {    
+        font-size: 4.5rem;
+        padding-left: 15%;
+        margin-top: 10%;  
+    }
+
     .home_text > div > h1:nth-child(4) {
-        margin-top: 21%;
+        margin-top: 13%;
     }
 
     #about > div > img {

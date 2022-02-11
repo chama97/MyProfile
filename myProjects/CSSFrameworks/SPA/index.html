@@ -38,7 +38,7 @@
       </nav>
 
      
-    <script src="assets/jQuery/jquery-3.6.0.min.js"></script> 
+   
 
   <!-- customer///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
@@ -209,13 +209,13 @@
       <section class="row">
         <div class="col-12 col-md-12 col-lg  mt-5">
           <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
-            <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
-            <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#addModal">Add New Item</button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#itemDeleteModal">Delete</button>
+            <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#itemUpdateModal">Update</button>
+            <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#itemAddModal">Add New Item</button>
           </div>
         </div>
   
-        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="itemDeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div id="deleteCustomer" class="modal-header">
@@ -233,7 +233,7 @@
           </div>
         </div>
   
-        <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="itemAddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div id="addCustomer" class="modal-header">
@@ -244,31 +244,31 @@
                 <form>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Item Id</label>
-                    <input type="text" class="form-control border-success border-2" id="exampleInputId" aria-describedby="emailHelp">
+                    <input type="text" class="form-control border-success border-2" id="txtItemId" aria-describedby="emailHelp">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Type</label>
-                    <input type="text" class="form-control border-success border-2" id="exampleInputName">
+                    <input type="text" class="form-control border-success border-2" id="txtItemName">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Qty</label>
-                    <input type="text" class="form-control border-success border-2" id="exampleInputAddress">
+                    <input type="text" class="form-control border-success border-2" id="txtItemQty">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Price</label>
-                    <input type="text" class="form-control border-success border-2" id="exampleInputContact">
+                    <input type="text" class="form-control border-success border-2" id="txtItemPrice">
                   </div>                
                 </form>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" >Clear</button>
-                <button type="button" class="btn btn-success">Add Item</button>
+                <button id="btnItemAdd" type="button" class="btn btn-success" >Add Item</button>
               </div>
             </div>
           </div>
         </div>
   
-        <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="itemUpdateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div id="updateCustomer" class="modal-header">
@@ -322,7 +322,7 @@
       </section>
   
       <section class="row">
-        <table class="table  table-striped table-hover table-bordered border-light mt-5" style="background-color: #90bfdf;">
+        <table id="tblItem" class="table  table-striped table-hover table-bordered border-light mt-5" style="background-color: #90bfdf;">
           <thead class="table-striped" style="background-color: #024877; color: white;">
             <tr>
               <th scope="col">ID</th>
@@ -332,48 +332,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">I-001</th>
-              <td>Desktop</td>
-              <td>100</td>
-              <td>150000.00</td>
-            </tr>
-            <tr>
-              <th scope="row">I-002</th>
-              <td>Laptop</td>
-              <td>50</td>
-              <td>180000.00</td>
-            </tr>
-            <tr>
-              <th scope="row">I-003</th>
-              <td>Desktop</td>
-              <td>100</td>
-              <td>150000.00</td>
-            </tr>
-            <tr>
-              <th scope="row">I-004</th>
-              <td>Desktop</td>
-              <td>100</td>
-              <td>150000.00</td>
-            </tr>
-            <tr>
-              <th scope="row">I-005</th>
-              <td>Desktop</td>
-              <td>100</td>
-              <td>150000.00</td>
-            </tr>
-            <tr>
-              <th scope="row">I-006</th>
-              <td>Desktop</td>
-              <td>100</td>
-              <td>150000.00</td>
-            </tr>
-            <tr>
-              <th scope="row">I-007</th>
-              <td>Desktop</td>
-              <td>100</td>
-              <td>150000.00</td>
-            </tr>
+            
           </tbody>
         </table>
       </section>
@@ -534,7 +493,9 @@
       </section>
     </section>
 
-
+    <script src="assets/jQuery/jquery-3.6.0.min.js"></script> 
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
     <script>
       document.getElementById("itemWindow").style.display="none";
       document.getElementById("orderwindow").style.display="none";
@@ -556,9 +517,13 @@
         document.getElementById("itemWindow").style.display="none";
         document.getElementById("customWindow").style.display="none";
       });
+     
+    </script>
 
 
-      $("#btnCustadd").click(function () {
+   
+    <script>
+       $("#btnCustadd").click(function () {
 
         $("#cstTable>tr").off("click");
 
@@ -569,28 +534,63 @@
 
         let row = `<tr><td>${customerID}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerContact}</td></tr>`;
 
-        $("#customerTable").append(row);
+        $("#cstTable").append(row);
 
-        $("#customerTable>tr").click(function () {
+        $("#cstTable>tr").click(function () {
    
           let cusID = $(this).children(":eq(0)").text(); 
           let cusName = $(this).children(":eq(1)").text();
           let cusAddress = $(this).children(":eq(2)").text();
-          let cusTP = $(this).children(":eq(3)").text();
+          let cusContact = $(this).children(":eq(3)").text();
 
-          console.log(cusID, cusName, cusAddress, cusTP);
+          console.log(cusID, cusName, cusAddress, cusContact);
 
         $("#txtCustomerId").val(cusID);
         $("#txtCustomerName").val(cusName);
         $("#txtCustomerAddress").val(cusAddress);
-        $("#txtCustomerContact").val(cusTP);
+        $("#txtCustomerContact").val(cusContact);
 
       });
     });
-    </script>
+
+ 
+
+    $("#btnItemAdd").click(function () {
+
+        $("#tblItem>tr").off("click");
+
+        let itemID = $("#txtItemId").val();
+        let itemName = $("#txtItemName").val();
+        let itemQty = $("#txtItemQty").val();
+        let itemPrice = $("#txtItemPrice").val();
+
+        let row = `<tr><td>${itemID}</td><td>${itemName}</td><td>${itemQty}</td><td>${itemPrice}</td></tr>`;
+
+        $("#tblItem>tr").append(row);
+
+        $("#tblItem>tr").click(function () {
+   
+          let itmID = $(this).children(":eq(0)").text(); 
+          let itmName = $(this).children(":eq(1)").text();
+          let itmQty = $(this).children(":eq(2)").text();
+          let itmPrice = $(this).children(":eq(3)").text();
+
+          console.log(itmID, itmName, itmQty , itmPrice);
+
+        $("#txtItemId").val(itmID);
+        $("#txtItemName").val(itmName);
+        $("#txtItemQty").val(itmQty);
+        $("#txtItemPrice").val(itmPrice);
+
+      });
+    });
+
+  </script>
+
+
     
 
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+   
     
 </body>
 </html>

@@ -52,6 +52,18 @@
     font-weight: 500;
   }
 
+  #deleteItem{
+    background-image: linear-gradient(to right, rgb(196, 0, 0),rgb(223, 130, 130));
+    color: white;
+    font-weight: 500;
+  }
+
+  #addItem{
+    background-image: linear-gradient(to right, rgb(6, 156, 51),rgb(144, 211, 161));
+    color: white;
+    font-weight: 500;
+  }
+
   .btn-group{
     margin-left: -10px;
     margin-top: 10px;

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Que_colorboxes</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-utilities.css">
+
+    <style>
+
+        body{
+            background-color: rgb(162, 169, 207);
+        }
+
+        body > main {
+            
+            position: relative;
+            width: fit-content;
+            justify-content: center;
+            align-items: center;
+            left: 400px;
+            top: 200px;
+        }
+        
+        #midRow {
+            display: flex;
+            position: relative;
+        }
+
+        #midRow > div {
+            border: solid white 2px;
+            border-radius: 10px;
+            width: 150px;
+            height: 60px;
+            margin: 20px;
+        }
+
+        body > main > div {
+            border: solid white 2px;
+            border-radius: 10px;
+            width: 150px;
+            height: 60px;
+            margin: 20px;
+        }
+
+        #box6 {
+            position: relative;
+            left: 570px;
+        }
+
+    </style>
+
+</head>
+<body>
+<main>
+    <div id="box1"></div>
+    <hr>
+    <section id="midRow">
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+        <div id="box5"></div>
+    </section>
+    <hr>
+    <div id="box6"></div>
+</main>
+
+<script src="assets/JQuery/jquery-3.6.0.min.js"></script>
+
+<script>
+    var idList = [$("#box1"), $("#box2"), $("#box3"), $("#box4"), $("#box5"), $("#box6")];
+    var colorList = ["red", "green", "blue", "yellow", "pink", "purple"]
+
+    function createList() {
+
+        var box_1 = colorList[0];
+        var box_2 = colorList[1];
+        var box_3 = colorList[2];
+        var box_4 = colorList[3];
+        var box_5 = colorList[4];
+        var box_6 = colorList[5];
+
+        colorList = [box_6, box_1, box_2, box_3, box_4, box_5];
+    
+    }
+    
+
+    function addColors() {
+        createList();
+
+        idList[0].css("background-color",colorList[0]);
+        idList[1].css("background-color",colorList[1]);
+        idList[2].css("background-color",colorList[2]);
+        idList[3].css("background-color",colorList[3]);
+        idList[4].css("background-color",colorList[4]);
+        idList[5].css("background-color",colorList[5]);
+    }
+    setInterval(addColors,700);
+
+</script>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitt Animation</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/css/all.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-utilities.css">
+    <style>
+        body > main {
+            width: fit-content;
+        }
+
+        body > main > section {
+            display: flex;
+            width: fit-content;
+        }
+
+        body > main > section > div {
+            border: 1px solid black;
+            width: 150px;
+            height: 56px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <hr>
+    <section id="main">
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+        <div id="4"></div>
+        <div id="5"></div>
+        <div id="6"></div>
+    </section>
+    <hr>
+</main>
+<script src="assets/JQuery/jquery-3.6.0.min.js"></script>
+<script>
+    var colorArray = ["#ff0000", "#ff3333", "#ff5c5c", "#ff7575", "#ff9999", "#fac3c3"];
+    var idArray = [$("#1"), $("#2"), $("#3"), $("#4"), $("#5"), $("#6")];
+
+    function makeArray() {
+
+    }
+
+    function clearColor() {
+        for (var i = 0; i < idArray.length; i++) {
+            idArray[i].css("background-color", "white");
+        }
+    }
+    let IntervalX;
+    var i= 0;
+    function forward() {
+        clearColor();
+        idArray[i].css("background-color", colorArray[0]);
+        i++;
+        if (i == 6) {
+            i=0;
+            clearInterval(intervalF);
+            IntervalX = setInterval(backward,300);
+        }
+    }
+
+
+    x = 5
+    function backward() {
+        clearColor();
+        idArray[x].css("background-color", colorArray[0]);
+        x--;
+        if (x == -1) {
+            x=5;
+            clearInterval(IntervalX);
+            start();
+        }
+    }
+    function start() {
+        intervalF = setInterval(forward, 300);
+    }
+    let intervalF = setInterval(forward, 300);
+    //custom Script
+</script>
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

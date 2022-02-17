@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=	, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap/js/bootstrap.min.js">
+    <title>Knight_rider</title>
+    <style>
+
+        body{
+            background-color: rgb(38, 36, 41);
+        }
+
+        body main {
+            top: 200px;
+            position: relative;
+            background-color: rgb(38, 36, 41);
+        }
+
+        body main hr {
+            width: 80%;
+        }
+
+       .kitt {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .kitt div {
+            border: 2px solid white;
+            border-radius: 5px;
+            /* background-color: white; */
+            width: 150px;
+            height: 50px;
+            margin: 10px;
+        }
+
+        .buttons{
+            justify-content: center;
+            position: relative;
+            align-items: center;
+            display: flex;
+            top: 100px;
+        }
+
+        .buttons button{
+            width: 100px;
+            height: 40px;
+            background-color: rgb(78, 179, 53);
+            color: aliceblue;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <hr>
+        <section class="kitt">
+            <div id="cell1"></div>
+            <div id="cell2"></div>
+            <div id="cell3"></div>
+            <div id="cell4"></div>
+            <div id="cell5"></div>
+            <div id="cell6"></div>
+            <div id="cell7"></div>    
+        </section>
+        <hr>
+        <section class="buttons">
+           <button id="start">Start</button>
+           <button id="stop">Stop</button>
+        </section>
+    </main>
+
+    <script src="assets/JQuery/jquery-3.6.0.min.js"></script>
+
+  <script>
+
+$("#start").click(function () {
+
+    var colorArray = ["red", "red", "#ff5c5c", "#ff7575", "#ff9999", "#fac3c3", "#fac3c3"];
+    var idArray = [$("#cell1"), $("#cell2"), $("#cell3"), $("#cell4"), $("#cell5"), $("#cell6"), $("#cell7")];
+
+    function makeArray() {
+
+    }
+
+    function clearColor() {
+        for (var i = 0; i < idArray.length; i++) {
+            idArray[i].css("background-color", "white");
+        }
+    }
+    let IntervalX;
+    var i= 0;
+    function forward() {
+        clearColor();
+        idArray[i].css("background-color", colorArray[0]);
+        i++;
+        if (i == 7) {
+            i=0;
+            clearInterval(intervalF);
+            IntervalX = setInterval(backward,200);
+        }
+    }
+
+
+    x = 6
+    function backward() {
+        clearColor();
+        idArray[x].css("background-color", colorArray[0]);
+        x--;
+        if (x == -1) {
+            x=6;
+            clearInterval(IntervalX);
+            start();
+        }
+    }
+
+   
+
+    function start() {
+        intervalF = setInterval(forward, 200);
+    }
+
+    let intervalF = setInterval(forward, 200);
+
+    }); 
+    
+   
+</script>
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

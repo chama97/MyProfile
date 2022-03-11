@@ -58,9 +58,9 @@
 
       <section class="row">
         <div class="col-12 col-md-12 col-lg  mt-5">
-          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <div id="btnsCustomer" class="btn-group" role="group" aria-label="Basic mixed styles example">
             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
-            <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
+            <button id="btnUpdateCustomer" type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
             <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#addModal">Add New Customer</button>
           </div>
         </div>
@@ -76,8 +76,8 @@
                 Are you sure you want to delete customer?
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger">Delete Customer</button>
+                <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btnCusDelete" type="button" class="btn btn-danger">Delete Customer</button>
               </div>
             </div>
           </div>
@@ -115,17 +115,55 @@
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-danger" >Clear</button>
+                <button id="btnCustClear" type="button" class="btn btn-danger" >Clear</button>
                 <button id="btnCustadd" type="button" class="btn btn-success">Add Customer</button>
               </div>
             </div>
           </div>
         </div>
 
+         <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div id="updateCustomer" class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update Customer</h5>
+                <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Customer Id</label>
+                    <input type="text" class="form-control " id="txtCustomerId2" aria-describedby="emailHelp">
+                    <p><small class="text-danger pl-1" id="lblcusid"></small></p>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Name</label>
+                    <input type="text" class="form-control " id="txtCustomerName2">
+                    <p><small class="text-danger pl-1" id="lblcusname"></small></p>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Address</label>
+                    <input type="text" class="form-control " id="txtCustomerAddress2">
+                    <p><small class="text-danger pl-1" id="lblcusaddress"></small></p>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Contact</label>
+                    <input type="text" class="form-control " id="txtCustomerContact2">
+                    <p><small class="text-danger pl-1" id="lblcussalary"></small></p>
+                  </div>                
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button id="btnCustClear" type="button" class="btn btn-danger" >Clear</button>
+                <button id="btnCustUpdate" type="button" class="btn btn-success">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div  class="col col-md-12 col-lg  mt-5">
           <form id="search" class="d-flex">
-            <input aria-label="Search" class="border form-control me-2  border-primary border-3" placeholder="Search Customer" type="search">
+            <input id="txtSearchCusID" aria-label="Search" class="border form-control me-2  border-primary border-3" placeholder="Enter Customer" type="search">
             <div class="dropdown">
               <a class="btn btn-light btn-lg dropdown-toggle border-success border-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                 Type
@@ -133,16 +171,15 @@
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <li><a class="dropdown-item" href="#">ID</a></li>
                 <li><a class="dropdown-item" href="#">Name</a></li>
-                <li><a class="dropdown-item" href="#">Address</a></li>
               </ul>
             </div>
-            <button class="btn btn-outline-success border-success border-3" type="submit">Search</button>
+            <button id="btnCustomerSearch" class="btn btn-outline-success border-success border-3" type="button" data-bs-toggle="modal" data-bs-target="#addModal">Search</button>
           </form>
         <div>
       </section>
      
       <section class="row">
-        <table id="cstTable" class="table  table-striped table-hover table-bordered border-light mt-5" style="background-color: #90bfdf;">
+        <table class="table  table-striped table-hover table-bordered border-light mt-5" style="background-color: #90bfdf;">
           <thead class="table-striped" style="background-color: #024877; color: white;">
             <tr>
               <th scope="col">ID</th>
@@ -151,7 +188,7 @@
               <th scope="col">Contact</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="cstTable" >
            
           </tbody>
         </table>
@@ -177,7 +214,7 @@
 
   <section class="row">
     <div class="col-12 col-md-12 col-lg  mt-5">
-      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+      <div id="btnsItems" class="btn-group" role="group" aria-label="Basic mixed styles example">
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal2">Delete</button>
         <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#updateModal2">Update</button>
         <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#addModal2">Add New Item</button>
@@ -196,7 +233,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-danger">Delete Item</button>
+            <button id="btnItemDelete" type="button" class="btn btn-danger">Delete Item</button>
           </div>
         </div>
       </div>
@@ -234,7 +271,7 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" >Clear</button>
+            <button id="btnItemClear" type="button" class="btn btn-danger" >Clear</button>
             <button id="btnItemAdd" type="button" class="btn btn-success">Add Item</button>
           </div>
         </div>
@@ -242,9 +279,10 @@
     </div>
 
 
+
     <div  class="col col-md-12 col-lg  mt-5">
       <form id="search" class="d-flex">
-        <input aria-label="Search" class="border form-control me-2  border-primary border-3" placeholder="Enter Item" type="search">
+        <input id="txtItemSearch" aria-label="Search" class="border form-control me-2  border-primary border-3" placeholder="Enter Item" type="search">
         <div class="dropdown">
           <a class="btn btn-light btn-lg dropdown-toggle border-success border-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
             Type
@@ -254,13 +292,13 @@
             <li><a class="dropdown-item" href="#">Type</a></li>
           </ul>
         </div>
-        <button class="btn btn-outline-success border-success border-3" type="submit">Search</button>
+        <button id="btnItemSearch" class="btn btn-outline-success border-success border-3" type="button" data-bs-toggle="modal" data-bs-target="#addModal2">Search</button>
       </form>
     <div>
   </section>
  
   <section class="row">
-    <table id="tblItem" class="table  table-striped table-hover table-bordered border-light mt-5" style="background-color: #90bfdf;">
+    <table  class="table  table-striped table-hover table-bordered border-light mt-5" style="background-color: #90bfdf;">
       <thead class="table-striped" style="background-color: #024877; color: white;">
         <tr>
           <th scope="col">ID</th>
@@ -269,7 +307,7 @@
           <th scope="col">Price</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="tblItem">
        
       </tbody>
     </table>
@@ -301,27 +339,28 @@
           <div class="divs"><span class="text text-light">Customer Details</span></div>
           <div class="modal-body">
             <form>
-              <div class="dropdown mt-3">
+              <div class="mt-3">
+                <!-- <form id="search" class="d-flex"> -->
+                  <input id="InputCusId" aria-label="Search" class="border form-control me-2  border-primary border-3" placeholder="Enter Customer Id" type="search">
+                  <button id="btnCustomerSearch2" class="mt-2 btn btn-outline-success border-success border-3" type="button">Search</button>
+                <!-- </form>
                 <a class="btn btn-light btn-md dropdown-toggle border-primary border-2" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                   Select Customer
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">C-001</a></li>
-                  <li><a class="dropdown-item" href="#">C-002</a></li>
-                  <li><a class="dropdown-item" href="#">C-003</a></li>
-                </ul>
+                <ul id="dropCustomer" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                </ul> -->
               </div>
-              <div class="mb-3 mt-3">
+              <div class="mt-4">
                 <label for="exampleInputPassword1" class="form-label ">Name</label>
-                <input type="text" class="form-control border-primary border-2" id="exampleInputName">
+                <input type="text" class="form-control border-primary border-2" id="InputCusName">
               </div>
-              <div class="mb-3">
+              <div class="mt-4">
                 <label for="exampleInputPassword1" class="form-label ">Address</label>
-                <input type="text" class="form-control border-primary border-2" id="exampleInputAddress">
+                <input type="text" class="form-control border-primary border-2" id="InputCusAddress">
               </div>
-              <div class="mb-3">
+              <div class="mt-4">
                 <label for="exampleInputPassword1" class="form-label ">Contact</label>
-                <input type="text" class="form-control border-primary border-2" id="exampleInputContact">
+                <input type="text" class="form-control border-primary border-2" id="InputCusContact">
               </div>                
             </form>
           </div>
@@ -334,34 +373,28 @@
           <div class="modal-body">
             <form>
               <div class="dropdown mt-3 d-flex">
-                <a class="btn btn-light btn-md dropdown-toggle border-primary border-2" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                  Select Item
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">I-001</a></li>
-                  <li><a class="dropdown-item" href="#">I-002</a></li>
-                  <li><a class="dropdown-item" href="#">I-003</a></li>
-                </ul> 
-                <div class="item_type">
-                  <input type="text" class="form-control border-primary border-2" id="floatingPassword" placeholder="Type">
-                </div>
+                <input id="InputItemCode" aria-label="Search" class="border form-control me-2  border-primary border-3" placeholder="Enter Item code" type="search">
+                <button id="btnItemSearch2" class="mt-1 btn btn-outline-success border-success border-3" type="button">Search</button>
               </div>
-             
+              <div class="mb-3 mt-4">
+                <label for="exampleInputPassword1" class="form-label ">Item Type</label>
+                <input type="text" class="form-control border-primary border-2" id="InputItemType">
+              </div>
               <div class="mb-3 mt-4">
                 <label for="exampleInputPassword1" class="form-label ">Qty On Hand</label>
-                <input type="text" class="form-control border-primary border-2" id="exampleInputAddress">
+                <input type="text" class="form-control border-primary border-2" id="InputItemQtyHand">
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label ">Price</label>
-                <input type="text" class="form-control border-primary border-2" id="exampleInputContact">
+                <input type="text" class="form-control border-primary border-2" id="InputItemPrice">
               </div> 
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label ">Qty For Sale</label>
-                <input type="text" class="form-control border-primary border-2" id="exampleInputAddress">
+                <input type="text" class="form-control border-primary border-2" id="InputItemQtySale">
               </div>  
               <div class="form-floating mt-5">
-                <button type="button" class="btn btn-success right">Add to Cart</button>
-                <button type="button" class="btn btn-danger right">Clear</button>
+                <button id="btnAddTocart" type="button" class="btn btn-success right">Add to Cart</button>
+                <button id="btnClearOrder" type="button" class="btn btn-danger right">Clear</button>
               </div>              
             </form>
           </div> 
@@ -403,13 +436,14 @@
         <table class="table  table-striped table-hover table-bordered border-light mt-5" style="background-color: #90bfdf;">
           <thead class="table-striped" style="background-color: #024877; color: white;">
             <tr>
-              <th scope="col">Item ID</th>
+              <th scope="col">Item Code</th>
               <th scope="col">Type</th>
               <th scope="col">Qty</th>
               <th scope="col">Price</th>
+              <th scope="col">Total</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="tblOrder">
            
           </tbody>
         </table>
@@ -417,6 +451,21 @@
     </section>
 
     <script src="assets/jQuery/jquery-3.6.0.min.js"></script> 
+
+    <script src="model/Customer.js"></script>
+
+    <script src="model/Item.js"></script>
+
+    <script src="model/Order.js"></script>
+
+    <script src="db/Db.js"></script>
+
+    <script  src="controller/CustomerController.js"></script>
+
+    <script src="controller/ItemController.js"></script>
+
+    <script src="controller/OrderController.js"></script>
+
     
     
     <script>
@@ -439,382 +488,415 @@
         document.getElementById("orderwindow").style.display="block";
         document.getElementById("itemWindow").style.display="none";
         document.getElementById("customWindow").style.display="none";
-      });
+      }); 
      
+  
+//     $("#btnCustadd").click(function () {
+//         saveCustomer();
+//         clearAll();
+//         loadAllCustomers();
+//     });
+
+//     $("#btnCustUpdate").click(function () {
+//         updateCustomer();
+//         clearAll();
+//     });
+
+//     $("#btnCustClear").click(function () {  
+//         clearAll();
+//     });
+
+//     $("#btnCustomerSearch").click(function () {
+//         var searchID = $("#txtSearchCusID").val();
+//         var response = searchCustomer(searchID);
+//         if (response) {
+//             $("#txtCustomerId").val(response.id);
+//             $("#txtCustomerName").val(response.name);
+//             $("#txtCustomerAddress").val(response.address);
+//             $("#txtCustomerContact").val(response.contact);
+//         }else{
+//             clearAll();
+//             alert("No Such a Customer");
+//         }
+//     });
+
+
+//   $("#btnCusDelete").click(function () {
+//     let customerID=$("#txtSearchCusID").val();
+//     let index=searchCustomer(customerID);
+//     if(index!=-1){
+//       customerDB.splice(index,1);
+//         loadAllCustomers();
+//         alert("Customer "+customerID+" Deleted");
+//         return;
+//     }
+//     alert("No Customer Found");
+//   });
+
+
+
+//     function loadAllCustomers() {
+//     $("#cstTable>tr").remove();
+//     for(let i=0;i<customerDB.length;i++){
+//         let customerID=customerDB[i].id;
+//         let customerName=customerDB[i].name;
+//         let customerAddress=customerDB[i].address;
+//         let customerTP=customerDB[i].contact;
+//         let row = `<tr><td>${customerID}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerTP}</td></tr>`;
+//         $("#cstTable").append(row);
+//     }
+
+// }
+
+//     function saveCustomer() {
+//       let customerID = $("#txtCustomerId").val();
+//       let customerName = $("#txtCustomerName").val();
+//       let customerAddress = $("#txtCustomerAddress").val();
+//       let customerContact = $("#txtCustomerContact").val();
+
+//       var customerObject = {
+//         id: customerID,
+//         name: customerName,
+//         address: customerAddress,
+//         contact: customerContact
+//       };
+//       customerDB.push(customerObject);
+//     }
+  
+
+    // $("#btnCustomerSearch2").click(function () {
+    //     var searchID = $("#InputCusId").val();
+    //     var response = searchCustomer(searchID);
+    //     if (response) {
+    //         $("#InputCusId").val(response.id);
+    //         $("#InputCusName").val(response.name);
+    //         $("#InputCusAddress").val(response.address);
+    //         $("#InputCusContact").val(response.contact);
+    //     }else{
+    //         clearAll();
+    //         alert("No Such a Customer");
+    //     }
+    //     $("#btnAddTocart").attr('disabled', true);
+    // });
+
+    // $("#btnItemSearch2").click(function () {
+    //     var searchID = $("#InputItemCode").val();
+    //     var response = searchItem(searchID);
+    //     if (response) {
+    //         $("#InputItemCode").val(response.id);
+    //         $("#InputItemType").val(response.name);
+    //         $("#InputItemQtyHand").val(response.qty);
+    //         $("#InputItemPrice").val(response.price);
+    //     }else{
+    //         clearAllItem();
+    //         alert("No Such a Item");
+    //     }
+    //     $("#btnAddTocart").attr('disabled', false);
+    //   });
     
-     
-    $("#btnCustadd").click(function () {
 
-        let customerID = $("#txtCustomerId").val();
-        let customerName = $("#txtCustomerName").val();
-        let customerAddress = $("#txtCustomerAddress").val();
-        let customerContact = $("#txtCustomerContact").val();
+    // $("#btnAddTocart").click(function () {
+    //   saveOrder();
+    //   loadAllOrderDetails();
+    //   clearOrderDetails();
+    // });
 
-        let row = `<tr><td>${customerID}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerContact}</td></tr>`;
+    
+    // $("#btnClearOrder").click(function () {
+    //   clearOrderDetails();
+    // });
 
-        $("#cstTable").append(row);
+    
+    // function saveOrder() {
+    //   let itemID = $("#InputItemCode").val();
+    //   let itemName = $("#InputItemType").val();
+    //   let itemQty = $("#InputItemQtySale").val();
+    //   let itemPrice = $("#InputItemPrice").val();
+    //   let itemTotal = $("#InputItemPrice").val()*$("#InputItemQtySale").val();
 
+    //   var orderObject = {
+    //     id: itemID,
+    //     name: itemName,
+    //     qty: itemQty,
+    //     price: itemPrice,
+    //     total: itemTotal
+    //   };
+    //   orderDB.push(orderObject);
+    // }
 
-        $("#cstTable>tr").click(function(){
-            let Row=$(this);
-            let CustomerID = $(Row.children().get(0)).text();
-            let CustomerName = $(Row.children().get(1)).text();
-            let CustomerAddress = $(Row.children().get(2)).text();
-            let CustomerContact = $(Row.children().get(3)).text();
-     
-            $("#txtCusID").val(CustomerID);
-            $("#txtCusName").val(CustomerName);
-            $("#txtCusAddress").val(CustomerAddress);
-            $("#txtCusTP").val(CustomerContact);
-        });
+    // function loadAllOrderDetails() {
+    //     $("#tblOrder").empty();
+    //     for (var i of orderDB) {
+    //         let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.qty}</td><td>${i.price}</td><td>${i.total}</td></tr>`;
+    //         $("#tblOrder").append(row);
+    //     }
+    // }
 
-    });
+    // function clearOrderDetails() {
+    //   $('#InputItemCode,#InputItemType,#InputItemQtySale,#InputItemPrice,#InputItemQtyHand').val("");
+    //   //$('#InputCusId,#InputCusName,#InputCusAddress,#InputCusContact').val("");
+    //   $('#InputItemCode').focus();
+    //   $("#btnAddTocart").attr('disabled', true);
+    // }
 
+   
+    // function searchCustomer(id) {
+    //     for (let i = 0; i < customerDB.length; i++) {
+    //         if (customerDB[i].id == id) {
+    //             return customerDB[i];
+    //         }
+    //     }
+    // }
 
-    $("#btnItemAdd").click(function () {
+    
 
-        let itemCode = $("#txtItemId").val();
-        let itemName = $("#txtItemName").val();
-        let itemQTY = $("#txtItemQty").val();
-        let itemPrice = $("#txtItemPrice").val();
-
-        let row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemQTY}</td><td>${itemPrice}</td></tr>`;
-
-        $("#tblItem").append(row);
-
-
-        $("#tblItem>tr").click(function(){
-            let Row=$(this);
-            let ItemCode = $(Row.children().get(0)).text();
-            let ItemName = $(Row.children().get(1)).text();
-            let ItemQTY = $(Row.children().get(2)).text();
-            let ItemPrice = $(Row.children().get(3)).text();
-     
-            $("#txtCusID").val(ItemCode);
-            $("#txtCusName").val(ItemName);
-            $("#txtCusAddress").val(ItemQTY);
-            $("#txtCusTP").val(ItemPrice);
-        });
-
-    });
-
-
-    // validation////////////////////////////////////////////////////////////
-
-    const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
-    const cusNameRegEx = /^[A-z ]{5,20}$/;
-    const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
-    const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+    // items  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    $('#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact').on('keydown', function (eventOb) {
-        if (eventOb.key == "Tab") {
-            eventOb.preventDefault(); 
-        }
-    });
+  //   $("#btnItemAdd").click(function () {
+  //       saveItem();
+  //       clearAllItem();
+  //       loadAllItems();
+  //       loadItemsDrop();
+  //   });
 
-    $('#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact').on('blur', function () {
-        formValid();
-    });
+  //   $("#btnItemClear").click(function () {  
+  //       clearAll();
+  //   });
 
-    $("#txtCustomerId").on('keyup', function (eventOb) {
-        setButton();
-        if (eventOb.key == "Enter") {
-            checkIfValid();
-        }
+  //   $("#btnItemSearch").click(function () {
+  //       var searchID = $("#txtItemSearch").val();
+  //       var response = searchItem(searchID);
+  //       if (response) {
+  //           $("#txtItemId").val(response.id);
+  //           $("#txtItemName").val(response.name);
+  //           $("#txtItemQty").val(response.qty);
+  //           $("#txtItemPrice").val(response.price);
+  //       }else{
+  //           clearAllItem();
+  //           alert("No Such a Item");
+  //       }
+  //     });
 
-        if (eventOb.key == "Control") {
-            var typedCustomerID = $("#txtCustomerId").val();
-            var srcCustomer = searchCustomerFromID(typedCustomerID);
-            $("#txtCustomerId").val(srcCustomer.getCustomerID());
-            $("#txtCustomerName").val(srcCustomer.getCustomerName());
-            $("#txtCustomerAddress").val(srcCustomer.getCustomerAddress());
-            $("#txtCustomerContact").val(srcCustomer.getCustomerContact());
-        }
+    
+  // $("#btnItemDelete").click(function () {
+  //   let itemCode=$("#txtItemSearch").val();
+  //   let index=searchItem(itemCode);
+  //   if(index!=-1){
+  //     itemDB.splice(index,1);
+  //       loadAllItems();
+  //       alert("Item "+itemCode+" Deleted");
+  //       return;
+  //   }
+  //   alert("No Item Found");
+  // });
+
+  //   // $("#dropItems > li > a").click(function () {
+  //   //     var searchID = $(this).val();
+
+  //   //     var response = searchItem(searchID);
+  //   //     if (response) {
+  //   //         $("#itemName").val(response.name);
+  //   //         $("#itemQtyHand").val(response.qty);
+  //   //         $("#itemPrice").val(response.price);
+  //   //     }else{
+  //   //         alert("No Such a Item");
+  //   //     }
+  //   // });
+
+  //   function loadAllItems() {
+  //       $("#tblItem").empty();
+  //       for (var i of itemDB) {
+  //           let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.qty}</td><td>${i.price}</td></tr>`;
+  //           $("#tblItem").append(row);
+  //       }
+  //   }
+
+  //   // function loadItemsDrop() {
+  //   //     $("#dropItems").empty();
+  //   //     for (var i of itemDB) {
+  //   //         let drops = `<li><a class="dropdown-item">${i.id}</li></a>`;
+  //   //         $("#dropItems").append(drops);
+  //   //     }
+  //   // }
+
+  //   function saveItem() {
+   
+  //     let itemID = $("#txtItemId").val();
+  //     let itemName = $("#txtItemName").val();
+  //     let itemQty = $("#txtItemQty").val();
+  //     let itemPrice = $("#txtItemPrice").val();
+
+  //     var itemObject = {
+  //       id: itemID,
+  //       name: itemName,
+  //       qty: itemQty,
+  //       price: itemPrice
+  //     };
+  //     itemDB.push(itemObject);
+  //   }
+
+  //   function searchItem(id) {
+  //       for (let i = 0; i < itemDB.length; i++) {
+  //           if (itemDB[i].id == id) {
+  //               return itemDB[i];
+  //           }
+  //       }
+  //   }
+
+  //   const itemIDRegEx = /^(I-)[0-9]{1,3}$/;
+  //   const itemNameRegEx = /^[A-z ]{4,20}$/;
+  //   const itemQtyRegEx = /^[0-9]{1,}$/;
+  //   const itemPriceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
 
-    });
+  //   $('#txtItemId,#txtItemName,#txtItemQty,#txtItemPrice').on('keydown', function (eventOb) {
+  //       if (eventOb.key == "Tab") {
+  //           eventOb.preventDefault(); 
+  //       }
+  //   });
 
-    $("#txtCustomerName").on('keyup', function (eventOb) {
-        setButton();
-        if (eventOb.key == "Enter") {
-            checkIfValid();
-        }
-    });
+  //   $('#txtItemId,#txtItemName,#txtItemQty,#txtItemPrice').on('blur', function () {
+  //       ItemformValid();
+  //   });
 
-    $("#txtCustomerAddress").on('keyup', function (eventOb) {
-        setButton();
-        if (eventOb.key == "Enter") {
-            checkIfValid();
-        }
-    });
+  //   $("#txtItemId").on('keyup', function (eventOb) {
+  //       setItemButton();
+  //       if (eventOb.key == "Enter") {
+  //           checkIfValidItem();
+  //       }
 
-    $("#txtCustomerContact").on('keyup', function (eventOb) {
-        setButton();
-        if (eventOb.key == "Enter") {
-            checkIfValid();
-        }
-    });
+  //       if (eventOb.key == "Control") {
+  //           var typedCustomerID = $("#txtItemId").val();
+  //           var srcItem = searchItemFromID(typedItemID);
+  //           $("#txtItemId").val(srcItem.getItemID());
+  //           $("#txtItemName").val(srcItem.getItemName());
+  //           $("#txtItemQty").val(srcItem.getItemQty());
+  //           $("#txtItemPrice").val(srcItem.getItemPrice());
+  //       }
+  //   });
+
+  //   $("#txtItemName").on('keyup', function (eventOb) {
+  //       setItemButton();
+  //       if (eventOb.key == "Enter") {
+  //         checkIfValidItem()
+  //       }
+  //   });
+
+  //   $("#txtItemQty").on('keyup', function (eventOb) {
+  //       setItemButton();
+  //       if (eventOb.key == "Enter") {
+  //         checkIfValidItem()
+  //       }
+  //   });
+
+  //   $("#txtItemPrice").on('keyup', function (eventOb) {
+  //       setItemButton();
+  //       if (eventOb.key == "Enter") {
+  //         checkIfValidItem()
+  //       }
+  //   });
   
-    $("#btnCustadd").attr('disabled', true);
+  //   $("#btnItemadd").attr('disabled', true);
 
-    function clearAll() {
-        $('#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact').val("");
-        $('#txCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact').css('border', '3px solid #ced4da');
-        $('#txtCustomerId').focus();
-        $("#btnCustadd").attr('disabled', true);
-        loadAllCustomers();
-        $("#lblcusid,#lblcusname,#lblcusaddress,#lblcussalary").text("");
-    }
+  //   function clearAllItem() {
+  //       $('#txtItemId,#txtItemName,#txtItemQty,#txtItemPrice').val("");
+  //       $('#txtItemId,#txtItemName,#txtItemQty,#txtItemPrice').css('border', '2px solid #ced4da');
+  //       $('#txtItemId').focus();
+  //       $("#btnItemadd").attr('disabled', true);
+  //       loadAllItems();
+  //       $("#lblitemid,#lblitemname,#lblitemqty,#lblitemprice").text("");
+  //   }
 
-    function formValid() {
-        var cusID = $("#txtCustomerId").val();
-        $("#txtCustomerId").css('border', '3px solid green');
-        $("#lblcusid").text("");
-        if (cusIDRegEx.test(cusID)) {
-            var cusName = $("#txtCustomerName").val();
-            if (cusNameRegEx.test(cusName)) {
-                $("#txtCustomerName").css('border', '3px solid green');
-                $("#lblcusname").text("");
-                var cusAddress = $("#txtCustomerAddress").val();
-                if (cusAddressRegEx.test(cusAddress)) {
-                    var cusSalary = $("#txtCustomerContact").val();
-                    var resp = cusSalaryRegEx.test(cusSalary);
-                    $("#txtCustomerAddress").css('border', '3px solid green');
-                    $("#lblcusaddress").text("");
-                    if (resp) {
-                        $("#txtCustomerContact").css('border', '3px solid green');
-                        $("#lblcussalary").text("");
-                        return true;
-                    } else {
-                        $("#txtCustomerContact").css('border', '3px solid red');
-                        $("#lblcussalary").text("Cus Salary is a required field : Pattern 100.00 or 100");
-                        return false;
-                    }
-                } else {
-                    $("#txtCustomerAddress").css('border', '3px solid red');
-                    $("#lblcusaddress").text("Cus Name is a required field : Mimum 7");
-                    return false;
-                }
-            } else {
-                $("#txtCustomerName").css('border', '3px solid red');
-                $("#lblcusname").text("Cus Name is a required field : Mimimum 5, Max 20, Spaces Allowed");
-                return false;
-            }
-        } else {
-            $("#txtCustomerId").css('border', '3px solid red');
-            $("#lblcusid").text("Cus ID is a required field : Pattern C00-000");
-            return false;
-        }
-    }
+  //   function ItemformValid() {
+  //       var itemID = $("#txtItemId").val();
+  //       $("#txtItemId").css('border', '3px solid green');
+  //       $("#lblitemid").text("");
+  //       if (itemIDRegEx.test(itemID)) {
+  //           var itemName = $("#txtItemName").val();
+  //           if (itemNameRegEx.test(itemName)) {
+  //               $("#txtItemName").css('border', '3px solid green');
+  //               $("#lblitemname").text("");
+  //               var itemQty = $("#txtItemQty").val();
+  //               if (itemQtyRegEx.test(itemQty)) {
+  //                   var itemPrice = $("#txtItemPrice").val();
+  //                   var resp = itemPriceRegEx.test(itemPrice);
+  //                   $("#txtItemQty").css('border', '3px solid green');
+  //                   $("#lblitemqty").text("");
+  //                   if (resp) {
+  //                       $("#txtItemPrice").css('border', '3px solid green');
+  //                       $("#lblitemprice").text("");
+  //                       return true;
+  //                   } else {
+  //                       $("#txtItemPrice").css('border', '3px solid red');
+  //                       $("#lblitemprice").text("item Price is a required field : Pattern 100.00 or 100");
+  //                       return false;
+  //                   }
+  //               } else {
+  //                   $("#txtItemQty").css('border', '3px solid red');
+  //                   $("#lblitemqty").text("Item Qty is a required field :1");
+  //                   return false;
+  //               }
+  //           } else {
+  //               $("#txtItemName").css('border', '3px solid red');
+  //               $("#lblitemname").text("Item Name is a required field : Mimimum 4, Max 20, Spaces Allowed");
+  //               return false;
+  //           }
+  //       } else {
+  //           $("#txtItemId").css('border', '3px solid red');
+  //           $("#lblitemid").text("Item ID is a required field : Pattern I-000");
+  //           return false;
+  //       }
+  //   }
 
-    function checkIfValid() {
-        var cusID = $("#txtCustomerId").val();
-        if (cusIDRegEx.test(cusID)) {
-            $("#txtCustomerName").focus();
-            var cusName = $("#txtCustomerName").val();
-            if (cusNameRegEx.test(cusName)) {
-                $("#txtCustomerAddress").focus();
-                var cusAddress = $("#txtCustomerAddress").val();
-                if (cusAddressRegEx.test(cusAddress)) {
-                    $("#txtCustomerContact").focus();
-                    var cusSalary = $("#txtCustomerContact").val();
-                    var resp = cusSalaryRegEx.test(cusSalary);
-                    if (resp) {
-                        let res = confirm("Do you really need to add this Customer..?");
-                        if (res) {
-                            saveCustomer();
-                            clearAll();
-                        }
-                    } else {
-                        $("#txtCustomerContact").focus();
-                    }
-                } else {
-                    $("#txtCustomerAddress").focus();
-                }
-            } else {
-                $("#txtCustomerName").focus();
-            }
-        } else {
-            $("#txtCustomerId").focus();
-        }
-    }
+  //   function checkIfValidItem() {
+  //       var itemID = $("#txtItemId").val();
+  //       if (itemIDRegEx.test(itemID)) {
+  //           $("#txtItemName").focus();
+  //           var itemName = $("#txtItemName").val();
+  //           if (itemNameRegEx.test(itemName)) {
+  //               $("#txtItemQty").focus();
+  //               var itemQty = $("#txtItemQty").val();
+  //               if (itemQtyRegEx.test(itemQty)) {
+  //                   $("#txtItemPrice").focus();
+  //                   var itemPrice = $("#txtItemPrice").val();
+  //                   var resp = itemPriceRegEx.test(itemPrice);
+  //                   if (resp) {
+  //                       let res = confirm("Do you really need to add this Item..?");
+  //                       if (res) {
+  //                           saveItem();
+  //                           clearAllItem();
+  //                       }
+  //                   } else {
+  //                       $("#txtItemPrice").focus();
+  //                   }
+  //               } else {
+  //                   $("#txtItemQty").focus();
+  //               }
+  //           } else {
+  //               $("#txtItemName").focus();
+  //           }
+  //       } else {
+  //           $("#txtItemId").focus();
+  //       }
+  //   }
 
-    function setButton() {
-        let b = formValid();
-        if (b) {
-            $("#btnCustadd").attr('disabled', false);
-        } else {
-            $("#btnCustadd").attr('disabled', true);
-        }
-    }
+  //   function setItemButton() {
+  //       let b = ItemformValid();
+  //       if (b) {
+  //           $("#btnItemAdd").attr('disabled', false);
+  //       } else {
+  //           $("#btnItemAdd").attr('disabled', true);
+  //       }
+  //   }
 
-    $('#btnCustadd').click(function () {
-        checkIfValid();
-    });
-
-
-    ///////////////////////////////////////////////////////////////////////////////////////
-
-    const itemIDRegEx = /^(I00-)[0-9]{1,3}$/;
-    const itemNameRegEx = /^[A-z ]{5,20}$/;
-    const itemQtyRegEx = /^[0-9]{1,}$/;
-    const itemPriceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
-
-
-    $('#txtItemId,#txtItemName,#txtItemQty,#txtItemPrice').on('keydown', function (eventOb) {
-        if (eventOb.key == "Tab") {
-            eventOb.preventDefault(); 
-        }
-    });
-
-    $('#txtItemId,#txtItemName,#txtItemQty,#txtItemPrice').on('blur', function () {
-        ItemformValid();
-    });
-
-    $("#txtItemId").on('keyup', function (eventOb) {
-        setItemButton();
-        if (eventOb.key == "Enter") {
-            checkIfValidItem();
-        }
-
-        if (eventOb.key == "Control") {
-            var typedCustomerID = $("#txtItemId").val();
-            var srcItem = searchItemFromID(typedItemID);
-            $("#txtItemId").val(srcItem.getItemID());
-            $("#txtItemName").val(srcItem.getItemName());
-            $("#txtItemQty").val(srcItem.getItemQty());
-            $("#txtItemPrice").val(srcItem.getItemPrice());
-        }
-
-
-    });
-
-    $("#txtItemName").on('keyup', function (eventOb) {
-        setItemButton();
-        if (eventOb.key == "Enter") {
-          checkIfValidItem()
-        }
-    });
-
-    $("#txtItemQty").on('keyup', function (eventOb) {
-        setItemButton();
-        if (eventOb.key == "Enter") {
-          checkIfValidItem()
-        }
-    });
-
-    $("#txtItemPrice").on('keyup', function (eventOb) {
-        setItemButton();
-        if (eventOb.key == "Enter") {
-          checkIfValidItem()
-        }
-    });
-  
-    $("#btnItemadd").attr('disabled', true);
-
-    function clearAllItem() {
-        $('#txtItemId,#txtItemName,#txtItemQty,#txtItemPrice').val("");
-        $('#txtItemId,#txtItemName,#txtItemQty,#txtItemPrice').css('border', '2px solid #ced4da');
-        $('#txtItemId').focus();
-        $("#btnItemadd").attr('disabled', true);
-        loadAllItems();
-        $("#lblitemid,#lblitemname,#lblitemqty,#lblitemprice").text("");
-    }
-
-    function ItemformValid() {
-        var itemID = $("#txtItemId").val();
-        $("#txtItemId").css('border', '3px solid green');
-        $("#lblitemid").text("");
-        if (itemIDRegEx.test(itemID)) {
-            var itemName = $("#txtItemName").val();
-            if (itemNameRegEx.test(itemName)) {
-                $("#txtItemName").css('border', '3px solid green');
-                $("#lblitemname").text("");
-                var itemQty = $("#txtItemQty").val();
-                if (itemQtyRegEx.test(itemQty)) {
-                    var itemPrice = $("#txtItemPrice").val();
-                    var resp = itemPriceRegEx.test(itemPrice);
-                    $("#txtItemQty").css('border', '3px solid green');
-                    $("#lblitemqty").text("");
-                    if (resp) {
-                        $("#txtItemPrice").css('border', '3px solid green');
-                        $("#lblitemprice").text("");
-                        return true;
-                    } else {
-                        $("#txtItemPrice").css('border', '3px solid red');
-                        $("#lblitemprice").text("item Price is a required field : Pattern 100.00 or 100");
-                        return false;
-                    }
-                } else {
-                    $("#txtItemQty").css('border', '3px solid red');
-                    $("#lblitemqty").text("Item Qty is a required field :10");
-                    return false;
-                }
-            } else {
-                $("#txtItemName").css('border', '3px solid red');
-                $("#lblitemname").text("Item Name is a required field : Mimimum 5, Max 20, Spaces Allowed");
-                return false;
-            }
-        } else {
-            $("#txtItemId").css('border', '3px solid red');
-            $("#lblitemid").text("Item ID is a required field : Pattern I00-000");
-            return false;
-        }
-    }
-
-    function checkIfValidItem() {
-        var itemID = $("#txtItemId").val();
-        if (itemIDRegEx.test(itemID)) {
-            $("#txtItemName").focus();
-            var itemName = $("#txtItemName").val();
-            if (itemNameRegEx.test(itemName)) {
-                $("#txtItemQty").focus();
-                var itemQty = $("#txtItemQty").val();
-                if (itemQtyRegEx.test(itemQty)) {
-                    $("#txtItemPrice").focus();
-                    var itemPrice = $("#txtItemPrice").val();
-                    var resp = itemPriceRegEx.test(itemPrice);
-                    if (resp) {
-                        let res = confirm("Do you really need to add this Item..?");
-                        if (res) {
-                            saveItem();
-                            clearAllItem();
-                        }
-                    } else {
-                        $("#txtItemPrice").focus();
-                    }
-                } else {
-                    $("#txtItemQty").focus();
-                }
-            } else {
-                $("#txtItemName").focus();
-            }
-        } else {
-            $("#txtItemId").focus();
-        }
-    }
-
-    function setItemButton() {
-        let b = ItemformValid();
-        if (b) {
-            $("#btnItemAdd").attr('disabled', false);
-        } else {
-            $("#btnItemAdd").attr('disabled', true);
-        }
-    }
-
-    $('#btnItemAdd').click(function () {
-        checkIfValidItem();
-    });
-
-
-
+  //   $('#btnItemAdd').click(function () {
+  //       checkIfValidItem();
+  //   });
 
   </script>
 
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   
 </body>

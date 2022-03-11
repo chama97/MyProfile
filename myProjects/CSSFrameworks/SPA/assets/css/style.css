@@ -64,6 +64,12 @@
     font-weight: 500;
   }
 
+  #updateItem{
+    background-image: linear-gradient(to right, rgb(6, 156, 51),rgb(144, 211, 161));
+    color: white;
+    font-weight: 500;
+  }
+
   .btn-group{
     margin-left: -10px;
     margin-top: 10px;
@@ -76,6 +82,13 @@
   #dropdownMenuLink{
     margin-right: 10px;
   }
+
+  #btnsCustomer{
+    height: 50px;
+  }
+
+ 
+
 
   /* items  //////////////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -101,6 +114,11 @@
   margin-left: -10px;
   font-weight: 500;
 }
+
+#btnsItems{
+  height: 50px;
+}
+
 
 /* order //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 

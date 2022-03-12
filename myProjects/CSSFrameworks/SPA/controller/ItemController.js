@@ -20,7 +20,40 @@ $("#btnItemSearch").click(function () {
         clearAllItem();
         alert("No Such a Item");
     }
-  });
+});
+
+$("#btnCustomerSearch").click(function () {
+    var searchID = $("#txtSearchCusID").val();
+    var response = searchCustomer(searchID);
+    if (response) {
+        $("#txtCustomerId").val(response.getCustomerID());
+        $("#txtCustomerName").val(response.getCustomerName());
+        $("#txtCustomerAddress").val(response.getCustomerAddress());
+        $("#txtCustomerContact").val(response.getCustomerContact());
+    }else{
+        clearAll();
+        alert("No Such a Customer");
+    }
+});
+
+$("#btnItemtUpdate").click(function () {
+    updateItem();
+    loadAllItems();
+});
+
+$("#btnUpdateItem").click(function () {  
+    var searchID = $("#txtItemSearch").val();
+    var response = searchItem(searchID);
+    if (response) {
+        $("#txtItemId2").val(response.getItemCode());
+        $("#txtItemName2").val(response.getItemType());
+        $("#txtItemQty2").val(response.getItemQty());
+        $("#txtItemPrice2").val(response.getItemPrice());
+    }else{
+        clearAllItem();
+        alert("No Such a Item");
+    }
+});
 
 
 $("#btnItemDelete").click(function () {
@@ -50,21 +83,21 @@ function saveItem() {
   let itemQty = $("#txtItemQty").val();
   let itemPrice = $("#txtItemPrice").val();
 
-  let index=isExists(itemID);
+  let index=isItemExists(itemID);
     if(index!=-1){
         alert("The Item ID Already Exists. Please Enter Another ID");
     }else{
         let i1=new Item(itemID,itemName,itemQty,itemPrice);
         itemDB.push(i1);
-        clearAll();
+        clearAllItem();
     }
 }
 
 function updateItem(){
-    let itemID = $("#txtItemId").val();
-    let itemName = $("#txtItemName").val();
-    let itemQty = $("#txtItemQty").val();
-    let itemPrice = $("#txtItemPrice").val();
+    let itemID = $("#txtItemId2").val();
+    let itemName = $("#txtItemName2").val();
+    let itemQty = $("#txtItemQty2").val();
+    let itemPrice = $("#txtItemPrice2").val();
     let index=isItemExists(itemID);
     if(index!=-1){
         alert("Item Updated");
@@ -90,7 +123,7 @@ function isItemExists(id){
 
 function searchItem(id) {
     for (let i = 0; i < itemDB.length; i++) {
-        if (itemDB[i].id == id) {
+        if (itemDB[i].getItemCode() == id) {
             return itemDB[i];
         }
     }

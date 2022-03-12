@@ -1,38 +1,31 @@
 function Order(code,type,qty,price,total) {
-    var __itemCode=code;
-    var __itemType=type;
-    var __itemQty=qty;
-    var __itemPrice=price;
-    var __totalPrice=total;
+    var __orderId=oid;
+    var __customerId=cid;
+    var __orderDate=date;
+    var __orderPrice=price;
     
-    this.getItemCode=function () {
-        return __itemCode;
+    this.getOrderId=function () {
+        return __orderId;
     }
-    this.getItemType=function () {
-        return __itemType;
+    this.getCustomerId=function () {
+        return __customerId;
     }
-    this.getItemQty=function () {
-        return __itemQty;
+    this.getOrderDate=function () {
+        return __orderDate;
     }
-    this.getItemPrice=function (){
-        return  __itemPrice;
+    this.getOrderPrice=function (){
+        return  __orderPrice;
     }
-    this.getTotalPrice=function (){
-        return  __totalPrice;
+    this.setOrderId=function (oid) {
+        __orderId=oid;
     }
-    this.setItemCode=function (code) {
-        __itemCode=code;
+    this.setCustomerId=function (cid) {
+        __customerId=cid;
     }
-    this.setItemType=function (type) {
-        __itemType=type;
+    this.setOrderDate=function (date) {
+        __orderDate=date;
     }
-    this.setItemQty=function (qty) {
-        __itemQty=qty;
-    }
-    this.setItemPrice=function (price){
-        __itemPrice=price;
-    }
-    this.setTotalPrice=function (total){
-        __totalPrice=total;
+    this.setOrderPrice=function (price){
+        __orderPrice=price;
     }
 }

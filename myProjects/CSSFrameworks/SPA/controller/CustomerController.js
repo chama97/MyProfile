@@ -65,18 +65,6 @@ function loadAllCustomers() {
     }
 }
 
-// function loadAllCustomers() {
-//     $("#cstTable>tr").remove();
-//     for(let i=0;i<customerDB.length;i++){
-//         let customerID=customerDB[i].getCustomerID();
-//         let customerName=customerDB[i].getCustomerName();
-//         let customerAddress=customerDB[i].getCustomerAddress();
-//         let customerContact=customerDB[i].getCustomerContact();
-//         let row = `<tr><td>${customerID}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerContact}</td></tr>`;
-//         $("#cstTable").append(row);
-//     }
-// }
-
 function saveCustomer() {
     let customerID = $("#txtCustomerId").val();
     let customerName = $("#txtCustomerName").val();

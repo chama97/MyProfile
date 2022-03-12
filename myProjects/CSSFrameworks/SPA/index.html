@@ -216,7 +216,7 @@
     <div class="col-12 col-md-12 col-lg  mt-5">
       <div id="btnsItems" class="btn-group" role="group" aria-label="Basic mixed styles example">
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal2">Delete</button>
-        <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#updateModal2">Update</button>
+        <button id="btnUpdateItem" type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#updateModal2">Update</button>
         <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#addModal2">Add New Item</button>
       </div>
     </div>
@@ -278,6 +278,45 @@
       </div>
     </div>
 
+
+    <div class="modal fade" id="updateModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div id="updateItem" class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update Item</h5>
+            <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Item Code</label>
+                <input type="text" class="form-control " id="txtItemId2" aria-describedby="emailHelp">
+                <p><small class="text-danger pl-1" id="lblitemid"></small></p>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Type</label>
+                <input type="text" class="form-control " id="txtItemName2">
+                <p><small class="text-danger pl-1" id="lblitemname"></small></p>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Qty On Hand</label>
+                <input type="text" class="form-control " id="txtItemQty2">
+                <p><small class="text-danger pl-1" id="lblitemqty"></small></p>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Price</label>
+                <input type="text" class="form-control " id="txtItemPrice2">
+                <p><small class="text-danger pl-1" id="lblitemprice"></small></p>
+              </div>                
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="btnItemClears" type="button" class="btn btn-danger" >Clear</button>
+            <button id="btnItemUpdate" type="button" class="btn btn-success">Update Item</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <div  class="col col-md-12 col-lg  mt-5">
@@ -342,7 +381,7 @@
               <div class="mt-3">
                 <!-- <form id="search" class="d-flex"> -->
                   <input id="InputCusId" aria-label="Search" class="border form-control me-2  border-primary border-3" placeholder="Enter Customer Id" type="search">
-                  <button id="btnCustomerSearch2" class="mt-2 btn btn-outline-success border-success border-3" type="button">Search</button>
+                  <button id="btnCustomerSearch2" class="mt-3 btn btn-outline-success border-success border-3" type="button">Search</button>
                 <!-- </form>
                 <a class="btn btn-light btn-md dropdown-toggle border-primary border-2" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                   Select Customer
@@ -350,7 +389,7 @@
                 <ul id="dropCustomer" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 </ul> -->
               </div>
-              <div class="mt-4">
+              <div class="mt-5">
                 <label for="exampleInputPassword1" class="form-label ">Name</label>
                 <input type="text" class="form-control border-primary border-2" id="InputCusName">
               </div>
@@ -380,7 +419,7 @@
                 <label for="exampleInputPassword1" class="form-label ">Item Type</label>
                 <input type="text" class="form-control border-primary border-2" id="InputItemType">
               </div>
-              <div class="mb-3 mt-4">
+              <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label ">Qty On Hand</label>
                 <input type="text" class="form-control border-primary border-2" id="InputItemQtyHand">
               </div>
@@ -392,7 +431,7 @@
                 <label for="exampleInputPassword1" class="form-label ">Qty For Sale</label>
                 <input type="text" class="form-control border-primary border-2" id="InputItemQtySale">
               </div>  
-              <div class="form-floating mt-5">
+              <div class="form-floating mt-4">
                 <button id="btnAddTocart" type="button" class="btn btn-success right">Add to Cart</button>
                 <button id="btnClearOrder" type="button" class="btn btn-danger right">Clear</button>
               </div>              
@@ -405,27 +444,27 @@
             <div class="modal-body">
               <form>
                 <div class="mb-3 mt-3">
-                  <input type="date" class="form-control border-primary border-2" id="exampleInputName">
+                  <input type="date" class="form-control border-primary border-2" id="orderDate">
                 </div>
-                <div class="form-floating mt-3">
-                  <input type="text" class="form-control" id="floatingPassword" placeholder="Price">
+                <div class="form-floating mt-4">
+                  <input type="text" class="form-control" id="orderId" placeholder="Price">
                   <label for="floatingPassword">Order Id</label>
                 </div> 
-                <div class="form-floating mt-3">
-                  <input type="text" class="form-control" id="floatingPassword" placeholder="Price">
+                <div class="form-floating mt-4">
+                  <input type="text" class="form-control border-danger border-4" id="orderPrice" placeholder="Price" >
                   <label for="floatingPassword">Price</label>
                 </div>   
-                <div class="form-floating mt-3">
-                  <input type="text" class="form-control" id="floatingPassword" placeholder="Price">
-                  <label for="floatingPassword">Discount</label>
+                <div class="form-floating mt-4">
+                  <input type="text" class="form-control border-primary border-4" id="orderDiscount" placeholder="Price">
+                  <label for="floatingPassword">Discount %</label>
                 </div>   
-                <div class="form-floating mt-3">
-                  <input type="text" class="form-control" id="floatingPassword" placeholder="Price">
+                <div class="form-floating mt-4">
+                  <input type="text" class="form-control border-success border-4" id="orderBalance" placeholder="Price">
                   <label for="floatingPassword">Balance</label>
                 </div> 
-                <div class="form-floating mt-4">
-                  <button type="button" class="btn btn-success right">Place Order</button>
-                  <button type="button" class="btn btn-danger right">Cancel Order</button>
+                <div class="form-floating mt-5">
+                  <button id="btnPlaceOrder" type="button" class="btn btn-success right">Place Order</button>
+                  <button id="btnCancelOrder" type="button" class="btn btn-danger right">Cancel Order</button>
                 </div>              
               </form>
             </div>
@@ -450,6 +489,7 @@
       </section>
     </section>
 
+    
     <script src="assets/jQuery/jquery-3.6.0.min.js"></script> 
 
     <script src="model/Customer.js"></script>
